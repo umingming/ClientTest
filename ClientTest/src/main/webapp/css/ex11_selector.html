@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      /* .box {color: orange; }
+      div { color: red; }
+      div { color: blue; }
+      div { font-style: italic; } */
+
+      div > div > div > div > div > div > div > div > div > div > div { color: blue; }
+      .tl { color: red; }
+      .box3 { color: blue !important;}
+
+   </style>
+</head>
+<body>
+   <div>
+      <h1 id="box1" class="box">상자</h1>
+   </div>
+   <div>
+      <div class="box3">박스</div>
+   </div>
+
+
+   <div>
+      <div>
+         <div>
+            <div>
+               <div>
+                  <div>
+                     <div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div class="tl">태그</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+</body>
+</html>
