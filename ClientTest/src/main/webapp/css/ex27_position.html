@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      .box {
+         border: 10px solid black;
+         width: 200px;
+         height: 200px;
+      }
+
+      #box1 {
+         background-color:lightpink;
+      }
+      #box2 {
+         background-color:lightskyblue;
+         /* position: fixed;
+         left: 100px;
+         top: 200px; */
+         /* position: absolute;
+         left: 100px;
+         top: 200px;
+         position: relative;
+         left: 100px;
+         top: 200px; */
+      }
+      #box3 {
+         background-color:lightyellow;
+      }
+      
+      /* #box1:hover + #box2 {
+         left: 400px;
+      } */
+
+      #p1 {
+         width: 300px; height: 300px;
+         background-color: lightyellow;
+      }
+
+      #p2 {
+         width: 200px; height: 200px; margin: 30px;
+         background-color: rgb(255, 245, 156);
+      }
+
+      #p3 {
+         width: 100px; height: 100px; margin: 30px;
+         background-color: rgb(255, 236, 61);
+         position: absolute;
+         left: 0px;
+         top: 0px;
+      }
+
+   </style>
+</head>
+<body>
+   <h1>계층</h1>
+
+   <div class="box" id="p1">
+      조부모
+      <div class="box" id="p2">
+         부모
+         <div class="box" id="p3">나</div>
+      </div>
+   </div>
+
+   <h1>float</h1>
+   <div class="box" id="box1">상자1</div>
+   <div class="box" id="box2">상자2</div>
+   <div class="box" id="box3">상자3</div>
+
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus dicta fuga fugiat velit voluptatum laborum, repudiandae aut aliquam architecto error sapiente impedit cupiditate iste accusantium quaerat, doloremque repellat illum repellendus distinctio id aliquid cum molestias ut placeat. Odio iste nisi quod aperiam culpa. Rerum nobis beatae explicabo deleniti quasi officia nisi impedit consectetur dolor distinctio? Soluta aut pariatur neque assumenda veritatis a eius excepturi explicabo voluptate voluptatibus, voluptatum repellendus incidunt minima saepe blanditiis officia debitis minus molestias? Cumque incidunt repudiandae dolorum at blanditiis, amet consequuntur pariatur labore doloremque debitis laboriosam quibusdam praesentium odio repellendus itaque hic sed, vitae reiciendis doloribus.</p>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus dicta fuga fugiat velit voluptatum laborum, repudiandae aut aliquam architecto error sapiente impedit cupiditate iste accusantium quaerat, doloremque repellat illum repellendus distinctio id aliquid cum molestias ut placeat. Odio iste nisi quod aperiam culpa. Rerum nobis beatae explicabo deleniti quasi officia nisi impedit consectetur dolor distinctio? Soluta aut pariatur neque assumenda veritatis a eius excepturi explicabo voluptate voluptatibus, voluptatum repellendus incidunt minima saepe blanditiis officia debitis minus molestias? Cumque incidunt repudiandae dolorum at blanditiis, amet consequuntur pariatur labore doloremque debitis laboriosam quibusdam praesentium odio repellendus itaque hic sed, vitae reiciendis doloribus.</p>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus dicta fuga fugiat velit voluptatum laborum, repudiandae aut aliquam architecto error sapiente impedit cupiditate iste accusantium quaerat, doloremque repellat illum repellendus distinctio id aliquid cum molestias ut placeat. Odio iste nisi quod aperiam culpa. Rerum nobis beatae explicabo deleniti quasi officia nisi impedit consectetur dolor distinctio? Soluta aut pariatur neque assumenda veritatis a eius excepturi explicabo voluptate voluptatibus, voluptatum repellendus incidunt minima saepe blanditiis officia debitis minus molestias? Cumque incidunt repudiandae dolorum at blanditiis, amet consequuntur pariatur labore doloremque debitis laboriosam quibusdam praesentium odio repellendus itaque hic sed, vitae reiciendis doloribus.</p>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus dicta fuga fugiat velit voluptatum laborum, repudiandae aut aliquam architecto error sapiente impedit cupiditate iste accusantium quaerat, doloremque repellat illum repellendus distinctio id aliquid cum molestias ut placeat. Odio iste nisi quod aperiam culpa. Rerum nobis beatae explicabo deleniti quasi officia nisi impedit consectetur dolor distinctio? Soluta aut pariatur neque assumenda veritatis a eius excepturi explicabo voluptate voluptatibus, voluptatum repellendus incidunt minima saepe blanditiis officia debitis minus molestias? Cumque incidunt repudiandae dolorum at blanditiis, amet consequuntur pariatur labore doloremque debitis laboriosam quibusdam praesentium odio repellendus itaque hic sed, vitae reiciendis doloribus.</p>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus dicta fuga fugiat velit voluptatum laborum, repudiandae aut aliquam architecto error sapiente impedit cupiditate iste accusantium quaerat, doloremque repellat illum repellendus distinctio id aliquid cum molestias ut placeat. Odio iste nisi quod aperiam culpa. Rerum nobis beatae explicabo deleniti quasi officia nisi impedit consectetur dolor distinctio? Soluta aut pariatur neque assumenda veritatis a eius excepturi explicabo voluptate voluptatibus, voluptatum repellendus incidunt minima saepe blanditiis officia debitis minus molestias? Cumque incidunt repudiandae dolorum at blanditiis, amet consequuntur pariatur labore doloremque debitis laboriosam quibusdam praesentium odio repellendus itaque hic sed, vitae reiciendis doloribus.</p>
+   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus dicta fuga fugiat velit voluptatum laborum, repudiandae aut aliquam architecto error sapiente impedit cupiditate iste accusantium quaerat, doloremque repellat illum repellendus distinctio id aliquid cum molestias ut placeat. Odio iste nisi quod aperiam culpa. Rerum nobis beatae explicabo deleniti quasi officia nisi impedit consectetur dolor distinctio? Soluta aut pariatur neque assumenda veritatis a eius excepturi explicabo voluptate voluptatibus, voluptatum repellendus incidunt minima saepe blanditiis officia debitis minus molestias? Cumque incidunt repudiandae dolorum at blanditiis, amet consequuntur pariatur labore doloremque debitis laboriosam quibusdam praesentium odio repellendus itaque hic sed, vitae reiciendis doloribus.</p>
+</body>
+</html>
