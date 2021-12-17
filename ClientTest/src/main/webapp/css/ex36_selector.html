@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      span { color: red; }
+
+      span::before {
+         content: '<b>';
+      }
+
+      span::after {
+         content: ']';
+      }
+
+      .box {
+         width: 150px;
+         height: 150px;
+      }
+
+      /* #box1 { background: url(../images/bullet02.png) no-repeat 10px 20px; } */
+      #box1 { background-color: tomato; float: left;}
+      #box2 { background-color: thistle; float: left;}
+      #box3 { background-color: gold; float: left;}
+      #box4 { background-color: greenyellow; float: left;}
+      #link1 { clear: both; }
+
+   </style>
+</head>
+<body>
+   <p>Lorem ipsum dolor sit <span>amet consectetur</span> adipisicing elit. Cumque, <span></span>expedita minus voluptates quas numquam animi v</span>oluptatum ad facere <span> repellat! Quos molestias nam, rem facere non illum </span>animi aut repellat consequatur praesentium minima blanditiis deleniti debitis. Placeat numquam rerum nam quibusdam odit doloribus quam! Facilis modi itaque magni doloremque rerum. Quos sint asperiores adipisci exercitationem, quae, ipsum ducimus vitae voluptatem eaque velit totam iste quas accusantium, commodi voluptate itaque ratione dolorum quisquam. Vitae cum at voluptates ex illo quam. Dolorem reiciendis numquam, beatae ullam maxime ut fugiat commodi natus aut tempora voluptatum vero enim dolores accusamus recusandae minima qui sit voluptatem.</p>
+
+   <hr>
+   <div id="box1" class="box">상자1</div>
+   <div id="box2" class="box">상자2</div>
+   <div id="box3" class="box">상자3</div>
+   <!-- <div id="box4" class="box">상자4</div> -->
+
+   <div style="clear:both;"></div>
+   <a href="#!" id="link1">링크입니다.</a>
+</body>
+</html>
