@@ -44,6 +44,7 @@ header {
 }
 .innerHeader .logo {
     float: left;
+    padding-top: 15px;
 }
 .innerHeader .logo img {
     width: 100%; height: auto;
@@ -59,13 +60,14 @@ header {
     margin-left: 80px;
 }
 .innerHeader .gnb li a {
-    display: block; width: 100%;
+    display: block; 
+    width: 100%;
     height: 100%;
     text-align: center;
     color: #fff;
     font-size: 16px;
 }
-.innerHeader .gnb li:hover, .innerHeader.gnb li:focus {
+.innerHeader .gnb li a:hover, .innerHeader .gnb li a:focus {
     color: #ff8342;    
 }
 .innerHeader .tnb {
@@ -77,10 +79,10 @@ header {
 }
 .innerHeader .tnb li a {
     display: block;
-    width: 100px;
+    width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
 }
 .innerHeader .tnb li:nth-child(1) a i, .innerHeader .tnb li:nth-child(2) a i {
@@ -534,3 +536,26 @@ footer .inner .list li a:focus {
 footer .inner .list li:last-child a {
     font-weight: bold;
 }
+/* 1599 */
+/* @media screen and (max-width:1599px) {
+    header .innerHeader {
+        width: 95%;
+        min-width: 1024px;
+    }
+    .innerHeader .gnb {
+        margin-left: 50px;
+    }
+    .innerHeader .gnb li {
+        margin-left: 10px;
+    }
+    .innerHeader .gnb li:last-child {
+        margin-right: 0;
+    }
+    .innerHeader .tnb li {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    section.about ul, section.innovations .imgBox, section.me ul.list, section.sns ul {
+        width: 95%;
+    }
+} */
