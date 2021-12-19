@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+
+      .box {
+         width: 200px;
+         height: 200px;
+         border: solid;
+         margin: 10px;
+      }
+      #box1 {
+         box-shadow: 10px 10px 20px #999;
+      }
+
+      span:first-child{
+         color: blue;
+      }
+
+      p:hover > span {
+         text-shadow: 2px 2px 2px #999;
+         color: tomato;
+      }
+
+   </style>
+</head>
+<body>
+   <div id="box1" class="box">상자1</div>
+   <div id="box2" class="box">상자2</div>
+   <div id="box3" class="box">상자3</div>
+
+   <hr>
+
+   <p>안녕하세요. <span>홍길동</span>입니다. 저는 자바 공부를 하니다.</p>
+</body>
+</html>

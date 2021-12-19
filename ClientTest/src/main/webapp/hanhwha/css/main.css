@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500&family=Noto+Sans+KR&display=swap');
+*{margin: 0; padding: 0;}
+/* reset */
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none; color: inherit;
+}
+
+/* layout */
+.en {
+    font-family: 'Exo 2', sans-serif;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+}
+.wrap {
+    margin: 0 auto; 
+}
+#skip-nav {
+    position: fixed; left: 0; top: -41px; width: 100%; line-height: 40px; background: #ff8342;
+    color: #fff; text-align: center; border-bottom: #ff0000;
+    transition: all 0.5s;
+}
+#skip-nav:focus { 
+    top: 0;
+}
+header {
+    position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100px; 
+    line-height: 100px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.innerHeader {
+    width: 1600px; margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.innerHeader .logo {
+    float: left;
+}
+.innerHeader .logo img {
+    width: 100%; height: auto;
+}
+.innerHeader .gnbMo {
+    display: none;
+}
+.innerHeader .gnb {
+    float: left;
+}
+.innerHeader .gnb li {
+    float: left; margin-right: 80px;
+}
+.innerHeader .gnb li a {
+    display: block; width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.innerHeader .gnb li:hover, .innerHeader.gnb li:focus {
+    color: #ff8342;    
+}
+.innerHeader .tnb {
+    float: right;
+}
+.innerHeader .tnb li {
+    float: left;
+    margin-right: 25px;
+}
+.innerHeader .tnb li a {
+    display: block;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+.innerHeader .tnb li:nth-child(1) a i, .innerHeader .tnb li:nth-child(2) a i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+.innerHeader .tnb li:last-child a {
+    display: block;
+    width: 105px;
+    line-height: 2;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    margin-top: 35px;
+}
+.innerHeader .tnb li:last-child a i {
+    margin-left: 5px;
+}
+.innerHeader .tnb li:last-child a:hover {
+    background: #fff;
+    color: #ff8342;
+    transition: all 0.5s;
+}
+
+/* sectionmain */
+section.main {
+    width: 100%; height: 100vh; 
+    background: url(../img/vis_4.jpg)no-repeat center/cover;
+    position: relative;
+    background-attachment: fixed;
+}
+section.main .mainTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
