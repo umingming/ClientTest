@@ -10,6 +10,9 @@ a {
 }
 
 /* layout */
+.mo {
+    display: none;
+}
 .en {
     font-family: 'Exo 2', sans-serif;
 }
@@ -32,6 +35,7 @@ header {
     width: 100%; height: 100px; 
     line-height: 100px;
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 200;
 }
 .innerHeader {
     width: 1600px; margin: 0 auto;
@@ -52,6 +56,7 @@ header {
 }
 .innerHeader .gnb li {
     float: left; margin-right: 80px;
+    margin-left: 80px;
 }
 .innerHeader .gnb li a {
     display: block; width: 100%;
@@ -112,4 +117,226 @@ section.main .mainTitle {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
+    text-shadow: 0 0 5px rgba(8, 8, 8, 0.5);
+    animation-name: mainTitle;
+    animation-duration: 1s;
+}
+
+@keyframes mainTitle {
+    0% {opacity: 0; top: 60%;}
+    30% {opacity: 0; top: 60%;}
+    100% {opacity: 1; top: 50%;}
+}
+section.main .mainTitle h2 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+section.main .mainTitle p {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+section.main .mainTitle .view {
+    display: block;
+    text-align: center;
+    width: 180px; margin: 0 auto;
+    padding: 8px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+section.main .mainTitle .view:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+section.main .mainTitle .view:hover:after {
+    width: 100%;
+    transition: all 0.3s;
+}
+
+/* section .title */
+section .title {
+    color: #000;
+    text-align: center;
+}
+section .title h2 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+section .title h2 span {
+    color: #ff8342;
+}
+section .title p {
+    color: #555;
+    font-size: 18px;
+}
+
+}
+/* section.about */
+section.about {
+    background: #fff;
+    padding: 80px 0;
+}
+section.about ul {
+    margin: 30px auto;
+    width: 1400px;
+    border-bottom: 1px solid #ddd;
+    /* background: red; */
+    overflow: hidden;
+}
+section.about ul li {
+    float: left;
+    width: 33.3333%;
+}
+section.about ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+section.about ul li a p.img {
+    width: 100%;
+    height: 369px;
+    overflow: hidden;
+}
+section.about ul li a p.img img {
+    width: 100%;
+    height: auto;
+    transition: all 0.8s;
+}
+section.about ul li a:hover p.img img, section ul li a:focus p.img img {
+    transform: scale(1.2);
+    transition: all 1s;
+}
+section.about ul li a .text {
+    padding: 30px;
+}
+section.about ul li a .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+section.about ul li a .text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+section.about ul li a .text p.more {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 40px;
+    position: relative;
+}
+section.about ul li a .text p.more:before {
+    content: '\f178';
+    font-family: FontAwesome;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ff8342;
+    position: absolute;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+}
+/* section.innovations */
+section.innovations {
+    margin-bottom: 150px;
+}
+section.innovations .imgBox {
+    width: 1400px;
+    height: 540px;
+    margin: 50px auto 0;
+    background: url(../img/product_1.jpg) no-repeat center/cover;
+    position: relative;
+}
+section.innovations .imgBox .inner {
+    background: #3a3c4e;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+}
+section.innovations .imgBox .inner h3 {
+    background: #fff;
+    padding: 25px 45px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+section.innovations .imgBox .inner h3 span {
+    color: #ff8342;
+}
+section.innovations .imgBox .inner .bottom {
+    padding: 35px 85px;
+    box-sizing: border-box;
+    color: #fff;
+    overflow: hidden;
+    line-height: 1.6;
+}
+section.innovations .imgBox .inner .bottom p {
+    float: left;
+}
+
+section.innovations .imgBox .inner .bottom a {
+    padding: 7px 30px;
+    background: #ff8342;
+    border-radius: 50px;
+    float: right;
+}
+section.innovations .imgBox .inner .bottom a:hover,
+section.innovations .imgBox .inner .bottom a:focus {
+    background: #f86010;
+}
+
+/* section.me */
+section.me {
+    margin-bottom: 150px;
+    padding: 80px 0;
+    background: url(../img/me.jpg) no-repeat center/cover;
+}
+section.me ul.list {
+    width: 1400px;
+    margin: 50px auto;
+}
+section.me ul.list>li {
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+section.me ul.list>li:nth-child(1) {
+    border-bottom: 1px solid #ddd;
+}
+section.me ul.list li h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative;
+}
+section.me ul.list li h3 span {
+    position: absolute;
+    left: -35px;
+    color: #ff8342;
+}
+section.me ul.list li > p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+section.me ul.list li > a {
+    display: block;
+    background: red;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
+}
+section.me ul.list li > a span {
+    color: #ff8342;
+    font-weight: bold;
+    margin-left: 3px;
+    font-size: 14px;
 }
