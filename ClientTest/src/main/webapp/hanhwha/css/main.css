@@ -329,7 +329,6 @@ section.me ul.list li > p {
 }
 section.me ul.list li > a {
     display: block;
-    background: red;
     font-weight: bold;
     font-size: 16px;
     line-height: 1.6;
@@ -339,4 +338,43 @@ section.me ul.list li > a span {
     font-weight: bold;
     margin-left: 3px;
     font-size: 14px;
+}
+section.me ul.in {
+    margin-bottom: 30px;
+}
+section.me ul.in li {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+section.me ul.in li em {
+    float: left;
+    width: 12%;
+    font-weight: bold;
+}
+section.me ul.in li p {
+    float: left;
+    width: 88%;
+    position: relative;
+}
+section.me ul.in li p:before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff8342;
+}
+section.me button {
+    display: block;
+    background: #ff8342;
+    width: 280px;
+    border: none;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    border-radius: 50px;
+    color: #fff
 }
