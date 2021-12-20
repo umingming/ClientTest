@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #list {
+         width: 800px;
+         border: 1px solid grey;
+      }
+      .box {
+         width: 100px;
+         height: 50px;
+         margin: 15px 0px;
+         transition: width 1s linear;
+      }
+      #box1 { background-color: tomato; transition-delay: 0s; }
+      #box2 { background-color: rgb(245, 232, 116); transition-delay: 1s; }
+      #box3 { background-color: yellowgreen; transition-delay: 2s; }
+      #box4 { background-color: skyblue; transition-delay: 3s; }
+      #box5 { background-color: plum; transition-delay: 4s; }
+
+      #list:hover .box {
+         width: 800px;
+      }
+
+   </style>
+</head>
+<body>
+   <div id="list">
+      <div id="box1" class="box">linear</div>
+      <div id="box2" class="box">ease</div>
+      <div id="box3" class="box">ease-in</div>
+      <div id="box4" class="box">ease-out</div>
+      <div id="box5" class="box">ease-in-out</div>
+   </div>
+</body>
+</html>

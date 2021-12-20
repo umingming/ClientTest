@@ -38,7 +38,41 @@
          border: 1px solid gray;
          outline: none;
          border-radius: 3px;
+         /* padding: 3px 7px; */
       }
+/* 
+      .btn {
+
+      } */
+      #btn {
+         background-color: grey;
+         color: white;
+         /* width: 0%; */
+         border: 0px;
+         border-radius: 3px;
+         transition: all 0.3s;
+         position: relative
+      }
+      #btn:before {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         left: 0;
+         right: 0;
+         background-color: black;
+      }
+
+      .btn:hover #btn:before,
+      .btn:focus #btn:before {
+         background-color: blue;
+      }
+      
+      /* #btn:hover {
+         background: white;
+         color: black;
+         transition: all 0.3s;
+      } */
 
    </style>
 </head>
@@ -49,10 +83,8 @@
    <div class="box" id="box2">
       Nemo fugit sint et quo voluptas similique, eum earum ut. Vel deserunt officiis adipisci repudiandae perferendis recusandae, repellendus porro inventore labore, voluptate optio hic non ipsum numquam nihil, doloremque similique.
    </div>
-   <div class="tmp">
-      <div class="box" id="box3">
-         Tempore doloribus alias, praesentium aliquid nisi dolore obcaecati explicabo ad. Similique, dolorem laboriosam. Mollitia nihil sit distinctio magnam similique praesentium cumque, quibusdam enim dolore doloremque quo molestiae nam necessitatibus ipsum!
-      </div>
+   <div class="box" id="box3">
+      Tempore doloribus alias, praesentium aliquid nisi dolore obcaecati explicabo ad. Similique, dolorem laboriosam. Mollitia nihil sit distinctio magnam similique praesentium cumque, quibusdam enim dolore doloremque quo molestiae nam necessitatibus ipsum!
    </div>
 
    <div id="list1">
@@ -65,6 +97,9 @@
 
    <h1>폼 태그</h1>
    아이디: <input type="text" id="txtid">
-
+   <br><br>
+   <p class="btn">
+      <input type="button" value="가입하기" id="btn">
+   </p>
 </body>
 </html>
