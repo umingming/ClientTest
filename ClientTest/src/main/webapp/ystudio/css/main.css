@@ -9,6 +9,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
 tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
 h1, h2, h3, h4, h5, h6 {font-size: inherit;}
 a { text-decoration: inherit; color: inherit;}
+li {list-style: none;}
 
 /* layout */
 body { font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
@@ -147,4 +148,174 @@ header { width: 100%; padding-top: 30px; position: fixed; z-index: 100;}
     font-size: 20px;
     font-weight: 400;
     color: #999;
+}
+/* project */
+.contents .project {
+    color: #fff;
+}
+.contents .project .top {
+    width: 1170px;
+    height: 90px;
+    margin: 130px auto 60px;
+}
+.contents .project .top h3 {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.3;
+    float: left;
+}
+.contents .project .top a {
+    float: right;
+    font-size: 18px;
+    display: block;
+}
+.contents .project .top a span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+.contents .project ul {
+    clear: both;
+    width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contents .project ul li {
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+}
+.contents .project ul li:last-child {
+    margin-right: 0;
+}
+.contents .project ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.contents .project ul li a img {
+    width: 100%;
+    transition: all 0.5s;
+}
+.contents .project ul li a:hover img {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.contents .project ul li a .name {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #1b1b1b;
+    padding: 15px 15px;
+    width: 250px;
+    text-align: right;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+.contents .project ul li a .name span {
+    font-size: 15px;
+    font-weight: bold;
+}
+.contents .project ul li a .name h3 {
+    text-transform: uppercase;
+}
+/* partner */
+.partner {
+    width: 1170px;
+    margin: 120px auto;
+    color: #fff;
+}
+.partner h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+.partner ul {
+    overflow: hidden;
+}
+.partner ul li {
+    float: left;
+    width: 29%;
+    height: 100px;
+    margin-top: 80px;
+    text-align: center;
+}
+.partner ul li:nth-child(1), 
+.partner ul li:nth-child(5) {
+    width: 21%;
+    text-align: left;
+}
+.partner ul li:nth-child(4),
+.partner ul li:nth-child(8) {
+    text-align: right;
+    width: 21%;
+}
+.partner ul li img {
+    display: inline-block;
+    opacity: 0.4;
+    transition: all 0.3s;
+}
+.partner ul li:hover img {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+/* contact */
+.contact {
+    width: 100%;
+    background: url(../img/contact.jpg) no-repeat;
+    padding: 190px 0;
+    background-size: 90%;
+    background-position: left;
+    color: #fff;
+    position: relative;
+    background-attachment: fixed;
+}
+.contact .inner {
+    width: 1170px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.3;
+}
+.contact .inner h3 {
+    font-weight: 400;
+}
+.contact .inner .tel {
+    margin: 50px 0;
+    font-size: 55px;
+    font-weight: bold;
+}
+/* footer */
+footer {
+    background: #1b1b1b;
+    color: #999;
+    padding: 0 80px 80px;
+    position: relative;
+}
+footer ul {
+    overflow: hidden;
+}
+footer ul li {
+    float: left;
+    width: 33.333%;
+}
+footer ul li:nth-child(2) {
+    color: #eee;
+    font-size: 16px;
+    line-height: 2;
+}
+footer ul li:nth-child(2) span {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #999;
+}
+footer ul li:nth-child(3) {
+    font-weight: bold;
+}
+footer .goTop {
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    font-size: 50px;
+    color: white;
 }
