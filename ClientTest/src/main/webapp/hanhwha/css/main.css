@@ -54,10 +54,10 @@ header {
 }
 .innerHeader .gnb {
     float: left;
+    margin-left: 80px;
 }
 .innerHeader .gnb li {
     float: left; margin-right: 80px;
-    margin-left: 80px;
 }
 .innerHeader .gnb li a {
     display: block; 
@@ -537,7 +537,7 @@ footer .inner .list li:last-child a {
     font-weight: bold;
 }
 /* 1599 */
-/* @media screen and (max-width:1599px) {
+@media screen and (max-width:1599px) {
     header .innerHeader {
         width: 95%;
         min-width: 1024px;
@@ -546,16 +546,15 @@ footer .inner .list li:last-child a {
         margin-left: 50px;
     }
     .innerHeader .gnb li {
-        margin-left: 10px;
+        margin-right: 40px;
     }
     .innerHeader .gnb li:last-child {
         margin-right: 0;
     }
     .innerHeader .tnb li {
-        margin-left: 0;
         margin-right: 10px;
     }
     section.about ul, section.innovations .imgBox, section.me ul.list, section.sns ul {
         width: 95%;
     }
-} */
+}

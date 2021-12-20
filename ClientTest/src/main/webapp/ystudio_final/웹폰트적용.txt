@@ -1,0 +1,16 @@
+* 무료 웹폰트 아이콘 사용하기
+
+https://linearicons.com/free
+
+
+css  CDN
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+scrript CDN
+
+<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+
+
+유니코드
+https://unicode-table.com/kr/
