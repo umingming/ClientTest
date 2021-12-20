@@ -14,34 +14,18 @@
          width: 100px;
          height: 50px;
          margin: 15px 0px;
-         transition: width 1s linear;
+         transition: width 10s;
       }
-      #box1 { background-color: tomato; transition-delay: 0s; }
-      #box2 { background-color: rgb(245, 232, 116); transition-delay: 1s; }
-      #box3 { background-color: yellowgreen; transition-delay: 2s; }
-      #box4 { background-color: skyblue; transition-delay: 3s; }
-      #box5 { background-color: plum; transition-delay: 4s; }
+      #box1 { background-color: tomato; transition-timing-function: linear;}
+      #box2 { background-color: rgb(245, 232, 116); transition-timing-function: ease;}
+      #box3 { background-color: yellowgreen; transition-timing-function: ease-in;}
+      #box4 { background-color: skyblue; transition-timing-function: ease-out;}
+      #box5 { background-color: plum; transition-timing-function: ease-in-out;}
 
       #list:hover .box {
          width: 800px;
       }
 
-      #box {
-         border: 1px solid black;
-         width: 100px;
-         height: 100px;
-         /* background-color: gold; */
-         overflow: hidden;
-      }
-
-      #content {
-         background-color: cornflowerblue;
-         transition: all 0.5s;
-      }
-      #content:hover {
-         transform: translate(0px, -200px);
-         transition: all 0.5s;
-      }
    </style>
 </head>
 <body>
@@ -51,11 +35,6 @@
       <div id="box3" class="box">ease-in</div>
       <div id="box4" class="box">ease-out</div>
       <div id="box5" class="box">ease-in-out</div>
-   </div>
-
-   <hr>
-   <div id="box">
-      <div id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cumque error reiciendis perspiciatis sit esse eos inventore facere quae temporibus.</div>
    </div>
 </body>
 </html>

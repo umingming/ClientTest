@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         width: 800px;
+         margin: auto;
+      }
+      .line {
+         border: 1px solid black;
+         height: 100px;
+         position: relative;
+      }
+      .circle {
+         float: left;
+         border: 1px solid black;
+         height: 80px;
+         width: 80px;
+         margin-top: 18px;
+         font-size: 60px;
+         font-weight: bold;
+         text-align: center;
+         border-radius: 50%;
+         transition: all 3s;
+      }
+      div.box:hover .circle {
+         transform: rotate(1800deg);
+         transition: all 3s;
+         /* position: absolute; */
+      }
+      div.box:hover .move {
+         transition: all 3s;
+         width: 715px;
+      }
+      div.move {
+         transition: all 3s;
+         width: 0%;
+         height: 100%;
+         float: left;
+         transition-timing-function: ease;
+      }
+      </style>
+</head>
+<body>
+   <h1>:hover + transform + border-radius</h1>
+   <p>마우스를 올리면 반응하시오.</p>
+   <div class="box">
+      <div class="line" id="line1">
+         <div class="move" id="move1"></div>
+         <div class="circle" id="circle1">A</div>
+      </div>
+      <div class="line" id="line2">
+         <div class="move" id="move1"></div>
+         <div class="circle" id="circle2">B</div>
+      </div>
+      <div class="line" id="line3">
+         <div class="move" id="move1"></div>
+         <div class="circle" id="circle3">C</div>
+      </div>
+      <div class="line" id="line4">
+         <div class="move" id="move1"></div>
+         <div class="circle" id="circle4">D</div>
+      </div>
+      <div class="line" id="line5">
+         <div class="move" id="move1"></div>
+         <div class="circle" id="circle5">E</div>
+      </div>
+   </div>
+</body>
+</html>

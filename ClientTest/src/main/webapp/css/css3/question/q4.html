@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         margin: auto;
+         width: 730px;
+      }
+      div.box {
+         width: 730px;
+         margin: auto;
+      }
+      .img div {
+         float: left;
+         border: 10px solid black;
+         margin-bottom: 5px;
+         margin-right: -10px;
+         overflow: hidden;
+      }
+      #img1 div img {
+         transform: translate(-130px, 0px);
+         transition: all .5s;
+      }
+      #img1 div:hover img {
+         transform: translate(0px, 0px);
+         transition: all .5s;
+      }
+      #img2 div img {
+         opacity: 0;
+         transition: all .5s;
+      }
+      #img2 div:hover img {
+         opacity: 1;
+         transition: all .5s;
+      }
+      #img3 div img {
+         transform: scale(0.001, 0.001);
+         transition: all .5s;
+      }
+      #img3 div:hover img {
+         transform: scale(1, 1);
+         transition: all .5s;
+      }
+      #img4 div img {
+         transform: rotate(-180deg);
+         transform-origin: 0px 0px;
+         transition: all .5s;
+      }
+      #img4 div:hover img {
+         transform: rotate(0deg);
+         transition: all .5s;
+      }
+      </style>
+</head>
+<body>
+   <h1>:hover + transform + transition</h1>
+   <p>마우스를 올리면 반응하시오.</p>
+   <div class="box">
+      <div class="img" id="img1">
+         <div><img src="../../../images/rect_icon01.png" alt=""></div>
+         <div><img src="../../../images/rect_icon02.png" alt=""></div>
+         <div><img src="../../../images/rect_icon03.png" alt=""></div>
+         <div><img src="../../../images/rect_icon04.png" alt=""></div>
+         <div><img src="../../../images/rect_icon05.png" alt=""></div>
+      </div>
+      <div class="img" id="img2">
+
+         <div><img src="../../../images/rect_icon01.png" alt=""></div>
+         <div><img src="../../../images/rect_icon02.png" alt=""></div>
+         <div><img src="../../../images/rect_icon03.png" alt=""></div>
+         <div><img src="../../../images/rect_icon04.png" alt=""></div>
+         <div><img src="../../../images/rect_icon05.png" alt=""></div>
+      </div>
+      <div class="img" id="img3">
+
+         <div><img src="../../../images/rect_icon01.png" alt=""></div>
+         <div><img src="../../../images/rect_icon02.png" alt=""></div>
+         <div><img src="../../../images/rect_icon03.png" alt=""></div>
+         <div><img src="../../../images/rect_icon04.png" alt=""></div>
+         <div><img src="../../../images/rect_icon05.png" alt=""></div>
+      </div>
+      <div class="img" id="img4">
+         
+         <div><img src="../../../images/rect_icon01.png" alt=""></div>
+         <div><img src="../../../images/rect_icon02.png" alt=""></div>
+         <div><img src="../../../images/rect_icon03.png" alt=""></div>
+         <div><img src="../../../images/rect_icon04.png" alt=""></div>
+         <div><img src="../../../images/rect_icon05.png" alt=""></div>
+      </div>
+   </div>
+</body>
+</html>

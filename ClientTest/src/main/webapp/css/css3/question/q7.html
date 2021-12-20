@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         width: 800px;
+         margin: auto;
+      }
+      #clock {
+         border: 30px dashed grey;
+         width: 800px;
+         height: 800px;
+         position: relative;
+      }
+      #clock div {
+         border: 10px solid rgb(51, 51, 51);
+         border-radius: 50px;
+         width: 50px;
+         overflow: hidden;
+         color: grey;
+         text-align: center;
+         position: absolute;
+         left: 50%;
+         transform-origin: center bottom;
+         transition-timing-function: linear;
+      }
+      #sec {
+         height: 300px;
+         background: rgb(252, 243, 122);
+      }
+      #min {
+         top: 100px;
+         height: 200px;
+         background: skyblue;
+      }
+      #hour {
+         height: 100px;
+         top: 200px;
+         background: tomato;
+      }
+      #clock:hover #sec {
+         transform: rotate(21600deg);
+         transition: all 30s;
+         transition-timing-function: linear;
+      }
+      #clock:hover #min {
+         transition-timing-function: linear;
+         transform: rotate(360deg);
+         transition: all 30s;
+      }
+      #clock:hover #hour {
+         transition-timing-function: linear;
+         transform: rotate(60deg);
+         transition: all 30s;
+      }
+      </style>
+</head>
+<body>
+   <h1>transform(rotate) + transform-origin + transition</h1>
+   <p>시계침을 돌리시오.</p>
+   <div id="clock">
+      <div id="hour">Hour</div>
+      <div id="min">Min</div>
+      <div id="sec">Sec</div>
+   </div>
+   
+</body>
+</html>
