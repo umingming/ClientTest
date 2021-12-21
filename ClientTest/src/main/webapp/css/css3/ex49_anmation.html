@@ -27,8 +27,11 @@
       }
 
       @keyframes key3 {
-         from { width: 150px; }
-         to { width: 300px; }
+         0% { left: 0; top: 0; }
+         25% { left: 300px; top: 0;}
+         50% { left: 300px; top: 300px; transform: rotate(360deg);}
+         75% { left: 0px; top: 300px; }
+         100% { left: 0; top: 0; }
       }
       #box1 {
          /* transition: all 1s; */
@@ -42,7 +45,36 @@
       }
 
       #box3 {
-         animation: key3 1s;
+         /* animation: key3 5s;
+         animation-timing-function: linear;
+         position: relative;
+         animation-iteration-count: 3;
+         animation-direction: reverse; */
+      }
+
+      .cat {
+         animation-name: keyCat;
+         animation-iteration-count: 3;
+         animation-duration: 1s;
+         
+      }
+      
+      .btn {
+         animation-duration: 1s;
+
+      }
+      .btn:hover {
+         animation-name: keyBtn;
+         animation-duration: .1s;
+         animation-iteration-count: 3;
+      }
+
+      @keyframes keyBtn {
+         0% { transfrom: translate(0px, 0px); }
+         25% { transfrom: translate(-5px, 0px); }
+         50% { transfrom: translate(0px, 0px); }
+         75% { transfrom: translate(0px, 5px); }
+         100% { transfrom: translate(0px, 0px); }
       }
    </style>
 </head>
@@ -50,5 +82,17 @@
    <div id="box1" class="box">상자1</div>
    <div id="box2" class="box">상자2</div>
    <div id="box3" class="box">상자3</div>
+
+   <h1>고양이</h1>
+   <div>
+      <img src="../../images/catty01.png" alt="">
+      <img src="../../images/catty02.png" alt="">
+      <img src="../../images/catty03.png" alt="">
+      <img src="../../images/catty04.png" alt="">
+      <img src="../../images/catty05.png" alt="">
+   </div>
+   <input type="button" class="btn effect1" value="목록보기">
+   <input type="button" class="btn" value="가입하기">
+   <input type="button" class="btn" value="삭제하기">
 </body>
 </html>

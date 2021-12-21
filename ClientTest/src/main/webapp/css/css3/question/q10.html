@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<style>
+		body {
+			background-color: #222;
+			overflow: hidden;
+		}
+		
+		#text {
+			text-align: center;
+			margin-top: 400px;
+			font-variant: small-caps;
+		}
+		
+		#text span {
+         animation: txt 0.5s;
+			color: white;
+			font-size: 7em;
+			font-family: Arial;
+			display: inline-block;
+         /* animation-iteration-count: infinite; */
+         animation-fill-mode: backwards;
+		}
+      #text span:nth-child(2) {
+         animation-delay: 0.1s;
+      }
+      #text span:nth-child(3) {
+         animation-delay: 0.2s;
+      }
+      #text span:nth-child(4) {
+         animation-delay: 0.9s;
+      }
+      #text span:nth-child(5) {
+         animation-delay: 1.2s;
+      }
+      #text span:nth-child(6) {
+         animation-delay: 1.5s;
+      }
+      #text span:nth-child(7) {
+         animation-delay: 1.8s;
+      }
+      #text span:nth-child(8) {
+         animation-delay: 2.1s;
+      }
+      #text span:nth-child(9) {
+         animation-delay: 2.4s;
+      }
+      #text span:nth-child(10) {
+         animation-delay: 2.7s;
+      }
+      #text span:nth-child(11) {
+         animation-delay: 3.0s;
+      }
+      #text span:nth-child(12) {
+         animation-delay: 3.3s;
+         color: yellow;
+      }
+
+      @keyframes txt {
+         0% { transform: translate(2500%, 0) rotate(360000deg); }
+         100% { transform: translate(0, 0); }
+      }
+		
+	</style>
+</head>
+
+<body>
+	<div id="text">
+		<span>H</span>
+		<span>e</span>
+		<span>l</span>
+		<span>l</span>
+		<span>o</span>
+		<span>!</span>
+		<span></span>
+		<span>H</span>
+		<span>T</span>
+		<span>M</span>
+		<span>L</span>
+		<span><i class="fab fa-html5"></i></span>
+	</div>
+	
+</body>
+
+</html>
