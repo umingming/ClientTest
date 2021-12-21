@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .box {
+         border: 1px solid black;
+         width: 150px;
+         height: 150px;
+         margin: 20px;
+      }
+
+      #box1 { background: tomato;}
+      #box2 { background: gold;}
+      #box3 { background: cornflowerblue;}
+
+      @keyframes key1 {
+         from {
+            width: 150px;
+         }
+         to {
+            width: 300px;
+         }
+      }
+
+      @keyframes key3 {
+         from { width: 150px; }
+         to { width: 300px; }
+      }
+      #box1 {
+         /* transition: all 1s; */
+      }
+      
+      #box1:hover {
+         animation: key1 1s;
+         animation-fill-mode: forwards;
+         /* width: 300px;
+         transition: all 1s; */
+      }
+
+      #box3 {
+         animation: key3 1s;
+      }
+   </style>
+</head>
+<body>
+   <div id="box1" class="box">상자1</div>
+   <div id="box2" class="box">상자2</div>
+   <div id="box3" class="box">상자3</div>
+</body>
+</html>

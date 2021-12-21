@@ -13,7 +13,7 @@ li {list-style: none;}
 
 /* layout */
 body { font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
-.wrap {width: 100%; margin: 0 auto;}
+.wrap {width: 100%; margin: 0 auto; position: relative;}
 
 /* header */
 header { width: 100%; padding-top: 30px; position: fixed; z-index: 100;}
@@ -55,6 +55,44 @@ header { width: 100%; padding-top: 30px; position: fixed; z-index: 100;}
     margin-top: -6px;
 }
 
+/* gnb */ 
+.gnb {
+    padding: 70px 100px;
+    height: 100vh;
+    color: #666;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    z-index: 200;
+    box-sizing: border-box;
+    transition: all .7s;
+}
+.gnb.on {
+    right: 0;
+    transition: all .8s;
+}
+.gnb .close {
+    font-size: 40px;
+    color: #fff;
+    float: right;
+    display: block;
+}
+.gnb ul {
+    float: left;
+    margin-right: 200px;
+}
+.gnb ul li a {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.7;
+    transition: all 0.3s;
+}
+.gnb ul li:first-child a,
+.gnb ul li:hover {
+    color: #fff;
+    transition: all 0.5s;
+}
 /* visual */
 .visual {
     
