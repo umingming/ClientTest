@@ -169,20 +169,97 @@ header.on .innerHeader .logo a img:nth-child(2) {
     bottom: 10%;
 }
 
-/* 모션 */
-.visual .scroll {
+/* visual slick 화살표 위치 지정 */
+.slick-arrow {
+    position: absolute;
+    right: 0px; bottom: 0px;
+    width: 60px; height: 60px;
+    line-height: 60px;
+    background: #fff;
+    z-index: 20;
+    text-indent: -9999px;
+    border: none;
+}
+
+.slick-arrow:after {
+    content: '<';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #888;
+    font-size: 20px;
+    left: 0;
+    top: 0;
+    text-indent: 0px;
+    font-weight: 300;
+    transition: all 0.2s;
+}
+
+.slick-arrow.slick-prev {
+    bottom: 60px;
+}
+.slick-arrow.slick-next:after {
+    content: '>';
+}
+
+.slick-arrow:hover {
+    cursor: pointer;
+    background: #ccc;
+    transition: all 0.5s;
+    
+}
+
+.slick-arrow:hover:after {
+    font-size: 28px;
+    color: #333;
+    transition: all 0.2s;
+}
+
+/* 이미지 */
+.slick-active .txt p {
+    animation-name: txt1;
+    animation-duration: 0.8s;
+}
+@keyframes txt1 {
+    0% {opacity: 0; transform: rotateX(180deg) translateY(-150px);}
+    20% {opacity: 0; transform: rotateX(180deg) translateY(-150px);}
+    100% {opacity: 1; transform: rotateX(0deg) translateY(0px);}
+}
+
+.slick-active .txt a {
+    animation-name: txt2;
+    animation-duration: 0.8s;
+}
+@keyframes txt2 {
+    0% {opacity: 0; transform: rotateX(180deg) translateY(+150px);}
+    20% {opacity: 0; transform: rotateX(180deg) translateY(+150px);}
+    100% {opacity: 1; transform: rotateX(0deg) translateY(0px);}
+}
+.slick-active .txt h3 {
+    animation-name: txt3;
+    animation-duration: 0.8s;
+}
+@keyframes txt3 {
+    0% {transform: translateX(0); }
+    20% {transform:translateX(-50px);}
+    100% {transform: translateX(0); }
+}
+.slick-active .scroll {
     animation-name: scroll;
     animation-duration: 0.8s;
 }
 @keyframes scroll {
-    0% {
-        opacity: 0;
-        left: -100px;
-    }
-    100% {
-        opacity: 1;
-        left: 50px;
-    }
+    0% {opacity: 0; left: -100px;}
+    20% {opacity: 0; left: -100px;}
+    100% {opacity: 1; left: 50px;}
+}
+.slick-active img {
+    animation-name: img;
+    animation-duration: 1s;
+}
+@keyframes img {
+    0% {opacity: 0; right:-80px; transform: scale(0.99);}
+    100% {opacity: 1; right: 0px;}
 }
 
 /* contents */

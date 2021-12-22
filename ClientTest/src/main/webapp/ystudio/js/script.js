@@ -50,3 +50,17 @@ $(function() {
         $('html, body').animate({scrollTop: 0}, 400);
     });
 });
+
+//이미지 슬라이드
+
+$(function(){
+    $(".visual .slide").slick({
+        arrows: true,    //화살표
+        dots: false,    //인디케이트 해제
+        fade: true,    //페이드인효과
+        autoplay: true,     //자동재생
+        autoplaySpeed: 4000, //재생시간
+        pauseOnHover: false,
+        pauseOnFocus: false
+    })
+})
