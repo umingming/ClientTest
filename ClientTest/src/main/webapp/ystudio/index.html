@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>ystudio</title>
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <title>ystudio</title>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+</head>
 </head>
 <body>
     <div class="wrap">
@@ -37,7 +42,25 @@
         <section class="visual">
             <ul class="slide">
                 <li>
-                    <img src="img/visual1.jpg" alt="">
+                    <img src="img/visual1.jpg" alt="슬라이드이미지1">
+                    <div class="txt">
+                        <p>Creative disign</p>
+                        <h3>Website & App <br>Resposive Web and <br> Brand Identity</h3>
+                        <a href="#">See the work<span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
+                <li>
+                    <img src="img/visual2.jpg" alt="슬라이드이미지2">
+                    <div class="txt">
+                        <p>Creative disign</p>
+                        <h3>Website & App <br>Resposive Web and <br> Brand Identity</h3>
+                        <a href="#">See the work<span class="lnr lnr-chevron-right"></span></a>
+                    </div>
+                    <span class="scroll">Scroll down</span>
+                </li>
+                <li>
+                    <img src="img/visual3.jpg" alt="슬라이드이미지3">
                     <div class="txt">
                         <p>Creative disign</p>
                         <h3>Website & App <br>Resposive Web and <br> Brand Identity</h3>
@@ -48,17 +71,17 @@
             </ul>
         </section>
         <section class="contents">
-            <div class="mainText">
+            <div class="mainText animate" data-animate="fadeInUp" data-duration="1s" data-delay="0s"> 
                 <h3>Great experience <br> build great</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br>Mollitia, beatae impedit sequi recusandae et eveniet atque ex tenetur! <br> Natus qui ea dicta autem culpa earum. <br>Eum quidem doloremque atque fugiat!
                 <span>YSTUDIO</span></p>
             </div>
             <div class="project">
                 <div class="top">
-                    <h3>Meet <br>Out Projects </h3>
+                    <h3 class="animate" data-animate="fadeInLeft" data-duration="1s" data-delay="0s">Meet <br>Out Projects </h3>
                     <a href="#">Moro Projects <span class="lnr lnr-chevron-right"></span></a>
                 </div>
-                <ul>
+                <ul class="animate" data-animate="fadaInUp" data-duration="1s" data-delay="0s">
                     <li><a href="#">
                         <img src="img/project1.jpg" alt="">
                         <div class="name">
@@ -91,7 +114,7 @@
             </div>
             <div class="partner">
                 <h3>우리는 소중한 고객입니다.</h3>
-                <ul>
+                <ul class="animate" data-animate="fadeInRight" data-duration="1s" data-delay="0s">
                     <li><img src="img/partner1.png" alt=""></li>
                     <li><img src="img/partner2.png" alt=""></li>
                     <li><img src="img/partner3.png" alt=""></li>
@@ -102,7 +125,7 @@
                     <li><img src="img/partner8.png" alt=""></li>
                 </ul>
             </div>
-            <div class="contact">
+            <div class="contact animate" data-animate="fadeIn" data-duration="2s" data-delay="0s">
                 <div class="inner">
                     <h3>당신의 프로젝트를 이야기해주세요.</h3>
                     <p class="tel">010.1234.1234</p>
