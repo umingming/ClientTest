@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         margin: 0 auto;
+         width: 40%;
+      }
+      #result {
+         border: 0;
+      }
+   </style>
+</head>
+<body>
+   <h1>회원 가입</h1>
+   <form name="form1">
+      아이디 : 
+      <input type="text" name="input">
+      <input type="text" name="result" id="result">
+   </form>
+   <script>
+      var input = window.document.form1.input
+      input.onkeyup = checkLength;
+
+      function checkLength() {
+         if(input.value.length < 6){
+            window.document.body.bgColor = 'tomato';
+         } else {
+            window.document.body.bgColor = 'white';
+
+         }
+
+      }
+   </script>
+
+</body>
+</html>

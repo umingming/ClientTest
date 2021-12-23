@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      input {
+         display: block;
+      }
+   </style>
+</head>
+<body>
+   <h1>Event</h1>
+   <form name="form1">
+      <input type="text" name="txt1">
+      <input type="button" name="btn1" value="버튼1">
+      <input type="button" name="btn2" value="버튼2" onclick="m2()">
+   </form>
+   <script>
+      var btn1 = window.document.form1.btn1;
+
+      btn1.onclick = m1;
+
+      function m1() {
+         var now = new Date();
+         var time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+         window.document.form1.txt1.value = time;
+      }
+
+      function m2() {
+         var now  = new Date(); 
+         var date= now.getDate(); 
+         window.document.form1.txt1.value = date;
+      }
+   </script>
+</body>
+</html>

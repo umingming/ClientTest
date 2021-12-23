@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      input, textarea { display: block; margin: 10px 0;}
+      input { width: 300px;}
+   </style>
+   <script>
+
+   </script>
+</head>
+<body>
+   <h1>키 이벤트</h1>
+   <form name="form1">
+      <input type="text" name="txt1">
+      <input type="text" name="txt2">
+      <textarea name="txt3"></textarea>
+   </form>
+   <script>
+      var txt1 = window.document.form1.txt1;
+      var txt2 = window.document.form1.txt2;
+      var txt3 = window.document.form1.txt3;
+
+      txt1.onkeydown = m1;
+      txt1.onkeyup = m2;
+      function m1() {
+         // alert('m1');
+         // console.log(event.keyCode);
+         txt2.value = txt1.value;
+      }
+
+      function m2() {
+         // alert('m2');
+         // console.log('m2');
+      }
+
+      // txt3.onkeydown = m4;
+
+      function m4() {
+
+      }
+   </script>
+</body>
+</html>

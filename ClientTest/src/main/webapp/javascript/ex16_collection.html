@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+
+   </style>
+</head>
+<body>
+   <h1>이미지</h1>
+   <img src="../images/catty01.png" alt="">
+   <img src="../images/catty02.png" alt="">
+   <img src="../images/catty03.png" alt="">
+   <img src="../images/catty04.png" alt="">
+   <img src="../images/catty05.png" alt="">
+   <h1>링크</h1>
+   <a href="https://naver.com">네이버</a>
+   <a name="#top">위로</a>
+   <a href="https://google.com">구글</a>
+   <a href="#bottom">아래로</a>
+   <a href="https://daum.net">다음</a>
+
+   <h1>폼</h1>
+   <fieldset>
+      <legend>컨트롤 3개</legend>
+      <form name="form1">
+         <input type="text">
+         <input type="password">
+         <input type="button" value="암호 보이기">
+      </form>
+   </fieldset>
+   <fieldset>
+      <legend>컨트롤 1개</legend>
+      <form name="form2">
+         <label>check: </label>
+         <input type="checkbox">
+      </form>
+   </fieldset>
+   <script>
+      console.log(window.document.form1.elements.length);
+      console.log(window.document.forms[1].elements.length);
+   </script>
+</body>
+</html>

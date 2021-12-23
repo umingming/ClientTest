@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      textarea, input {
+         display: block;
+         margin-bottom: 10px;
+      }
+      textarea {
+         width: 500px;
+         height: 300px;
+         outline: none;
+      }
+
+   </style>
+</head>
+<body>
+   
+   <h1>마우스 관련 이벤트</h1>
+
+   <form name="form1">
+      <textarea name="txt1"></textarea>
+      <input type="button" value="버튼1" name="btn1">
+   </form>
+   <script>
+      var txt1 = window.document.form1.txt1;
+      var btn1 = window.document.form1.btn1;
+      txt1.onmouseover = m1;
+      txt1.onmouseout = m2;
+      txt1.onmousedown = m3;
+      
+      function m1() {
+         // alert('m1');
+         window.document.body.bgColor = 'cornflowerblue';
+      }
+      
+      function m2() {
+         window.document.body.bgColor = 'white';
+      }
+      function m3() {
+         // window.document.body.bgColor = 'orange';
+         // txt1.value = '마우스 다운: ' + event.buttons;
+         // txt1.value = event.clientX + ',' + event.clientY;
+         txt1.value = event.screenX + ',' + event.screenY;
+      }
+      
+      btn1.onmouseover = f1;
+      btn1.onmouseout = f2;
+      
+      function f1() {
+         btn1.value = 'button1';
+      }
+      
+      function f2() {
+         btn1.value = '버튼1';
+      }
+      
+      
+      </script>
+   
+</body>
+</html>

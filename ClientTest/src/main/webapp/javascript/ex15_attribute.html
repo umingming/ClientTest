@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      form > input {
+         display: block;
+         margin-bottom: 10px;
+      }
+   </style>
+</head>
+<body>
+   <h1>JavaScript로 태그의 속성 제어하기</h1>
+   <form name="form1">
+      <input type="text" name="txt1">
+      <input type="button" name="btn1" value="클릭">
+      
+      <hr>
+      <input type="password" name="pw1">
+      <input type="button" name="btn2" value="암호 보이기">
+   </form>
+   <script>
+      var txt1 = window.document.form1.txt1;
+      var btn1 = window.document.form1.btn1;
+      var btn2 = window.document.form1.btn2;
+
+      btn2.onclick = m2;
+      function m2() {
+         
+         if (pw.typ3 == 'password') {
+            pw1.type = 'text';
+            btn2.vale = '암호감추기';
+            
+         } else {
+            
+            pw.type = 'password';
+            btn2.value = '암호보이기'
+         }
+      }
+   </script>
+</body>
+</html>
