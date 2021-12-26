@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .item {
+         border: 1px solid #ccc;
+         background: #eee;
+         padding: 10px;
+         width: 440px;
+      }
+
+      .item > input[type=button] {
+         border: 1px solid #ccc;
+         background: white;
+         width: 120px;
+         height: 60px;
+         margin: 10px;
+         outline: none;
+      }
+   </style>
+</head>
+<body>
+   <form name="form1">
+      <div class="item">
+         <input type="button" name="btnRed" value="빨강" onclick="m4('Tomato');">
+         <input type="button" name="btnYellow" value="노랑"onclick="m4('gold');">
+         <input type="button" name="btnBule" value="파랑"onclick="m4('cornflowerblue');">
+      </div>
+      <div class="item">
+         <input type="button" name="btnRed" value="빨강" onclick="m1();">
+         <input type="button" name="btnYellow" value="노랑"onclick="m2();">
+         <input type="button" name="btnBule" value="파랑"onclick="m3();">
+      </div>
+      
+      <div class="item">
+         <input type="button" name="btnRed" value="빨강" onclick="m5(this);">
+         <input type="button" name="btnYellow" value="노랑"onclick="m5(this);">
+         <input type="button" name="btnBule" value="파랑"onclick="m5(this);">
+      </div>
+      <div class="item">
+         <input type="button" name="btnRed" value="tomato" onclick="m6(this);">
+         <input type="button" name="btnYellow" value="노랑"onclick="m6(this);">
+         <input type="button" name="btnBule" value="파랑"onclick="m6(this);">
+      </div>
+      <div class="item">
+         <input type="button" name="btnRed" value="빨강" onclick="m7(this);"
+         data-color='tomato'>
+         <input type="button" name="btnYellow" value="노랑"onclick="m7(this);">
+         <input type="button" name="btnBule" value="파랑"onclick="m7(this);">
+      </div>
+      <div class="item">
+         <input type="button" name="btnRed" value="빨강" onclick="m8();"
+         data-color='tomato'>
+         <input type="button" name="btnYellow" value="노랑"onclick="m8();">
+         <input type="button" name="btnBule" value="파랑"onclick="m8();">
+      </div>
+      <div class="item">
+         <input type="button" name="btnRed9" value="빨강" >
+         <input type="button" name="btnYellow9" value="노랑" >
+         <input type="button" name="btnBlue9" value="파랑" >
+      </div>
+      <div class="item">
+         <input type="button" name="btn" value="빨강" data-color='tomato'>
+         <input type="button" name="btn" value="노랑" >
+         <input type="button" name="btn" value="파랑" >
+      </div>
+      <div class="item">
+         <input type="button" name="btn11" value="버튼" data-color1='tomato' data-color2='gold'>
+      </div>
+   </form>
+   <script>
+      function m1() {
+         document.body.bgColor = "tomato";
+      }
+      function m2() {
+         document.body.bgColor = "gold";
+      }
+      function m3() {
+         document.body.bgColor = "cornflowerblue";
+      }
+      function m4(color) {
+         document.body.bgColor = color;
+      }
+      function m5(btn) {
+         var color = btn.name.substring(3)
+         document.body.bgColor = color;
+      }
+      function m6(btn) {
+         document.body.bgColor = btn.value;
+      }
+      function m7(btn) {
+         document.body.bgColor = btn.dataset['color'];
+      }
+      function m8() {
+         document.body.bgColor = event.srcElement.dataset['color'];
+      }
+      function m8() {
+         document.body.bgColor = event.srcElement.dataset['color'];
+      }
+      
+      document.form1.btnRed9.onclick = m9;
+      document.form1.btnYellow9.onclick = m9;
+      document.form1.btnBlue9.onclick = m9;
+
+      var colors = [];
+      colors['btnRed9'] = 'red';
+      colors['btnYellow9'] = 'gold';
+      colors['btnBlue9'] = 'cornflowerblue';
+      function m9() {
+         document.body.bgColor = colors[event.srcElement.name];
+      }
+      
+      
+      for(var i=0; i<document.form1.btn.length; i++){
+         document.form1.btn[i].onclick = m10;
+      }
+      
+      // alert(document.form1.btn.length);
+      function m10() {
+         // alert(event.srcElement.dataset['color']);
+         document.body.bgColor = event.srcElement.dataset['color'];
+      }
+      
+      document.form1.btn11.onmouseover = m11;
+      document.form1.btn11.onmouseout = m11;
+      
+      function m11() {
+         if (event.type == 'mouseover') {
+            document.body.bgColor = event.srcElement.dataset['color1'];
+         } else if (event.type == 'mouseout') {
+            document.body.bgColor = event.srcElement.dataset['color2'];
+         }
+      }
+      
+   </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <form name="form1">
+      <img src="../../images/cat01.jpg" name="cat">
+      <img src="../../images/cat02.jpg" name="cat">
+      <img src="../../images/cat03.jpg" name="cat">
+      <img src="../../images/cat04.jpg" name="cat">
+      <img src="../../images/cat05.jpg" name="cat">
+   </form>
+   <script>
+         for(var i=0; i<document.form1.cat.length; i++){
+            document.form1.cat[i].onmouseover = m1;
+            document.form1.cat[i].onmouseout = m1;
+         }
+         
+         function m1() {
+               if(event.type == 'mouseover') {
+                  event.srcElement.src = event.srcElement.src.replace('cat', 'dog');
+               } else if (event.type == 'mouseout') {
+                  event.srcElement.src = event.srcElement.src.replace('dog', 'cat');
+               }
+         }
+   </script>
+   
+</body>
+</html>

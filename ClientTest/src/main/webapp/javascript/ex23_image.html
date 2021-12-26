@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>이미지</h1>
+   <input type="button" name="btn1" value="확인">
+   <hr>
+   <img src="../images/cat01.jpg" name="cat1">
+   <hr>
+   <img src="../images/cat01.jpg" name="cat2">
+   <hr>
+   <img src="../images/cat01.jpg" name="cat3">
+   <hr>
+   <img src="../images/switch_on.png" name="sw1">
+   <script>
+      document.all.btn1.onclick = m1;
+
+      function m1() {
+         var cat1 = document.images["cat1"];
+         // cat1.width = 300;
+         cat1.src = '../images/cat02.jpg';
+      }
+      var cat2 = document.images["cat2"];
+      cat2.onmouseover = m2;
+      cat2.onmouseout = m3;
+      function m2() {
+         cat2.src = '../images/cat02.jpg';
+      }
+      function m3() {
+         cat2.src = '../images/cat01.jpg';
+      }
+      document.images["sw1"].onclick = m4;
+      
+      function m4() {
+         if (sw1.src.endsWith('switch_on.png')){
+            document.images["sw1"].src = '../images/switch_off.png';
+            document.body.bgColor = 'black';
+         } else {
+            document.images["sw1"].src = '../images/switch_on.png';
+            document.body.bgColor = 'white';
+         }
+      }
+      
+      var cat3 = document.images["cat3"];
+      var n = 1;
+      cat3.onclick = m5;
+
+      function m5() {
+         n++;
+         if(n > 5) {
+            n = 1;
+         }
+         cat3.src = '../images/cat0' + n + '.jpg';
+      }
+      
+      window.onkeydown = m6;
+
+      function m6() {
+         if(event.keyCode == 39) {
+            
+         }
+      }
+
+      </script>
+</body>
+</html>

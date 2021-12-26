@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         width: 500px;
+         margin: 0 auto;
+      }
+      form {
+         height: 265px;
+      }
+      div {
+         float: left;
+      }
+      div#btn1 {
+         width: 150px;
+      }
+      div#img1 {
+         position: relative;
+      }
+      img {
+         position: absolute;
+         left: 20px;
+         top: 40px;
+      }
+      input {
+         width: 120px;
+         margin: 10px;
+         font-size: 20px;
+      }
+   </style>
+</head>
+<body>
+   <form name="form1">
+      <div id=btn1>
+         <input type="button" value="강아지1" name="btn" data-src='dog01'>
+         <input type="button" value="강아지2" name="btn" data-src='dog02'>
+         <input type="button" value="강아지3" name="btn" data-src='dog03'>
+         <input type="button" value="강아지4" name="btn" data-src='dog04'>
+         <input type="button" value="강아지5" name="btn" data-src='dog05'>
+      </div>
+      <div id=img1>
+         <img src="../../images/dog01.jpg" name="img">
+      </div>
+   </form>
+   <script>
+      for(var i=0; i<document.form1.btn.length; i++){
+         document.form1.btn[i].onmouseover = m1;
+      }
+      
+      function m1() {
+         document.form1.img.src = document.form1.img.src.replace('dog01', event.srcElement.dataset['src']);
+      }
+   </script>
+</body>
+</html>

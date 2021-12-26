@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      fieldset {
+         border: 1px solid gray;
+         border-radius: 5px;
+         padding: 15px 20px;
+         margin: 15px 0px;
+      }
+   </style>
+</head>
+<body>
+   <h1>하이</h1>
+   <form name="pform">
+      <fieldset>
+         <legend>새창 열기와 닫기</legend>
+         <input type="button" name="pbtn1" value="자식창 띄우기">
+         <input type="button" name="pbtn2" value="자식창 닫기">
+      </fieldset>
+      <fieldset>
+         <legend>창 접근</legend>
+         <input type="text" name="ptxt1">
+         <input type="button" name="pbtn3" value="자식창에 있는 텍스트박스 접근하기">
+      </fieldset>
+      <fieldset>
+         <legend>아이디</legend>
+         <input type="text" name="ptxt2">
+         <input type="button" name="pbtn4" value="중복 검사">
+      </fieldset>
+
+   </form>
+   <script>
+      var pbtn1 = window.document.pform.pbtn1;
+      var pbtn2 = window.document.pform.pbtn2;
+      var pbtn4 = window.document.pform.pbtn4;
+      var ptxt2 = window.document.pform.ptxt2;
+
+      // ptxt2.onclick = 
+      pbtn4.onclick = m4;
+
+      pbtn1.onclick = m1;
+      pbtn2.onclick = m2;
+
+      function m1() {
+         // window.open('https://naver.com', 'child', '');
+         child = window.open('ex17_child.html', 'child', 'width=300 height=200');
+      }
+      function m2() {
+         child.close();
+      }
+      var pbtn3 = window.document.pform.pbtn3;
+      pbtn3.m3;
+      
+      function m3() {
+         child.document.cform.ctxt1.value = '부모 창에서 접근했습니다.'
+      }
+      function m4() {
+         child = window.open('ex17_child.html', 'idcheck', 'width=300 height=400');
+      }
+   </script>
+</body>
+</html>

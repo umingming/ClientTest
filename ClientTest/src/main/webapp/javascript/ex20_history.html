@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input type="button" name="btn1" value="뒤로 가기">
+   <input type="button" name="btn2" value="앞으로 가기">
+
+   <script>
+      document.all.btn1.onclick = m1;
+      document.all.btn2.onclick = m2;
+
+      function m1() {
+         window.history.back();
+         // window.history.go();
+      }
+      function m2() {
+         window.history.forward();
+
+      }
+
+   </script>
+</body>
+</html>

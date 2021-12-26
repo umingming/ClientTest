@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         width: 400px;
+         margin: 0 auto;
+      }
+      div {
+         border: 1px solid gray;
+         
+      }
+      div.txt {
+        float: left;
+        background: lightgray;
+      }
+      div.txt div {
+         height: 40px;
+         width: 100px;
+         text-align: center;
+      }
+      div.input div{
+         margin-left: 16px;
+         height: 40px;
+      }
+      div.input div input {
+         margin: 3px 8px;
+         height: 70%;
+      }
+      input#num {
+         width: 100px;
+      }
+   </style>
+</head>
+<body>
+   <h1>우편 번호 검색</h1>
+   <form name="pform1">
+      <div class="txt">
+         <div>우편 번호 </div>
+         <div>주소</div>
+         <div>상세 주소</div>
+      </div>
+      <div class="input">
+         <div><input type="text" name="text1" id="num" ><input type="button" name="search" value="우편 번호 검사하기"></div>
+         <div><input type="text" name="text2" ></div>
+         <div><input type="text" name="text3" ></div>
+      </div>
+   </form>
+   <script>
+      document.pform1.search.onclick = m1;
+      function m1() {
+         window.open('event3_check.html', 'child')
+      }
+   </script>
+</body>
+</html>

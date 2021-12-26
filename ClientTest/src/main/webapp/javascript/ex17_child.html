@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>하이</h1>
+   <form name="cform">
+      <fieldset>
+         <legend></legend>
+         <input type="text" name="ctxt1">
+         <input type="button" name="cbtn1" value="부모창에 있는 텍스트박스 접근하기">
+      </fieldset>
+      <fieldset>
+         <legend>아이디</legend>
+         <input type="text" name="ctxt2">
+         <input type="button" name="cbtn2" value="중복검사">
+         <input type="button" name="cbtn3" value="사용하기">
+         <input type="button" name="cbtn4" value="닫기">
+      </fieldset>
+   </form>
+
+   <script>
+      window.document.cform.cbtn1.onclick = m1;
+      function m1() {
+         opener.document.pform.ptxt1.value = '자식 창에서 접근했습니다.';
+      }
+      window.document.cform.cbtn3.onclick = m2;
+      
+      function m2() {
+         opener.document.pform.ptxt2.value = window.document.cform.ctxt2.value;
+      }
+   
+   </script>
+   
+</body>
+</html>

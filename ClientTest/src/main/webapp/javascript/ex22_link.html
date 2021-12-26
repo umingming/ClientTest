@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>링크</h1>
+   <a href="http://naver.com" name="link1">네이버</a>
+   <hr>
+   <input type="button" name="btn1" value="클릭">
+   <script>
+      document.all.btn1.onclick = m1;
+      function m1() {
+         document.links["link1"].href = 'http://google.com';
+         document.links["link1"].target = '_blank';
+         document.links["link1"].title = '구글로 이동합니다.';
+         
+         document.links["link1"].innerText = '구글';
+      }
+   </script>
+</body>
+</html>
