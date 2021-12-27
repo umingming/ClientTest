@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input type="text" value="10" name="txt">
+   <script>
+      var txt = document.all.txt;
+      window.onkeydown = m1;
+      timer = setInterval(f1, 1000);
+
+      var n = txt.value;
+      function f1() {
+         txt.value = n;
+         n--;
+         if(n == 0){
+            location.href = 'http://naver.com';
+         }
+      }
+
+      function m1() {
+         if(event.keyCode == 27) {
+            clearInterval(timer);
+            document.body.bgColor = 'tomato';
+         }
+      }
+      
+
+   </script>
+</body>
+</html>

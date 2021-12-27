@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      div {
+         border: 1px solid gray;
+         width: 500px;
+         text-align: center;
+         font-size: 60px;
+      }
+      div>input {
+         border: 0;
+         font-size: 60px;
+         width: 13%;
+      }
+      input{
+         border: 1px solid gray;
+         background: white;
+      }
+      input:disabled{
+         background: gray;
+      }
+   </style>
+</head>
+<body>
+   <div class="clock">
+      <input type="text" value="00" name="hh" maxlength="2">  
+      <span>:</span>
+      <input type="text" value="00" name="mm" maxlength="2">  
+      <span>:</span>
+      <input type="text" value="00" name="ss" maxlength="2">  
+   </div>
+   <input type="button" name="btn1" value="시작">
+   <input type="button" name="btn2" value="멈춤" disabled>
+   <input type="button" name="btn3" value="종료" disabled>
+   <script>
+      var hh = document.all.hh;
+      var mm = document.all.mm;
+      var ss = document.all.ss;
+      var btn1 = document.all.btn1;
+      var btn2 = document.all.btn2;
+      var btn3 = document.all.btn3;
+      var ssNum = 0;
+      var mmNum = 0;
+      var hhNum = 0;
+
+      btn1.onclick = start;
+      function start(){
+         btn1.disabled = true;
+         btn2.disabled = false;
+         btn3.disabled = false;
+
+         timerSS = setInterval(f1, 10);
+
+      }
+      btn2.onclick = stop;
+      function stop(){
+         btn2.disabled = true;
+         btn1.disabled = false;
+         btn3.disabled = false;
+      
+         clearInterval(timerSS);
+         
+      }
+      btn3.onclick = close;
+      function close(){
+         btn3.disabled = true;
+         btn2.disabled = true;
+         btn1.disabled = false;
+         
+         clearInterval(timerSS);
+         ss.value = '00';
+         mm.value = '00';
+
+      }
+
+      function f1(){
+         ssNum++;
+         if(ssNum < 10) {
+            ss.value = '0' + ssNum;
+         } else {
+            ss.value = ssNum;
+         }
+         if(ssNum > 100){
+            timerMM = setTimeout(f2, 0);
+            ssNum = 0;
+         }
+      }
+      function f2(){
+         mmNum++;
+         if(mmNum < 10) {
+            mm.value = ('0' + mmNum);
+         } else {
+            mm.value = mmNum;
+         }
+      }
+
+      
+   </script>
+</body>
+</html>
