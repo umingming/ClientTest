@@ -20,6 +20,7 @@ body {
 .wrap {
     width: 100%;
     overflow: hidden;
+    height: 5000px;
 }
 
 /* header */
@@ -27,7 +28,7 @@ header {
     width: 100%;
     position: fixed;
     z-index: 100;
-    background: red;
+    background: #191a1a;
 }
 .innerHeader {
     padding: 0 60px;
@@ -83,7 +84,26 @@ header {
     font-size: 18px;
     font-weight: 500;
 }
+.gnb >li >a:before {
+    position: absolute;
+    content: '';
+    background: #f8b922;
+    width: 75%;
+    height: 100%;
+    z-index: -1;
+    left: 50%;
+    top: -90px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.gnb >li:hover >a:before,
+.gnb >li >a:focus:before {
+    top: 0;
+    opacity: 1;
+}
 .gnb ul.inner {
+    left: 12%;
     position: absolute;
     top: 80px;
     width: 160px;
@@ -107,4 +127,47 @@ header {
     opacity: 1;
     padding: 10px 25px;
     line-height: 50px;
+}
+.gnb ul.inner a span {
+    display: inline-block;
+    position: relative;
+}
+.gnb ul.inner a span:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f8b922;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    transition: all 0.3s;
+}
+.gnb ul.inner a:hover span:after,
+.gnb ul.inner a:focus span:after {
+    width: 100%;
+    padding-right: 10px;
+}
+
+/* fixHeader */
+header.on .innerHeader {
+    height: 60px;
+    transition: all 0.4s;
+}
+header.on .innerHeader .gnb > li {
+    height: 60px;
+    line-height: 60px;
+    transition: all 0.4s;
+}
+header.on .innerHeader .logo {
+    transition: all 0.4s;
+    margin-top: 13px;
+}
+header.on .innerHeader .logo a img:nth-child(1){
+    opacity: 0;
+}
+header.on .innerHeader .logo a img:nth-child(2){
+    opacity: 1;
+}
+header.on .gnb ul.inner.on {
+    top:60px;
 }
