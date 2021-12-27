@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>라디오</h1>
+   <label><input type="radio" name="rb" value="white">흰색</label>
+   <label><input type="radio" name="rb" value="gray">검은색</label>
+   <label><input type="radio" name="rb" value="gold">노란색</label>
+   <label><input type="radio" name="rb" value="skyblue">파란색</label>
+   <label><input type="radio" name="rb" value="tomato">빨간색</label>
+   <script>
+      var rb = document.all.rb;
+
+      for(var i=0; i<rb.length; i++){
+         rb[i].onchange = m1;
+      }
+
+      function m1() {
+         document.body.bgColor = event.srcElement.value;
+      }
+
+   </script>
+</body>
+</html>

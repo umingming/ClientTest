@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<ㅣ>
+   <h1>체크박스</h1>
+   <input type="checkbox" name="cb1" value="yes">
+   <input type="button" name="btn1" value="버튼1">
+   <hr>
+   <h1>회원 가입</h1>
+   <h2>이용 약관</h2>
+   <div style="width: 500px; height: 150px; overflow: auto; border: 1px solid black;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam vel saepe a corrupti, porro nihil dicta culpa odio dolore ducimus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas esse aliquid fuga culpa ullam. Corrupti impedit ex dignissimos aperiam ut sunt, earum rem cumque quia maiores assumenda temporibus a sapiente molestiae praesentium veniam ad odit in laborum possimus mollitia. Consectetur laborum quos alias exercitationem rem veritatis, fugit pariatur ipsa vitae debitis tenetur consequatur cum vel perferendis! Ad, illo. Laboriosam non voluptate placeat veniam incidunt ipsam exercitationem voluptatem dolor perspiciatis, natus accusantium neque sequi tempora ut eum error quisquam repellat asperiores possimus molestiae. Expedita ipsam aperiam repellendus corrupti vel molestiae, fugiat, ullam molestias dicta dolorem cumque totam. Rem a sint esse?</div>
+   <hr>
+   <label><input type="checkbox" name="cbAgree">약관에 동의합니다. </label>
+   <hr>
+   <input type="button" name="btnNext" value="다음 단계로" onclick="location.href='next.html';" disabled>
+
+   <hr>
+   <h1>주소록</h1>
+   <table id="tbl1" border width="500">
+      <tr>
+         <th><input type="checkbox" name="cbAll"></th>
+         <th>번호</th>
+         <th>이름</th>
+         <th>주소</th>
+         <th>나이</th>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td align="center"><input type="checkbox" name="cb"></td>
+         <td>10</td>
+         <td>홍길동</td>
+         <td>서울시 강남구</td>
+         <td>20</td>
+      </tr>
+   </table>
+   <script>
+      var cb1 = document.all.cb1;
+      var btn1 = document.all.btn1;
+
+      btn1.onclick = m1;
+
+      function m1() {
+         cb1.checked = true;
+      }
+
+      var cbAgree = document.all.cbAgree;
+      var btnNext = document.all.btnNext;
+
+      cbAgree.onchange = m2;
+
+      function m2() {
+         btnNext.disabled = !cbAgree.checked;
+      }
+      
+      var cbAll = document.all.cbAll;
+      var cb = document.all.cb;
+
+      cbAll.onchange = m3;
+
+      function m3() {
+         for (var i=0; i<cb.length; i++) {
+            cb[i].checked = cbAll.checked;
+         }
+      }
+   </script>
+</body>
+</html>

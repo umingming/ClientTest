@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      fieldset { margin: 20px; padding: 25px; }
+      fieldset div { margin: 10px 0; }
+      fieldset label { display: inline-block; width: 70px; }
+
+
+   </style>
+</head>
+<body>
+   <form name="form1" action="ex26_ok.jsp">
+      <fieldset>
+         <input type="text" name="txt1">
+         <input type="button" name="btn1" value="">
+
+      </fieldset>
+      <fieldset>
+         <legend>회원가입</legend>
+         <div>
+            <label>이름:</label>
+            <input type="text" name="txtname">
+         </div>
+         <div>
+            <label>나이:</label>
+            <input type="number" name="txtage">
+         </div>
+         <div>
+            <label>아이디:</label>
+            <input type="text" name="txtid">
+         </div>
+         <div>
+            <label>암호:</label>
+            <input type="password" name="txtpw">
+         </div>
+         <div>
+            <label>암호확인:</label>
+            <input type="password" name="pwc">
+         </div>
+         <hr>
+         <input type="button" value="가입하기" name="btn2">
+      </fieldset>
+   </form>
+
+   <script>
+      // var txt1 = document.form1.txt1;
+      // var btn1 = document.form1.btn1;
+      // function m1() {
+      //    for (var i=0; i<txt1.value.length; i++){
+      //       var c = txt1.value.charAt(i);
+
+      //       if(c < '0' || c > '9'){
+      //          alert('error');
+      //          return;
+      //       }
+      //    }
+      //    alert('good~')
+
+      // }
+
+      var txtname = document.form1.txtname;
+      var txtid = document.form1.txtid;
+      var txtage = document.form1.txtage;
+      var txtpw = document.form1.txtpw;
+      var pwc = document.form1.pwc;
+      var btn2 = document.form1.btn2;
+
+      btn2.onclick = m2;
+      
+      function m2() {
+         if (txtname.value.trim() == ''){
+            alert('이름을 반드시 입력하세요.')
+            txtname.focus();
+            return;
+         }
+         
+         if (txtname.value.length < 2 || txtname.value.length > 5) {
+            alert('이름을 2~5자로 입력하세요.');
+            txtname.focus();
+            txtname.value = '';
+            return;
+         }
+         
+         for (var i=0; i<txtname.value.length; i++ ){
+            var c = txtname.value.charAt(i);
+            if (c < '가' || c > '힣') {
+               alert('이름을 한글로 입력하세요.')
+               txtname.focus();
+               return;
+            }
+         }
+         
+         if (txtid.value.trim() == ''){
+            alert('이름을 반드시 입력하세요.')
+            txtid.focus();
+            return;
+         }
+         
+         if (txtid.value.length < 2 || txtid.value.length > 5) {
+            alert('이름을 2~5자로 입력하세요.');
+            txtid.focus();
+            txtid.value = '';
+            return;
+         }
+         
+         for (var i=0; i<txtid.value.length; i++ ){
+            var c = txtid.value.charAt(i);
+            if ((c < 'A' || c > 'Z') && (c < 'a' || c > 'z')
+                  && (c < '0' || c > '9') && c != '_') {
+               alert('아이디는 영어와 숫자와 \'_\'로만 입력하세요.')
+               txtid.focus();
+               return;
+            }
+         }
+
+
+         if (!isNaN(txtid.value.charAt(0))) {
+            alert('아이디는 숫자로 시작할 수 없습니다.');
+            txtid.focus();
+            return;
+         }
+         
+         document.form1.submit();
+      }
+      
+      </script>
+</body>
+</html>
