@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         width: 500px;
+         margin: 0 auto;
+      }
+   </style>
+</head>
+<body>
+   <h1>주문하기</h1>
+   <form name="form1">
+      <fieldset>
+         <legend>주문자</legend>
+         <div>이름: <input type="text" name="name1"></div>
+         <div>주소: <input type="text" name="address1"></div>
+      </fieldset>
+   </form>
+   <div>
+      <input type="checkbox" name="ck" id=""> 주문하시는 분과 정보과 동일합니다.
+   </div>
+   <form name="form2">
+      <fieldset>
+         <legend>주문자</legend>
+         <div>이름: <input type="text" name="name2"></div>
+         <div>주소: <input type="text" name="address2"></div>
+      </fieldset>
+   </form>
+   <script>
+      var ck = document.all.ck;
+      var name1 = document.all.name1;
+      var address1 = document.all.address1;
+      var name2 = document.all.name2;
+      var address2 = document.all.address2;
+
+      ck.onchange = m1;
+
+      function m1() {
+         if(ck.checked){
+            name2.value = name1.value;
+            address2.value = address1.value;
+         } else {
+            name2.value = '';
+            address2.value = '';
+         }
+      }
+   </script>
+</body>
+</html>

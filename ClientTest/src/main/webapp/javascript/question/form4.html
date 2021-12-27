@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>입력하기</h1>
+   <table>
+      <tr>
+         <th>번호</th>
+         <th>입력</th>
+         <th>잠금</th>
+      </tr>
+      <tr>
+         <td>1</td>
+         <td><input type="text" name="inputTxt"></td>
+         <td><input type="checkbox" name="ck"></td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td><input type="text" name="inputTxt"></td>
+         <td><input type="checkbox" name="ck"></td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td><input type="text" name="inputTxt"></td>
+         <td><input type="checkbox" name="ck"></td>
+      </tr>
+      <tr>
+         <td>4</td>
+         <td><input type="text" name="inputTxt"></td>
+         <td><input type="checkbox" name="ck"></td>
+      </tr>
+      <tr>
+         <td>5</td>
+         <td><input type="text" name="inputTxt"></td>
+         <td><input type="checkbox" name="ck"></td>
+      </tr>
+      <tr>
+         <td>6</td>
+         <td><input type="text" name="inputTxt"></td>
+         <td><input type="checkbox" name="ck"></td>
+      </tr>
+   </table>
+
+   <script>
+      var cb = document.all.ck;
+      var inputTxt = document.all.inputTxt;
+
+      window.onclick = m1;
+      function m1(){
+         for(var i=0; i<cb.length; i++){
+            cb[i].checked = inputTxt[i].readOnly;
+         }
+      }
+   </script>
+</body>
+</html>

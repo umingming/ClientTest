@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         width: 600px;
+         margin: 0 auto;
+      }
+      div {
+         border: 1px solid gray;
+         text-align: center;
+         width: 30%;
+         height: 200px;
+         float: left;
+         position: relative;
+      }
+      div input {
+         width: 100%;
+      }
+   </style>
+</head>
+<body>
+   <form name="form1">
+      <div>차단된 친구 <br>
+         <select name="sel1" multiple size="8">
+            <option value="f1">권예진</option>
+            <option value="f2">이유미</option>
+            <option value="f3">홍길동</option>
+            <option value="f4">박효주</option>
+            <option value="f5">이민섭</option>
+            <option value="f6">고은지</option>
+            <option value="f7">양소라</option>
+         </select>
+      </div>
+      <div class="btn">
+         <input type="button" value="ADD >" name="add">
+         <input type="button" value="< Remove" name="remove">
+         <input type="button" value="Add All >>" name="addAll">
+         <input type="button" value="<< Remove All" name="removeAll">
+      </div>
+      <div>허용된 친구 <br>
+         <select name="sel2" multiple size="8">
+            <option value="f1">김랑이</option>
+         </select>
+      </div>
+   </form>
+   <script>
+      var sel1 = document.all.sel1;
+      var sel2 = document.all.sel2;
+      var add = document.all.add;
+      var remove = document.all.remove;
+      var addAll = document.all.addAll;
+      var removeAll = document.all.removeAll;
+
+      add.onclick = m1;
+
+      function m1() {
+         sel2.options.add(sel1.options[sel1.selectedIndex]);
+         sel1.options.remove(sel1.selectedIndex);
+         sel2.options[sel2.options.length-1].selected = false;
+      }
+      
+      remove.onclick = m2;
+      function m2() {
+         sel1.options.add(sel2.options[sel2.selectedIndex]);
+         sel2.options.remove(sel2.selectedIndex);
+         sel1.options[sel1.options.length-1].selected = false;
+      }
+
+      addAll.onclick = m3;
+      function m3() {
+         var tmp = sel1.options.length;
+         for(var i=0; i<tmp; i++){
+            sel2.options.add(sel1.options[i]);
+         }
+      }
+      
+   </script>
+</body>
+</html>
