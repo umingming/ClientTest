@@ -31,3 +31,23 @@ function fixHeader() {
         $('header').removeClass('on');
     }
 }
+
+// 글자 애니메이션
+$(function(){
+    Splitting();
+})
+
+
+//.top-visual 이미지 슬라이드
+$(function(){
+    $('.visual .slide').slick({
+        arrow:true,  //화살표
+        dots:true,  //인디케이터
+        autoplay:true,    //자동 재상
+        fade:true,    //부드럽게 화면 전환
+        autoplaySpeed:7000,  //재생 시간
+        pauseOnHover:false,  //호버시 멈추는 것을 해제
+        pauseOnFocus:false
+    });
+    $('.slick-prev').text('prev');
+});

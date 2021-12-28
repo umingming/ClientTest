@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      div { border: 1px solid black; padding: 15px; margin: 15px; }
+      #n7 { border-width: 10px; }
+
+      .check { background-color: tomato; }
+
+  </style>
+</head>
+<body>
+   <input type="button" value="버튼1" id="btn1">
+   <hr>
+   <div id="n1">
+      할아버지
+      <div id="n2">
+         큰아버지
+         <div id="n5">
+            사촌
+         </div>
+      </div>
+      <div id="n3">
+         부모
+         <div id="n6">
+            형
+         </div>
+         <div id="n7">
+            <!-- 나(상대적 기준점) -->
+            나
+            <div id="n10">
+               첫째 자식
+            </div>
+            <div id="n11">
+               둘째 자식
+               <div id="n13">
+                  손자
+               </div>
+            </div>
+            <div id="n12">
+               막내 자식
+            </div>
+         </div>
+         <div id="n8">
+            막내 동생
+         </div>
+      </div>
+      <div id="n4">
+         작은 아빠
+         <div id="n9">
+            사촌
+         </div>
+      </div>
+   </div>
+   <script>
+      document.getElementById('btn1').onclick = function() {
+         const n7 = window.document.getElementById('n7');
+
+         // for(let i=0; i<n7.childNodes.length; i++){
+         //    console.log(n7.childNodes[i].nodeType,
+         //                n7.childNodes[i].nodeName,
+         //                n7.childNodes[i].nodeValue);
+         // }
+         // for(let i=0; i<n7.children.length; i++){
+         //    console.log(n7.children[i].nodeType,
+         //                n7.children[i].nodeName,
+         //                n7.children[i].nodeValue);
+         // }
+
+         // n7.children[0].className = 'check';
+         // n7.parentNode.parentNode.parentNode.className = 'check';
+         n7.parentElement.className = 'check';
+
+      }
+   </script>
+</body>
+</html>

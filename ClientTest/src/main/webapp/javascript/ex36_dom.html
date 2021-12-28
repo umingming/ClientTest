@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div>
+      <input type="text" name="txt1" id="txt1" class="txt">
+      <input type="text" name="txt2" id="txt1" class="txt">
+      <input type="text" name="txt3" id="txt1" class="txt">
+   </div>
+   <script>
+      var txt1 = document.getElementById('txt1');
+      txt1.value = '사과';
+      var txt = document.getElementsByClassName('txt')
+      for (var i=0; i<txt.length; i++){
+         txt[i].value = i;
+      }
+      var txt2 = document.getElementsByName('txt2')
+      txt2[0].value = '사과';
+      
+      var txt = document.getElementsByTagName('input');
+      for (var i=0; i<txt.length; i++){
+         txt[i].value = i;
+      }
+
+      var txt1_1 = document.all.txt1;
+      var txt1_2 = document.getElementById('txt1');
+      console.log(txt1_1 == txt1_2);
+      console.log(txt1_1 === txt1_2);
+   </script>
+</body>
+</html>

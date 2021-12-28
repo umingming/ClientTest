@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 /* reset */
 
@@ -22,7 +22,9 @@ body {
     overflow: hidden;
     height: 5000px;
 }
-
+.en {
+    font-family: 'Bebas Neue', cursive;
+}
 /* header */
 header {
     width: 100%;
@@ -170,4 +172,252 @@ header.on .innerHeader .logo a img:nth-child(2){
 }
 header.on .gnb ul.inner.on {
     top:60px;
+}
+
+/* section.visual */
+.visual .slide li { 
+    position: relative; 
+    width: 100%;
+    height: 870px;
+    text-align: center;
+    color: #fff;
+}
+.visual .slide li:before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22%;
+    background: url(../img/symbol.png) no-repeat center/cover;
+    z-index: 1;
+}
+
+.visual .slide li img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    top: 0;
+} 
+.visual .slide li .txt {
+    position: absolute;
+    width: 100%;
+    top: 34%;
+    line-height: 1;
+    font-size: 135px;
+    letter-spacing: 12px;
+}
+.visual .slide li a {
+    letter-spacing: 1px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 27%;
+    font-size: 20px;
+}
+.visual .slide li a:after {
+    content: '';
+    width: 65%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    background: #f8b922;
+    transition: all 0.3s;
+}
+.visual .slide li a:hover:after,
+.visual .slide li a:focus:after {
+    width: 100%;
+    transition: all 0.3s;
+}
+
+/* mask */
+.visual .slide li .mask {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.35);
+}
+.visual .slide li .mask.a {
+    left: 0%;
+}
+.visual .slide li .mask.b {
+    left: 25%;
+}
+.visual .slide li .mask.c {
+    left: 50%;
+}
+.visual .slide li .mask.d {
+    left: 75%;
+}
+.slick-arrow {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: none;
+    width: 110px;
+    height: 52px;
+    border: none;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
+}
+.slick-next {
+    right: 0;
+    text-align: left;
+}
+.slick-arrow:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55%;
+    height: 2px;
+    background: #fff;
+}
+.slick-next:after {
+    left: 45%;
+}
+.slick-arrow:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+    z-index: -1;
+}
+.slick-next:before {
+    right: 0;
+}
+.slick-prev:before {
+    left: 0;
+}
+
+/* 화살표 hover */
+.slick-arrow:hover {
+    color: #000;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.slick-arrow:hover:after {
+    background: #f8b922;
+}
+.slick-arrow:hover:before {
+    width: 112%;
+}
+
+/* 인디케이터 */
+.visual .slide .slick-dots {
+    z-index: 20;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.visual .slide .slick-dots li:before {
+    display: none;
+}
+.visual .slide .slick-dots li {
+    width: 2px;
+    height: 20px;
+    float: left;
+    margin: 0 10px;
+}
+.visual .slide .slick-dots li button {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    text-indent: -9999px;
+}
+.visual .slide .slick-dots:hover,
+.visual .slide .slick-dots button:hover {
+    cursor: pointer;
+}
+.visual .slide .slick-dots li.slick-active button {
+    background: #f8b922;
+    height: 23px;
+    margin-top: -12px;
+    transition: height 0.3s;
+}
+.visual .slick-active:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: #f8b922;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation-name: bar;
+    animation-duration: 7s;
+}
+
+@keyframes bar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* 마스크 애니 */
+.visual .slick-active .mask.a { 
+    animation-name: mask;
+    animation-duration: 0.4s;
+}
+.visual .slick-active .mask.b { 
+    animation-name: mask;
+    animation-duration: 0.6s;
+}
+.visual .slick-active .mask.c { 
+    animation-name: mask;
+    animation-duration: 0.8s;
+}
+.visual .slick-active .mask.d { 
+    animation-name: mask;
+    animation-duration: 1s;
+}
+@keyframes mask {
+    0% { width: 25%; background: #000; }
+    50% { width: 25%; background: #000; }
+    99% { background: #000; }
+}
+
+/* txt animation */
+.splitting .char {
+    display: inline-block;
+    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+}
+@keyframes slide-up {
+    0% { transform: translateY(30px); opacity: 0;}
+    80% { transform: translateY(30px); opacity: 0;}
+}
+
+/* 버튼 애니 */
+.visual .slick-active a {
+    animation-name: slide-up2;
+    animation-duration: 1s;
+}
+@keyframes slide-up2 {
+    0% { bottom: 20%; opacity: 0; }
+    60% { bottom: 20%; opacity: 0; }
+}
+.visual .slick-active img {
+    animation-name: img;
+    animation-duration: 7s;
+}
+@keyframes img {
+    0% { transform: scale(1.2) translateX(-50%) };
 }

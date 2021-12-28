@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #sample {
+         border: 1px solid black;
+         width: 750px;
+      }
+      #sample::after {
+         content: '';
+         display: block;
+         clear: both;
+
+      }
+      #sample > img {
+         width: 150px;
+         float: left;
+         border-radius: 10px;
+         cursor: pointer;
+         opacity: 0.5;
+         transition: opacity 0.5s;
+         
+      }
+      #sample > img:hover {
+         opacity: 1;
+      }
+      
+      #content::after {
+         content: '';
+         display: block;
+         clear: both;
+      }
+      #content {
+         margin-top: 50px;
+         width: 750px;
+      }
+      #content > img {
+         float: left;
+         border-radius: 10px;
+         width: 375px;
+      }
+      
+   </style>
+</head>
+<body>
+   <div id="sample">
+      <img src="../images/cat01.jpg">
+      <img src="../images/cat02.jpg">
+      <img src="../images/cat03.jpg">
+      <img src="../images/cat04.jpg">
+      <img src="../images/cat05.jpg">
+      <img src="../images/dog01.jpg">
+      <img src="../images/dog02.jpg">
+      <img src="../images/dog03.jpg">
+      <img src="../images/dog04.jpg">
+      <img src="../images/dog05.jpg">
+   </div>
+   <hr>
+   <input type="button" value="clear" id="btnClean">
+   <hr>
+   <div id="content">
+   </div>
+   <script>
+      /* 
+         -작은 이미지를 클릭하면 큰 이미지에 추가 되게
+         -클리어 버튼 누르면 큰 이미지 초기화
+      */
+      
+      const sample = document.getElementById('sample');
+      const content = document.getElementById('content');
+      const cute = document.getElementsByTagName('img');
+      const btnClean = document.getElementById('btnClean');
+
+      // for (let i=0; i<cute.length; i++){
+      //    cute[i].onclick = function() {
+      //       let tmp = cute[i].src;
+      //       content.innerHTML += '<img src=' + tmp + '>';
+      //    }
+      // }
+      for (let i=0; i<cute.length; i++){
+         cute[i].onclick = function() {
+            let fileName = getFileName(event.srcElement.src);
+            let temp = '<img src="../images' + fileName + '">';
+            content.innerHTML += temp;
+         }
+      }
+
+      function getFileName(path){
+         let index = path.lastIndexOf('/');
+         return path.substr(index);
+      }
+      
+      btnClean.onclick = function() {
+         content.innerHTML = '';
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <script>
+      var hong = new Object();
+      hong.name = '홍길동';
+      let key = 'name';
+      console.log(hong[key]);          //홍길동
+      console.log(hong.key);  
+
+      var hong = { 
+         name: '홍길동', 
+         age: 20
+      };
+
+
+      var hong = new Object();
+      hong.name = '홍길동';
+      hong.hello = function() {
+         console.log('헬로' + this.name);
+      };
+
+      hong.hello();
+   </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <input type="button" name="btn1" value="버튼1">
+   <input type="button" name="btn2" value="버튼2">
+   <script>
+      // var m1;
+      // function f1() {
+      //    console.log('f1');
+      // }
+      // console.log(typeof m1);
+      // console.log(typeof f1);
+      // m1 = f1;
+      // console.log(typeof m1);
+      // console.log(typeof f1);
+      // m1();
+
+      // var a2 = function () {
+      //    console.log('a2');
+      // }
+
+      function m1() {
+         alert(1);
+      }
+
+      document.all.btn1.onclick = m1;
+
+      function f2() {
+         console.log('f2');
+      }
+      function f3(fn) {
+         console.log('f3');
+         fn();
+      }
+
+      f3(f2);
+
+      function f4() {
+         console.log('f4');
+      }
+      function f5() {
+         return f4;
+      }
+      f5()();      //f4
+   </script>
+</body>
+</html>

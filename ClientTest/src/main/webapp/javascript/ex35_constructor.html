@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      var user1 = {
+         name: '홍길동',
+         age: 20,
+         hello: function() {
+            console.log(this.name, this.age);
+         }
+      }
+
+      function User(name, age){
+         this.name = name;
+         this.age = age;
+         this.hello = function() {
+            console.log(this.name, this.age);
+         };
+      }
+
+      var user1 = new User('홍길동', 20);
+      console.log(user1.name);
+
+      console.clear();
+
+      var o1 = new Object();
+      var o2 = new Date();
+      var o3 = new Array();
+      var o4 = new User();
+
+      console.log(typeof o1);
+      console.log(typeof o2);
+      console.log(typeof o3);
+      console.log(typeof o4);
+
+      console.log(o1.constructor.name);
+      console.log(o4.constructor.name);
+      console.log(o2.constructor.toString());
+      console.log(o3.constructor.toString());
+      console.log(o4.constructor.toString());
+
+
+
+   </script>
+</body>
+</html>

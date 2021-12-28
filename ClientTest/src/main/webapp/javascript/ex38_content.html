@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      fieldset {
+         width: 200px;
+      }
+      fieldset > div {
+         margin: 10px;
+      }
+      #tbl {
+         border: 1px solid gray;
+         border-collapse: collapse;
+      }
+      #tbl td {
+         border: 1px solid gray;
+         width: 50px;
+         height: 50px;
+
+      }
+   </style>
+</head>
+<body>
+   <h1>테이블 생성하기</h1>
+
+   <fieldset>
+      <legend>행x열</legend>
+      <div>
+         행 : <select id="selRow"></select>
+      </div>
+      <div>
+         열 : <select id="selColumn"></select>
+      </div>
+      <div>
+         <input type="button" value="생성하기" id="btnCreate">
+      </div>
+   </fieldset>
+
+   <table id="tbl"></table>
+
+   <script>
+      const selRow = document.getElementById('selRow');
+      const selColumn = document.getElementById('selColumn');
+      const btnCreate = document.getElementById('btnCreate');
+
+      for (let i=1; i<11; i++){
+         selRow.options.add(new Option(i, i));
+         selColumn.options.add(new Option(i, i));
+      }
+
+      btnCreate.onclick = function() {
+         let temp = '';
+         for (let i=0; i<selRow.value; i++) {
+            temp += '<tr>';
+            for (let j=0; j<selColumn.value; j++) {
+               temp += '<td>';
+               temp += '(' + i + ',' + j + ')';
+               temp += '</td>';
+            }
+            temp += '</tr>';
+         }
+         document.getElementById('tbl').innerHTML = temp;
+      };
+   </script>
+</body>
+</html>

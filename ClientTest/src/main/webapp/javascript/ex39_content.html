@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      img {
+         display: block;
+      }
+      #tbl { border: 1px solid black; border-collapse: collapse; }
+      #tbl td { border: 1px solid black; width: 126px; height: 126px; }
+   </style>
+</head>
+<body>
+   <table id="tbl">
+      <tr>
+         <td></td>
+         <td></td>
+         <td><img src="../images/rect_icon01.png"></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td><img src="../images/rect_icon02.png"></td>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td><img src="../images/rect_icon03.png"></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td><img src="../images/rect_icon04.png"></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td><img src="../images/rect_icon05.png"></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+   </table>
+   <script>
+      const list = document.getElementsByTagName('td');
+
+      for (let i=0; i<list.length; i++){
+         list[i].onclick = function() {
+            let td = event.srcElement;
+            td.innerHTML = '<img src="../images/rect_icon10.png">';
+         };
+      }
+   </script>
+</body>
+</html>
