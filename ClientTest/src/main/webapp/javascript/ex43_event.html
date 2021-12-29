@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .box {
+         border: 1px solid black;
+         background: gold;
+         width: 200px;
+         height: 200px;
+      }
+      .one {
+         border-width: 20px;
+      }
+      .two {
+         background: cornflowerblue;
+      }
+      .three {
+         width: 400px;
+      }
+   </style>
+</head>
+<body>
+   <input type="button" value="버튼1" id="btn1">
+   <hr>
+   <div id="box1" class="box"></div>
+   <script>
+      const btn1 = document.getElementById('btn1');
+      const box1 = document.getElementById('box1');
+      // btn1.addEventListener('click', m1);
+      // btn1.addEventListener('click', m2);
+      function m1() {
+         alert('m1');
+      }
+      function m2() {
+         alert('m2');
+      }
+      function m3() {
+         alert('m3');
+      }
+
+      btn1.onclick = function() {
+         box1.classList.add('one');
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      table {
+         border: 1px gray solid;
+      }
+      #tbl2 td {
+         border: 1px gray solid;
+         width: 126px;
+         height: 126px;
+      }
+      #tbl2 td img {
+         display: block;
+      }
+      </style>
+</head>
+<body>
+   <h1>이블</h1>
+
+   <table class="table" id="tbl1">
+      <tr>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+      </tr>
+      <tr>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+      </tr>
+      <tr>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+         <td>item</td>
+      </tr>
+   </table>
+   <table class="table" id="tbl2">
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+      </tr>
+   </table>
+   <script>
+      const rows = document.getElementById('tbl2').firstElementChild.children;
+      for(let i=0; i<rows.length; i++) {
+         const cells = rows[i].children;
+
+         for(let j=0; j<cells.length; j++){
+            cells[j].onmousedown = function() {
+               if(event.buttons == 1){
+                  event.srcElement.innerHTML = '<img src="../images/rect_icon01.png">';
+               } else if (event.buttons == 2) {
+                  event.srcElement.innerHTML = '<img src="../images/rect_icon02.png">';
+               } else if (event.buttons == 4) {
+                  if(event.srcElement.nodeName == 'IMG') {
+                     event.srcElement.parentElement.innerHTML = '';
+                  }
+               }
+            }
+         }
+      }
+   </script>
+</body>
+</html>
