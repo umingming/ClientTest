@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      fieldset {
+         width: 300px;
+      }
+      table {
+         width: 600px;
+         border: 1px gray solid;
+         border-collapse: collapse;
+      }
+      td {
+         border: 1px gray solid;
+      }
+   </style>
+</head>
+<body>
+   <fieldset>
+      <legend>색상 입력</legend>
+      <div>색상: <input type="color" id="color"></div>
+      <div>이름: <input type="text" id="colorName"></div>
+      <input type="button" value="추가하기" id="btn">
+   </fieldset>
+   <table id="tbl">
+      <tr>
+         <th>색상명</th>
+         <th>미리보기</th>
+      </tr>
+      <tr>
+         <td>자주색</td>
+         <td id="#EC45AC">#EC45AC</td>
+      </tr>
+      <tr>
+         <td>풀색</td>
+         <td id="#ACEF12">#ACEF12</td>
+      </tr>
+   </table>
+   
+   <script>
+      const color = document.getElementById('color');
+      const colorName = document.getElementById('colorName');
+      const btn = document.getElementById('btn');
+      const tbl = document.getElementById('tbl');
+      
+      setColor();
+      btn.addEventListener('click', addColor);
+
+      function addColor() {
+         const newLine = document.createElement('tr');
+         const nameCell = document.createElement('td');
+         nameCell.innerText = colorName.value;
+         const colorCell = document.createElement('td');
+         colorCell.innerText = color.value;
+         colorCell.setAttribute('bgColor', color.value);
+         newLine.appendChild(nameCell);
+         newLine.appendChild(colorCell);
+         tbl.appendChild(newLine);
+      }
+
+      function setColor() {
+         for(let i=0; i<tbl.children[0].children.length; i++){
+            let tmp = tbl.children[0].children[i].children[1];
+            tmp.setAttribute('bgColor', tmp.id);
+         }
+      }
+
+   </script>
+</body>
+</html>

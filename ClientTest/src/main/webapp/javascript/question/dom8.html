@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      div, span, input, th, td, fieldset {
+         font-size: 14px;
+      }
+   
+      #add {
+         border: 1px solid gray;
+         padding: 10px;
+         width: 300px;
+      }
+      
+      #add > div {
+         margin-bottom: 5px;
+      }
+      
+      #add > div > label:first-child {
+         display: inline-block;
+         width: 50px;
+         text-align: right;
+         margin-right: 10px;
+      }
+      
+      #btnadd {
+         margin-top: 10px;
+         margin-left: 15px;
+      }
+   
+      #tbl1 {
+         border: 1px solid gray;
+         border-collapse: collapse;
+         width: 500px;
+         margin-top: 20px;
+      }
+      #tbl1 th {
+         background: #ddd;
+      }
+      #tbl1 th, #tbl1 td {
+         border: 1px solid gray;
+         padding: 4px;
+         text-align: center;
+      }
+      #tbl1 th:nth-child(1) { width: 50px; }
+      #tbl1 th:nth-child(2) { width: 70px; }
+      #tbl1 th:nth-child(3) { width: 50px; }
+      #tbl1 th:nth-child(4) { width: 120px; }
+      #tbl1 th:nth-child(5) { width: 210px; }
+      
+      
+      
+   </style>
+</head>
+<body>
+   <div class="main m600">
+      <fieldset id="add">
+         <legend>입력 항목</legend>
+         <div><label for="txtname">이름 : </label><input type="text" id="txtname" autofocus></div>
+         <div><label for="selage">나이 : </label><select id="selage"></select></div>
+         <div><label for="rbgener">성별 : </label><label><input type="radio" name="rbgender" id="rbgender1" value="m" checked> 남자</label><label><input type="radio" name="rbgender" id="rbgender2" value="f"> 여자</label></div>
+         <div><label for="txtaddress">주소 : </label><input type="text" id="txtaddress"></div>
+         <div><input type="button" id="btnadd" value="추가하기"></div>
+      </fieldset>
+      <table id="tbl1">
+         <thead id="thead1">
+            <tr>
+               <th>번호</th>
+               <th>이름</th>
+               <th>나이</th>
+               <th>성별</th>
+               <th>주소</th>
+            </tr>
+         </thead>
+         <tbody id="tbody1">
+            <tr>
+               <td colspan="5">등록된 항목이 없습니다.</td>
+            </tr>
+         </tbody>
+      </table><br><br>
+   </div>
+   <script>
+      const txtName = document.getElementById('txtname');
+      const selAge = document.getElementById('selage');
+      const selMan = document.getElementById('rbgender1');
+      const selWoman = document.getElementById('rbgender2');
+      const address = document.getElementById('txtaddress');
+      const btn = document.getElementById('btnadd');
+      const tbody = document.getElementById('tbody1');
+      const thead = document.getElementById('thead1');
+      let index = 0;
+      btn.addEventListener('click', add);
+
+      for (var i=20; i<=60; i++) {
+			selAge.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+		}
+
+      function add(){
+         index++;
+         let tmp = new Array();
+         for(let i=0; i<thead.firstElementChild.children.length; i++){
+            tmp[i] = document.createElement('td');
+         }
+         let img = getGender;
+         tmp[0].innerText = index;
+         tmp[1].innerText = txtName.value;
+         tmp[2].innerText = selAge.value;
+         tmp[3].innerHtml = img;
+         tmp[4].innerText = address.value;
+         let tmpLine = document.createElement('tr');
+         for(let i=0; i<thead.firstElementChild.children.length; i++){
+            tmpLine.appendChild(tmp[i]);
+         }
+         tbody.appendChild(tmpLine);
+      }
+
+      function getGender() {
+         if(rbgender1.checked == true){
+            return '<img src="../../images/gender_f.png" alt="">';
+         } else if (rbgender2.checked == true){
+            return '<img src="../../images/gender_m.png" alt="">';
+         }
+      }
+
+   </script>
+</body>
+</html>

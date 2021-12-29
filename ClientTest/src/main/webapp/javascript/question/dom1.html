@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      div {
+         width: 590px;
+         border: 1px solid black;
+         height: 100px;
+         /* min-height: 100px; */
+      }
+      img {
+         width: 64px;
+         padding: 5px 0;
+         height: 90px;
+      }
+   </style>
+</head>
+<body>
+   <div id="box"></div>
+
+   <script>
+      const box = document.getElementById('box');
+      window.onkeydown = m1;
+      function m1() {
+         if(event.keyCode > 48 && event.keyCode < 58){
+            const num = event.keyCode - 48;
+            const img = document.createElement('img');
+            const src = '../../images/' + num + '.png';
+            img.setAttribute('src', src);
+            box.appendChild(img);
+         }
+      }
+   </script>
+</body>
+</html>

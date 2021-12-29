@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      td {
+        border: 1px solid black; 
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+      }
+      table {
+         border-collapse: collapse;
+      }
+
+   </style>
+</head>
+<body oncontextmenu='return false'>
+   <table id=tbl>
+      <tr>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+      </tr>
+      <tr>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+      </tr>
+      <tr>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+      </tr>
+      <tr>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+      </tr>
+      <tr>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+         <td class="cell">0</td>
+      </tr>
+   </table>
+   <script>
+
+      const cell = document.getElementsByClassName('cell');
+
+      for(let i=0; i<cell.length; i++){
+         cell[i].addEventListener('mousedown', setCnt);
+      }
+
+      function setCnt() {
+         if(event.buttons == 1){
+            event.srcElement.innerText++;
+         } else if (event.buttons == 2){
+            if(event.srcElement.innerText == 0){
+               event.srcElement.removeEventListener('mousedown', setCnt);
+               event.srcElement.bgColor = 'gray';
+            } else {
+               event.srcElement.innerText--;
+            }
+         }
+      }
+   </script>
+</body>
+</html>

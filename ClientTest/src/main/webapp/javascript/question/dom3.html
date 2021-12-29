@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      td {
+        border: 1px solid black; 
+        width: 50px;
+        height: 50px;
+        text-align: center;
+      }
+      table {
+         border-collapse: collapse;
+      }
+
+   </style>
+</head>
+<body>
+   <table id="tbl">
+      <tr>
+         <td>1</td>
+         <td>2</td>
+      </tr>
+      <tr>
+         <td>3</td>
+         <td>4</td>
+      </tr>
+   </table>
+   <script>
+      const tbl = document.getElementById('tbl');
+      window.onkeydown = editTbl;
+
+      function editTbl() {
+         if (event.keyCode == 37) {
+            removeCol();
+         } else if (event.keyCode == 39) {
+            addCol();
+         } else if (event.keyCode == 38) {
+            removeRow();
+         } else if (event.keyCode == 40) {
+            addRow();
+         } 
+         setNum();
+      }
+
+      function setNum() {
+         const tr = tbl.firstElementChild.children;
+         for(let i=0; i<tr.length; i++){
+            let index = tr[0].children.length;
+            for(let j=0; j<tr[i].children.length; j++){
+               tr[i].children[j].innerText = i*index + j + 1;
+            }
+         }
+      }
+
+
+      function removeCol() {
+         const tr = tbl.firstElementChild.children;
+         if(tr[0].children.length > 1){
+            for(let i=0; i<tr.length; i++){
+               let td = tr[i].lastElementChild;
+               tr[i].removeChild(td);
+            }
+         }
+      }
+
+      function removeRow() {
+         const tr = tbl.firstElementChild.children;
+         if(tr.length > 1){
+            for(let i=0; i<tr.length; i++){
+               tbl.firstElementChild.removeChild(tr[i]);
+            }
+         }
+      }
+
+      function addCol() {
+         const tr = tbl.firstElementChild.children;
+         for(let i=0; i<tr.length; i++){
+            let td = document.createElement('td');
+            tr[i].appendChild(td);
+         }
+      }
+
+      function addRow() {
+         const tr = document.createElement('tr');
+         const td = tbl.firstElementChild.children[0].children;
+         for(let i=0; i<td.length; i++) {
+            const tmp = document.createElement('td');
+            tr.appendChild(tmp);
+         }
+         tbl.firstElementChild.appendChild(tr);
+      }
+
+
+   </script>
+</body>
+</html>

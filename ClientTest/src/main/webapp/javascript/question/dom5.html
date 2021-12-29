@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      td {
+        border: 1px solid black; 
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+      }
+      table {
+         border-collapse: collapse;
+         margin: 0 auto;
+         padding: 0;
+      }
+      img {
+         width: 50px;
+         height: 50px;
+         display: block;
+      }
+   </style>
+</head>
+<body oncontextmenu='return false'>
+   <table id=tbl>
+      <tr>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+      </tr>
+      <tr>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+      </tr>
+      <tr>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+      </tr>
+      <tr>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+      </tr>
+      <tr>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+         <td class="cell"></td>
+      </tr>
+   </table>
+   <script>
+
+      const cell = document.getElementsByClassName('cell');
+
+      for(let i=0; i<cell.length; i++){
+         cell[i].addEventListener('mousedown', addImg);
+      }
+
+      function addImg() {
+         let img = document.createElement('img')
+         if(event.buttons == 1){
+            img.src = '../../images/rect_icon01.png';
+         } else if (event.buttons == 2){
+            img.src = '../../images/rect_icon02.png';
+         }
+         event.srcElement.appendChild(img);
+         // event.srcElement.classList.remove('cell');
+         event.srcElement.removeEventListener('mousedown', addImg);
+      }
+   </script>
+</body>
+</html>
