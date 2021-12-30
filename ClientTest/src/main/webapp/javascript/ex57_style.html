@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body { margin: 0 auto; padding: 0; width: 900px;
+         transition: all 0.5s;
+      }
+      .section {
+         width: 100%;
+         height: 500px;
+         border: 1px solid black;
+      }
+   </style>
+</head>
+<body>
+   <div class="section">
+      <h1>about</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, blanditiis quisquam quo temporibus impedit architecto quaerat harum sunt ex earum repellendus, commodi quas. Perferendis libero, amet quaerat recusandae consectetur sunt voluptates, tempora repudiandae temporibus doloremque delectus fugiat culpa nulla provident? Sunt deleniti omnis officiis. Nostrum quaerat ipsa enim doloremque voluptatem quae modi vel, quis, quia mollitia asperiores tempore molestiae! Quae vel fugiat magni obcaecati veritatis eos assumenda animi nostrum placeat optio fuga labore, deleniti ea rem aspernatur. Magnam deleniti aliquid eveniet. Eaque, totam atque explicabo sed in laborum consectetur repellendus nihil rerum natus sint est ipsum, consequuntur delectus, voluptatum omnis.</p>
+   </div>
+   <div class="section">
+      <h1>yap</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, blanditiis quisquam quo temporibus impedit architecto quaerat harum sunt ex earum repellendus, commodi quas. Perferendis libero, amet quaerat recusandae consectetur sunt voluptates, tempora repudiandae temporibus doloremque delectus fugiat culpa nulla provident? Sunt deleniti omnis officiis. Nostrum quaerat ipsa enim doloremque voluptatem quae modi vel, quis, quia mollitia asperiores tempore molestiae! Quae vel fugiat magni obcaecati veritatis eos assumenda animi nostrum placeat optio fuga labore, deleniti ea rem aspernatur. Magnam deleniti aliquid eveniet. Eaque, totam atque explicabo sed in laborum consectetur repellendus nihil rerum natus sint est ipsum, consequuntur delectus, voluptatum omnis.</p>
+   </div>
+   <div class="section">
+      <h1>me</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, blanditiis quisquam quo temporibus impedit architecto quaerat harum sunt ex earum repellendus, commodi quas. Perferendis libero, amet quaerat recusandae consectetur sunt voluptates, tempora repudiandae temporibus doloremque delectus fugiat culpa nulla provident? Sunt deleniti omnis officiis. Nostrum quaerat ipsa enim doloremque voluptatem quae modi vel, quis, quia mollitia asperiores tempore molestiae! Quae vel fugiat magni obcaecati veritatis eos assumenda animi nostrum placeat optio fuga labore, deleniti ea rem aspernatur. Magnam deleniti aliquid eveniet. Eaque, totam atque explicabo sed in laborum consectetur repellendus nihil rerum natus sint est ipsum, consequuntur delectus, voluptatum omnis.</p>
+   </div>
+   <div class="section">
+      <h1>yuot</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, blanditiis quisquam quo temporibus impedit architecto quaerat harum sunt ex earum repellendus, commodi quas. Perferendis libero, amet quaerat recusandae consectetur sunt voluptates, tempora repudiandae temporibus doloremque delectus fugiat culpa nulla provident? Sunt deleniti omnis officiis. Nostrum quaerat ipsa enim doloremque voluptatem quae modi vel, quis, quia mollitia asperiores tempore molestiae! Quae vel fugiat magni obcaecati veritatis eos assumenda animi nostrum placeat optio fuga labore, deleniti ea rem aspernatur. Magnam deleniti aliquid eveniet. Eaque, totam atque explicabo sed in laborum consectetur repellendus nihil rerum natus sint est ipsum, consequuntur delectus, voluptatum omnis.</p>
+   </div>
+   <div class="section">
+      <h1>hi</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, blanditiis quisquam quo temporibus impedit architecto quaerat harum sunt ex earum repellendus, commodi quas. Perferendis libero, amet quaerat recusandae consectetur sunt voluptates, tempora repudiandae temporibus doloremque delectus fugiat culpa nulla provident? Sunt deleniti omnis officiis. Nostrum quaerat ipsa enim doloremque voluptatem quae modi vel, quis, quia mollitia asperiores tempore molestiae! Quae vel fugiat magni obcaecati veritatis eos assumenda animi nostrum placeat optio fuga labore, deleniti ea rem aspernatur. Magnam deleniti aliquid eveniet. Eaque, totam atque explicabo sed in laborum consectetur repellendus nihil rerum natus sint est ipsum, consequuntur delectus, voluptatum omnis.</p>
+   </div>
+   <script>
+      const list = document.getElementsByClassName('section');
+      const s1 = list[0].getBoundingClientRect().top;
+      const s2 = list[1].getBoundingClientRect().top;
+      const s3 = list[2].getBoundingClientRect().top;
+      const s4 = list[3].getBoundingClientRect().top;
+      const s5 = list[4].getBoundingClientRect().top;
+      window.onscroll= function(){
+         if(window.scrollY < s2){
+            console.log(1);
+            document.body.bgColor = 'white';
+         } else if (window.scrollY < s3){
+            console.log(2);
+            document.body.bgColor = 'tomato';
+         } else if (window.scrollY < s4){
+            console.log(3);
+            document.body.bgColor = 'gold';
+         } else if (window.scrollY < s5){
+            console.log(4);
+            document.body.bgColor = 'cornflowerblue';
+         } else {
+            console.log(5);
+            document.body.bgColor = 'violet';
+         }
+      }
+   </script>
+</body>
+</html>
