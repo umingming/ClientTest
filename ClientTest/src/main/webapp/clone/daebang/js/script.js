@@ -32,22 +32,35 @@ function fixHeader() {
     }
 }
 
-// 글자 애니메이션
-$(function(){
-    Splitting();
-})
+// // 글자 애니메이션
+// $(function(){
+//     Splitting();
+// })
 
 
 //.top-visual 이미지 슬라이드
 $(function(){
     $('.visual .slide').slick({
-        arrow:true,  //화살표
+        arrows:true,  //화살표
         dots:true,  //인디케이터
-        autoplay:true,    //자동 재상
+        autoplay:false,    //자동 재상
         fade:true,    //부드럽게 화면 전환
         autoplaySpeed:7000,  //재생 시간
         pauseOnHover:false,  //호버시 멈추는 것을 해제
         pauseOnFocus:false
     });
     $('.slick-prev').text('prev');
+    
+    //두 번째 슬라이드
+    $('.slide2').slick({
+        arrows:false,  //화살표
+        dots:true,  //인디케이터
+        autoplay:true,    //자동 재상
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplaySpeed:6000,  //재생 시간
+        pauseOnHover:true,  //호버시 멈추도록 설정
+        pauseOnFocus:true
+    });
 });
