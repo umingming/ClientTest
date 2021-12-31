@@ -32,10 +32,10 @@ function fixHeader() {
     }
 }
 
-// // 글자 애니메이션
-// $(function(){
-//     Splitting();
-// })
+// 글자 애니메이션
+$(function(){
+    Splitting();
+})
 
 
 //.top-visual 이미지 슬라이드
@@ -62,5 +62,26 @@ $(function(){
         autoplaySpeed:6000,  //재생 시간
         pauseOnHover:true,  //호버시 멈추도록 설정
         pauseOnFocus:true
+    });
+    $('.slide2 #slick-slide-control10').text("서울 마곡지구 업무 용지");
+    $('.slide2 #slick-slide-control11').text("서울 마곡지구 업무 용지");
+    $('.slide2 #slick-slide-control12').text("서울 마곡지구 업무 용지");
+    $('.slide2 #slick-slide-control13').text("서울 마곡지구 업무 용지");
+});
+
+
+// 스크롤 애니메이션
+$(function(){
+    $('.animate').scrolla({
+        mobile:true,  //모바일버전 활성화
+        once:false   //한 번만 하고 싶을 때는 true
+    });
+})
+
+//스크롤 다운
+$(function(){
+    $('.scroll').on('click', function(){
+        var scrollBtn = $('#scroll').offset().top;
+        $('html, body').animate({scrollTop: (scrollBtn)}, 400);
     });
 });
