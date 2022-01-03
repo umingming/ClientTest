@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+   <input type="button" value="버튼" id="btn">
+   <hr>
+   <div id="box">상자입니다.</div>
+   <input type="text" id="txt">
+
+   <script>
+      $('#btn').click(function(){
+         // alert($('#box'))
+         // $('#box').text('안녕하세요');
+         $('#box').css('color', 'blue');
+         alert($('#box').css('color'));
+      })
+   </script>
+</body>
+</html>
