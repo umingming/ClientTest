@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      const list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const clist = [ '사과', '귤', '딸기', '바나나', '파인애플', '포도', '복숭아', '참외', '배', '수박']
+      // for(let i=0; i<list.length; i++){
+      //    console.log(list[i]);
+      // }
+      list.forEach(function(n){
+         console.log(n);
+      })
+      list.forEach(n => console.log(n));
+
+      clist.forEach((item, index) => console.log(index, item));
+
+      console.clear();
+
+      list.map(n => n%3 ).forEach(n => console.log(n));
+      list.map(n => n % 2 ? '짝수':'홀수').forEach(word => console.log(word));
+
+      for(let i=0; i<clist.length; i++){
+         if (clist[i].startsWith('바')){
+            console.log(clist[i]);
+            break;
+         }
+      }
+
+      console.log(clist.find(item => item.startsWith('바')));
+   </script>
+</body>
+</html>

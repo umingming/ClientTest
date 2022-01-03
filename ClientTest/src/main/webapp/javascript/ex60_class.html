@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      function Person(name, age){
+         this.name = name;
+         this.age = age;
+         this.hello = function() {
+            console.log(this.name);
+         };
+      }
+
+      const p1 = new Person('홍길동', 20);
+      p1.hello();
+
+      class User {
+         constructor(name, age){
+            this.name = name;
+            this.age = age;
+         }
+         hello = function() {
+            console.log(this.name, this.age);
+         }
+
+         get info(){
+            return this.name + ',' + this.age;
+         }
+
+         set name2(name2){
+            this.name = name2;
+         }
+      }
+
+      const u1 = new User('아무개', 25);
+      u1.hello();
+   </script>
+</body>
+</html>
