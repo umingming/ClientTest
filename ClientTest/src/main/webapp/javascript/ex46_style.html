@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <style>
+      #box1 { border: 1px solid black; width: 100px; }
+      .tool > i {
+         font-size: 16px;
+         cursor: pointer;
+      }
+   </style>
+</head>
+<body>
+   <h1>JS>CSS</h1>
+   <input type="button" value="버튼1" id="btn1">
+   <input type="button" value="버튼2" id="btn2">
+   <hr>
+   <div id="box1">상자</div>
+
+
+   <h1>텍스트</h1>
+   <div class="tool">
+      <i class="fas fa-search-plus"></i>
+      <i class="fas fa-search-minus"></i>
+   </div>
+   <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perspiciatis nulla, quae obcaecati esse in aut exercitationem atque dolorum et veritatis totam placeat impedit dolorem corporis optio natus blanditiis odio accusamus. Quisquam aspernatur laboriosam magni repellat odit facere quasi adipisci, obcaecati, exercitationem molestiae qui nesciunt modi vitae maiores tempora? Dolorem eaque dicta corporis earum minima. Ab velit voluptatibus qui alias dolores reiciendis perferendis. Enim minus quasi amet earum illo nemo. Magni saepe voluptates fugit illum molestiae dolores dolorem ex velit, nisi modi, distinctio sapiente commodi architecto nobis hic rem veniam aliquam et. Aliquam beatae fugiat maxime asperiores dolores quisquam quaerat, sapiente quo. Voluptatum ipsam aperiam deleniti quod autem nisi placeat fuga incidunt quidem fugit quae ex eum ratione, ipsum sit inventore, voluptate necessitatibus laboriosam aspernatur sed fugiat velit ab nobis non. Sunt porro labore facilis qui tempora, nesciunt asperiores beatae, adipisci tempore autem dolor reiciendis consectetur? Corporis qui mollitia nihil est deleniti hic officiis maxime sunt quos nam facilis in sed explicabo corrupti nulla ipsa ratione consectetur laudantium veritatis optio ex doloremque, quibusdam similique ad? Neque velit, cumque modi rem accusantium alias consectetur assumenda ut asperiores repudiandae dignissimos culpa, recusandae voluptate reprehenderit suscipit eligendi sint voluptas ab eos unde! Ex suscipit aliquam, id inventore modi cumque repellendus deserunt laboriosam neque perspiciatis, voluptatum optio molestias rem itaque ut labore eveniet commodi pariatur officiis, illum atque enim. Dolorem perferendis consequatur officiis assumenda aut tempore consectetur totam distinctio? Quo debitis a itaque tempora, placeat velit nobis dolorum nihil tempore voluptate odit commodi. Omnis, tenetur iusto dolor perspiciatis enim sequi corrupti, quae alias ullam repudiandae iure, veritatis sed harum obcaecati. Voluptatibus deserunt exercitationem ex ut quos laboriosam itaque culpa esse libero magnam, doloribus quo ea nobis eveniet eligendi vitae sequi a corrupti quibusdam iste molestiae! Officia vitae facere deserunt. Fuga voluptatum quidem ex doloremque?</p>
+
+   <script>
+      document.getElementById('btn1').onclick = function() {
+         const box1 = document.getElementById('box1');
+         // box1.style = 'color:blue; border:1px solid black;';
+         box1.style.color = 'gold';
+         box1.style['border'] = '1px dashed blue';
+         box1.style['backgroundColor'] = 'blue';
+         box1.sytle.fontSize = '3em';
+      };
+      document.getElementById('btn2').onclick = function() {
+         const box1 = document.getElementById('box1');
+
+         // box1.sytle.width = 
+         // alert(box1.style.width);
+         const list = getComputedStyle(box1);
+         // alert(list.getPropertyValue('width'));
+         box1.style.width = parseInt(list.getPropertyValue('width'))*2 + 'px';
+      }
+
+      const plus = document.getElementsByClassName('tool')[0].children[0];
+      const minus = document.getElementsByClassName('tool')[0].children[1];
+      const content = document.getElementById('content');
+
+      let fontSize = 16;
+      plus.onclick = function() {
+         fontSize++;
+         content.style.fontSize = fontSize + 'px';
+      };
+      
+      minus.onclick= function() {
+         fontSize--;
+         content.style.fontSize = fontSize + 'px';
+      };
+
+
+   </script>
+</body>
+</html>
