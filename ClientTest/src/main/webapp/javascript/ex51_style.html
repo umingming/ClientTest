@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .box { 
+         width: 150px; height: 150px;
+         position: absolute; left: 0; top: 0;
+      }
+      #box { background: gold;}
+      #box2 { background: gold; top:150px}
+      #box3 { background: cornflowerblue; top: 300px;}
+      #box4 { background: greenyellow; top: 450px;}
+      #box5 { background: plum; top: 600px;}
+   </style>
+</head>
+<body>
+   <div id="box" class="box">상자1</div>
+   
+   <script>
+      const box = document.getElementById('box');
+
+      let isDown = false;
+      let offsetX  = 0;
+      let offsetY  = 0;
+      window.onmousedown = function() {
+         isDown = true;
+      };
+      window.onmousemove = function() {
+         if(isDown) {
+            box.style.width = event.clientX + 'px';
+            box.style.height = event.clientY + 'px';
+         }
+      };
+      window.onmouseup = function() {
+         isDown = false;
+      };
+   </script>
+</body>
+</html>

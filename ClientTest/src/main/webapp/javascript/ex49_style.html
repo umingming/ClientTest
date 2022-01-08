@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      #box1 { width: 150px; height: 150px; background: gold; position: absolute; left: 0; top: 0; }
+   </style>
+</head>
+<body>
+   <div id="box1"></div>
+   <script>
+      const box = document.getElementById('box1');
+      let isDown = false;
+      let offsetX  = 0;
+      let offsetY  = 0;
+      window.onmousedown = function() {
+         if (event.srcElement.id == 'box1'){
+            isDown = true;
+            offsetX = event.offsetX;
+            offsetY = event.offsetY;
+         }
+      };
+      window.onmousemove = function() {
+         if(isDown) {
+            box.style.left = event.clientX - offsetX + 'px';
+            box.style.top = event.clientY - offsetY + 'px';
+         }
+      };
+      window.onmouseup = function() {
+         isDown = false;
+      };
+   </script>
+</body>
+</html>
