@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="js/jquery-ui.css">
+   <title>Document</title>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/jquery-ui.js"></script>
+</head>
+<body>
+   <h1>목록</h1>
+   <ul id="list1">
+      <li>사과</li>
+      <li>바나나</li>
+      <li>파인애플</li>
+      <li>귤</li>
+      <li>딸기</li>
+   </ul>
+
+   <div id="list3">
+      <img src="../images/man_01.png" alt="" data-no="1">
+      <img src="../images/man_02.png" alt="" data-no="2">
+      <img src="../images/man_03.png" alt="" data-no="3">
+      <img src="../images/woman_01.png" alt="" data-no="4">
+      <img src="../images/woman_02.png" alt="" data-no="5">
+   </div>
+   <input type="button" value="순서 확인하기" id="btn1">
+   <div id="result">
+
+   </div>
+   <script>
+      $('#list1').sortable();
+      $('#list3').sortable();
+      $('#btn1').click(function(){
+         $('#result').empty();
+         $('#list3').children().each(function(index, item){
+            $('#result').append(item.dataset['no'] + '<br>');
+         });
+      });
+   </script>
+</body>
+</html>

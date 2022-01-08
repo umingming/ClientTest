@@ -404,12 +404,13 @@ section.sns ul li a {
     height: 100%;
 }
 section.sns ul li a p.img {
-    height: 251px;
     overflow: hidden;
     position: relative;
+    height: 251px;
 }
 section.sns ul li a p.img img {
     width: 100%;
+    height: 20vh;
 }
 section.sns ul li a p.img:before {
     content: '';
