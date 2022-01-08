@@ -7,13 +7,16 @@
 <body>
 	<h1>사용자 데이터 입력</h1>
 	
-	<form action="/client/html/ex17.jsp" method="GET">
+	<form action="/client/html/ex17.jsp" method="post">
 		<input type="text" name="txt1">
 		<input type="submit" value="서버로 전송하기">
 	</form>
 
 	<h1>네이버 검색</h1>
-	
+	<form method="get" action="https://search.naver.com/search.naver">
+		<input type="text" name="query">
+		<input type="submit" value="검색하기">
+	</form>
 
 </body>
 </html>
