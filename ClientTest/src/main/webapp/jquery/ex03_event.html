@@ -5,8 +5,61 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <script src="js/jquery-1.12.4.js"></script>
 </head>
 <body>
-   
+   <input type="button" value="버튼1" id="btn1" class="btn" data-color="tomato">
+   <input type="button" value="버튼2" id="btn2" class="btn" data-color="gold">
+   <input type="button" value="버튼3" id="btn3" class="btn" data-color="cornflowerblue">
+   <input type="button" value="버튼4" id="btn4" class="btn" data-color="cornflowerblue">
+
+   <script>
+      // jQuery('#btn1').click(function(){
+      //    alert('버튼1');
+      // });
+      // jQuery('#btn2').on('click', function(){
+      //    alert('버튼2');
+      // });
+
+      // const list = document.getElementsByClassName('btn');
+
+      // for(let i=0; i<list.length; i++){
+      //    list[i].onclick = function() {
+      //       // alert(event.srcElement.id);
+      //       alert(this.id);
+      //    }
+      // }
+
+      // jQuery('.btn').click(function(){
+      //    alert(this.id);
+      // });
+
+         // jQuery('#btn4').mouseover(function(){
+         //    $(this).css('color', 'gold');
+         // });
+
+      // jQuery('#btn4').mouseover(function() {
+      //                $(this).css('color', 'tomato');
+      //             }).mouseout(function(){
+      //                $(this).css('color', 'black');
+      //             })
+
+      jQuery('#btn4').css('color', 'white')
+                     .css('background-color', gold)
+                     .css('font-size', '3em');
+
+      const obj = {
+         'color':'gold',
+         'background-color':'tomato',
+         'font-size':'3em'
+      };
+      jQuery('#btn4').css(obj);
+      
+      jQuery('#btn4').css({
+         'color':'gold',
+         'background-color':'tomato',
+         'font-size':'3em'
+      });
+   </script>
 </body>
 </html>
