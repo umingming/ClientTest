@@ -10,10 +10,20 @@
          width: 250px;
          height: 188px;
          border: 10px solid cornflowerblue;
+         overflow: hidden;
       }
       #list {
-         border: 10px solid coral;
+         /* border: 10px solid coral; */
+         width: 250px;
+         height: 940px;
+         transition: all 1s;
       }
+      #list::after {
+         content: '';
+         display: block;
+         clear: both;
+      }
+
       #list img {
          float: left;
       }
@@ -29,5 +39,13 @@
          <img src="../images/cat05.jpg">
       </div>
    </div>
+   <script>
+      const box = document.getElementById('box');
+      const list = document.getElementById('list');
+
+      box.onmouseover = function() {
+         list.style.transform = 'translate(0px, -752px)';
+      };
+   </script>
 </body>
 </html>
