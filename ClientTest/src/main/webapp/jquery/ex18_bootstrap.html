@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <title>Document</title>
+   <script src="js/jquery-1.12.4.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <style>
+      main{
+         width: 800px;
+         margin: 0 auto;
+
+      }
+      #tblList {}
+      #tblList th:nth-child(1) {width: 60px;}
+      #tblList th:nth-child(2) {width: auto;}
+      #tblList th:nth-child(3) {width: 90px;}
+      #tblList th:nth-child(4) {width: 110px;}
+      #tblList th:nth-child(5) {width: 60px;}
+
+      #tblList th, #tblList td { text-align: center; }
+      #tblList td:nth-child(2) { text-align: left; }
+   </style>
+</head>
+<body>
+   <main>
+      <h1 class="page-header">Board <small>Bootstrap</small></h1>
+      <table id="tblList" class="table table-bordered table-striped">
+         <thead>
+            <tr>
+               <th>번호</th>
+               <th>제목</th>
+               <th>이름</th>
+               <th>날짜</th>
+               <th>읽음</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>1</td>
+               <td>게시판 작업 중입니다.</td>
+               <td>이유미</td>
+               <td>2022-01-09</td>
+               <td>4</td>
+            </tr>
+            <tr>
+               <td>2</td>
+               <td>게시판 작업 중입니다.</td>
+               <td>이유미</td>
+               <td>2022-01-09</td>
+               <td>4</td>
+            </tr>
+            <tr>
+               <td>3</td>
+               <td>게시판 작업 중입니다.</td>
+               <td>이유미</td>
+               <td>2022-01-09</td>
+               <td>4</td>
+            </tr>
+            <tr>
+               <td>4</td>
+               <td>게시판 작업 중입니다.</td>
+               <td>이유미</td>
+               <td>2022-01-09</td>
+               <td>4</td>
+            </tr>
+            <tr>
+               <td>5</td>
+               <td>게시판 작업 중입니다.</td>
+               <td>이유미</td>
+               <td>2022-01-09</td>
+               <td>4</td>
+            </tr>
+            <tr>
+               <td>6</td>
+               <td>게시판 작업 중입니다.</td>
+               <td>이유미</td>
+               <td>2022-01-09</td>
+               <td>4</td>
+            </tr>
+         </tbody>
+      </table>
+      <nav style="text-align: center;">
+         <ul class="pagination">
+           <li>
+             <a href="#" aria-label="Previous">
+               <span aria-hidden="true">&laquo;</span>
+             </a>
+           </li>
+           <li><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li class="active"><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+           <li><a href="#">6</a></li>
+           <li><a href="#">7</a></li>
+           <li><a href="#">8</a></li>
+           <li><a href="#">9</a></li>
+           <li><a href="#">10</a></li>
+           <li>
+             <a href="#" aria-label="Next">
+               <span aria-hidden="true">&raquo;</span>
+             </a>
+           </li>
+         </ul>
+       </nav>
+      <div class="btns">
+         <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-tag"></span>
+            home
+         </button>
+         <button type="button" class="btn btn-info">
+            <span class="glyphicon glyphicon-tag"></span>
+            write
+         </button>
+      </div>
+   </main>
+</body>
+</html>
