@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="js/jquery-1.12.4.js"></script>
+</head>
+<body>
+   <div id="box1" class="box">상자1</div>
+   <div id="box2">상자2</div>
+   <div id="box3" class="box">상자3</div>
+   <div id="box4">상자4</div>
+   <p id="box5" class="box">상자5</p>
+   <script>
+      const list1 = document.getElementsByTagName('div');
+      for(let i=0; i<list1.length; i++){
+         list1[i].style.color = 'blue';
+      }
+
+      // const list2 = jQuery('div');
+      // for(let i=0; i<list2.length; i++){
+      //    list[i].style.color = 'gold';
+      // }
+
+      jQuery('div').css('color', 'cornflowerblue');
+      jQuery('#box2').css('background-color', 'gold');
+      jQuery('.box').css('font-size', '3em');
+      jQuery('#box2, #box5').css('text-decoration', 'underline');
+      
+
+   </script>
+</body>
+</html>
