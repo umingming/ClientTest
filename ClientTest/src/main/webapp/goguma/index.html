@@ -59,10 +59,19 @@
 			
 		</section> -->
 
-      <section class="community content">
+      <section class="community add">
          <div class="title">
             <h2>커뮤니티</h2>
          </div>
+         <div class="add">
+				<p>게시물이 등록되었습니다.</p>
+				<div class="button">
+					<input type="button" value="확인하기" class="btn check"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';"> 
+					<input type="button" value="목록으로" class="btn list"
+						onclick="location.href='/goguma/community/communityList.do';"> 
+				</div>
+			</div>
          <table class="detail">
             <tr>
                <td colspan="3">안녕하세여ㅎㅎ</td>
@@ -93,6 +102,9 @@
             </tr>
             <tr>
                <td>넵ㅎㅎ</td>
+               <td class="button">
+                  <input type="button" value=삭제 class="btn del">
+               </td>
             </tr>
          </table>
          <table class="comment">
@@ -107,6 +119,7 @@
          </table>
          <form method="GET" action="#!" class="comment form">
             <textarea name="comment" placeholder="내용을 입력하세요." class="content"></textarea>
+            <input type="submit" value="등록" class="btn important">
          </form>
 
          <div class="button">

@@ -342,10 +342,10 @@ section .new {
     font-size: 27px;
 }
 .community .detail tr:first-child td:first-child {
-	width: 700px;
+    width: 700px;
 }
 /* .community .detail tr:first-child td:after {
-	position: absolute;
+    position: absolute;
 	top: -250px;
 	left: 30px;
 	content: '';
@@ -375,6 +375,7 @@ section .new {
     font-weight: 400;
     color: #757575;
     transform: translateY(-5px);
+    text-decoration: underline orange;
 }
 .community .detail tr:nth-child(3) td:nth-child(1) {
 	width: 120px;
@@ -416,7 +417,7 @@ section .new {
     width: 1100px;
     margin: 0 auto;
     /* border-top: 3px solid #dadada; */
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px dashed #dadada;
     position: relative;
 }
 .community .comment td {
@@ -452,14 +453,36 @@ section .new {
     padding-bottom: 15px;
     padding-left: 10px;
 }
+.community .comment .button .btn {
+    height: 25px;
+    padding: 0px;
+    width: 40px;
+    transform: translateX(900px);
+    line-height: 10px;
+}
 
 
 /* comment form */
 .community .comment.form {
     border-bottom: 3px solid #dadada;
+    width: 1100px;
 }
 .community .comment.form .content {
+    margin: 30px 50px;
+    width: 1000px;
+    height: 100px;
     padding: 8px;
+    transform: translateY(2px);
+}
+.community .comment.form .btn {
+    position: absolute;
+    top: 90px;
+    right: 65px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 3px;
+    width: 55px;
+    outline: 0;
 }
 
 /* form */
