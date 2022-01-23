@@ -30,40 +30,91 @@
             </ul>
          </div>
       </header>
-      <nav class="leftside">
-         <div class="menu">
-            <ul>
-               <li>
-                  <span class="glyphicon glyphicon-envelope message"></span>
-                  <span class="glyphicon glyphicon-arrow-left arrow"></span>
-                  받은 메시지
-               </li>
-               <li>
-                  <span class="glyphicon glyphicon-envelope message"></span>
-                  <span class="glyphicon glyphicon-arrow-right arrow"></span>
-                  보낸 메시지
-               </li>
-            </ul>
-         </div>
-      </nav>
       <section class="message-in">
+         <nav class="left-side">
+            <div class="menu">
+               <ul>
+                  <li>
+                     <span class="glyphicon glyphicon-envelope message"></span>
+                     <span class="glyphicon glyphicon-arrow-left arrow"></span>
+                     받은 메시지
+                  </li>
+                  <li>
+                     <span class="glyphicon glyphicon-envelope message"></span>
+                     <span class="glyphicon glyphicon-arrow-right arrow"></span>
+                     보낸 메시지
+                  </li>
+               </ul>
+            </div>
+         </nav>
          <div class="title">
             <h2>받은 메시지</h2>
          </div>
-         <div class="add">
-				<p>게시물이 등록되었습니다.</p>
-				<div class="button">
-					<input type="button" value="확인하기" class="btn check"
+         <table class="detail">
+            <tr>
+               <td><b>보낸 사람</b></td>
+               <td>감자</td>
+            </tr>
+            <tr>
+               <td><b>보낸 시간</b></td>
+               <td>22.01.16 22:10</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  안녕하세여ㅎㅎ 친해지고 싶어요!
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" value="답장" class="btn check"
 						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';"> 
-					<input type="button" value="목록으로" class="btn list"
-						onclick="location.href='/goguma/community/communityList.do';"> 
-				</div>
-			</div>
-        
-        
-         
-        
+               </td>
+               <td>
+                  <input type="button" value="삭제" class="btn check"
+						onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';"> 
+               </td>
+            </tr>
+         </table>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
 
+
+         <table class="table">
+            <tr>
+               <th>보낸 사람</th>
+               <th>내용</th>
+               <th>날짜</th>
+            </tr>
+            <tr>
+               <td>감자</td>
+               <td>안녕하세요.</td>
+               <td>01:16</td>
+            </tr>
+            <tr>
+               <td>감자</td>
+               <td>안녕하세요.</td>
+               <td>01:16</td>
+            </tr>
+            <tr>
+               <td>감자</td>
+               <td>안녕하세요.</td>
+               <td>01:16</td>
+            </tr>
+            <tr>
+               <td>감자</td>
+               <td>안녕하세요.</td>
+               <td>01:16</td>
+            </tr>
+         </table>
       </section>
       <footer>
          <div class="innerFooter">

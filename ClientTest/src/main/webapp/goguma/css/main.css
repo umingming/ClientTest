@@ -526,46 +526,48 @@ section .new {
 
 /* 메시지 */
 /* nav */
-.leftside {
-    padding-top: 3%;
+.left-side {
+    padding-top: 20px;
 	padding-bottom: 3%;
 	min-height: 75vh;
-    margin-top: 10px;
 	width: 200px;
 	float: left;
-	border-right:3px solid #9B59B6;
+	border-right: 3px solid #9B59B6;
+	transform: translateY(-5px);
+	margin-right: 50px;
 }
 
 /* 메뉴가 들어가는 공간 */
-.leftside .menu {
+.left-side .menu {
 	height: 100%;
 	width: 95%;
 	padding-left: 10%;
-	float: left;
+	/* float: left; */
 }
 
-.leftside .menu > ul {
+.left-side .menu > ul {
     margin-left:25px;
 }
 
-.leftside .menu ul > li{
+.left-side .menu ul > li{
     margin-bottom:10px;
     cursor: pointer;
     font-size: 18px;
 }
-.leftside .menu ul > li .message {
+.left-side .menu ul > li .message {
     text-align: center;
     color: #fff;
-    background: #000;
+    background: #757575;
     width: 21px;
     height: 17px;
     line-height: 17px;
     font-size: 17px;
     /* font-weight: 600; */
 }
-.leftside .menu ul > li .arrow {
+.left-side .menu ul > li .arrow {
     border-radius: 50%;
     color: #fff;
+    /* background: hsl(2, 96%, 79%); */
     background: #9B59B6;
     font-weight: 100;
     font-size: 11px;
@@ -575,4 +577,51 @@ section .new {
     line-height: 17px;
     transform: translateX(-16px) translateY(3px);
     margin-right: -15px;
+}
+
+
+
+/* section */
+.message-in {
+    width: 1500px;
+	left: 30px;
+}
+.message-in .table {
+    width: 950px;
+}
+.message-in .detail {
+	width: 970px;
+    border: 3px solid #dadada;
+}
+.message-in .detail,
+.message-in .detail td{
+    border-left: 0px;
+    border-right: 0px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.message-in .detail tr:nth-child(1) td{
+    padding-top: 10px;
+}
+.message-in .detail tr td:nth-child(1) {
+    width: 80px;
+}
+.message-in .detail tr:nth-child(2) td{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dadada;
+}
+.message-in .detail tr:nth-child(3) td{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.message-in .detail .btn{
+    transform: translateX(800px) translateY(-15px);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 3px;
+    position: relative;
+    width: 55px;
+}
+.message-in .detail td:nth-child(2) .btn{
+    transform: translateX(790px) translateY(-15px);
 }
