@@ -90,12 +90,21 @@ header {
     top: 20px;
     font-size: 45px;
     font-weight: 700;
+    cursor: pointer;
 }
 .innerHeader .logo img {
     position: absolute;
     left: 30px;
     top: 10px;
     width: 80px;
+}
+.innerHeader .logo img:hover {
+    animation: dance 2s infinite;
+}
+@keyframes dance {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-50deg) scale(1.1); }
+    100% { transform: rotate(0deg); }
 }
 .innerHeader .search {
     position: absolute;
@@ -158,6 +167,35 @@ header {
 .innerHeader .menu li:nth-child(3) img{
     margin-right: 1px;
 }
+.innerHeader .menuOption .message-img span{
+	width: 250px;
+    font-size: 3000px;
+	transform: translateX(-20px);
+    transform: translateY(20px);
+    color: #181818;
+    z-index: 3;
+}
+.innerHeader .menuOption .message-count {
+	transform: translateX(68px) translateY(-7px);
+}
+.innerHeader .menuOption .message-count span {
+	color: #fff;
+	z-index: 5;
+	background: #000;
+}
+.innerHeader .menuOption span:before {
+	content: '';
+	position: absolute;
+    left: -180px;
+    top: -20px;
+	height: 615px;
+	width: 615px;
+	/* background: #F4BF35; */
+	border-radius: 50%;
+	z-index: -1;
+	/* transform: translateX(-3px) translateY(8px); */
+}
+
 
 
 /* footer */
@@ -624,4 +662,192 @@ section .new {
 }
 .message-in .detail td:nth-child(2) .btn{
     transform: translateX(790px) translateY(-15px);
+}
+
+
+
+/* 메시지 보내기 */
+.message-in form {
+    width: 1070px;
+    margin: 0 auto;
+    border-top: 3px solid #dadada;
+    padding-top: 10px;
+    font-size: 18px;
+}
+.message-in form p {
+    font-size: 18px;
+    margin-left: 50px;
+    padding: 3px;
+}
+.message-in form .content {
+    padding: 8px;
+    margin-left: 10px;
+    width: 85%;
+    height: 300px;
+    outline: 0;
+}
+
+
+
+
+
+
+
+
+
+/* nav */
+.message .left-side {
+    padding-top: 40px;
+	padding-bottom: 3%;
+	min-height: 75vh;
+	width: 170px;
+	float: left;
+	border-right:3px solid #9B59B6;
+	transform: translateY(-25px);
+	margin-right: 50px;
+}
+.message .left-side .menu {
+	height: 100%;
+	width: 95%;
+	/* padding-left: 10%; */
+	/* float: left; */
+}
+.message .left-side .menu ul > li{
+    margin-bottom:10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.message .left-side .menu ul > li .message {
+    text-align: center;
+    color: #fff;
+    background: #757575;
+    width: 21px;
+    height: 17px;
+    line-height: 17px;
+    font-size: 17px;
+    /* font-weight: 600; */
+}
+.message .left-side .menu ul > li .arrow {
+    border-radius: 50%;
+    color: #fff;
+    background: #9B59B6;
+    font-weight: 100;
+    font-size: 11px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    line-height: 17px;
+    transform: translateX(-16px) translateY(3px);
+    margin-right: -15px;
+}
+
+
+/* 메시지 목록 */
+.message {
+	/* position: relative; */
+	left: 30px;
+	width: 1200px;
+}
+.message .title {
+	transform: translateX(20px);
+}
+.message .table {
+	width: 970px;
+    border: 3px solid #dadada;
+}
+.message .table,
+.message .table th,
+.message .table td{
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+.message .table tr {
+    height: 40px;
+}
+.message .table th {
+    font-weight: 500;
+}
+.message .table td:nth-child(1){
+    color: #757575;
+    padding-left: 30px;
+    font-size: 16px;
+    width: 80px;
+}
+.message .table th:nth-child(1){
+    padding-left: 40px;
+    text-align: center;
+}
+.message .table td:nth-child(2){
+    padding-left: 50px;
+    text-align: left;
+    width: 700px;
+}
+.message .table td:nth-child(2):hover{
+	font-weight: 500;
+}
+.message .table th:nth-child(4),
+.message .table td:nth-child(5){
+    padding-right: 20px;
+}
+.message .table .Y {
+	color: #757575;
+}
+
+
+/* 메시지 읽기 */
+.message .detail {
+	width: 970px;
+    border: 3px solid #dadada;
+}
+.message .detail,
+.message .detail td{
+    border-left: 0px;
+    border-right: 0px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.message .detail tr:nth-child(1) td{
+    padding-top: 10px;
+}
+.message .detail tr td:nth-child(1) {
+    width: 85px;
+}
+.message .detail tr:nth-child(2) td{
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #dadada;
+}
+.message .detail tr:nth-child(3) td{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+}
+
+
+/* 상세 메시지 버튼 */
+.message .btn{
+    font-weight: 700;
+    font-size: 16px;
+    padding: 3px;
+    position: relative;
+    width: 55px;
+    transform: translateX(10px) translateY(10px);
+}
+.message .detail .btn,
+.message .button .btn {
+	outline: 0;
+}
+.message .btn:hover {
+	color: #9B59B6;
+}
+.message .detail td:nth-child(1) .btn{
+    transform: translateX(800px) translateY(-15px);
+}
+.message .detail td:nth-child(2) .btn{
+    transform: translateX(780px) translateY(-15px);
+}
+.message .detail td:nth-child(1) .btn.del {
+    transform: translateX(870px) translateY(-15px);
 }

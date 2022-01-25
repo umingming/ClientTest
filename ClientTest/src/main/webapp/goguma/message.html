@@ -48,8 +48,19 @@
             </div>
          </nav>
          <div class="title">
-            <h2>받은 메시지</h2>
+            <h2>메시지 보내기</h2>
          </div>
+         <form class="form">
+            <p>받는 사람: 감자</p>
+            <textarea name="content" class="content" maxlength="1000" placeholder="내용을 입력해주세요."></textarea>
+            <div class="button">
+               <input type="button" value="취소" class="btn check"
+               onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';"> 
+               <input type="button" value="보내기" class="btn check"
+               onclick="location.href='/goguma/community/communityDetail.do?seq=${seq}';"> 
+            </div>
+         </form>
+
          <table class="detail">
             <tr>
                <td><b>보낸 사람</b></td>
