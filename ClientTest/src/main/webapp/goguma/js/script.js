@@ -1,24 +1,13 @@
-//fixheaer
 var scrollTop = 0;
-var scrollSkill = 0;
 scrollTop = $(document).scrollTop();
-fixHeader();
-activateSkillMotion();
 
-//윈도우 창 조절
-$(window).on('scroll resize', function () {
-    scrollTop = $(document).scrollTop();
-    fixHeader();
-    activateSkillMotion();
+
+$(function(){
+    $('.top').on('click', function(){
+        let scroll = $('.inner-header').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
 });
-
-function fixHeader() {
-   if(scrollTop > 150) {
-       $('header').addClass('on');
-   } else {
-       $('header').removeClass('on');
-   }
-}
 
 
 //메인 슬라이드
@@ -46,20 +35,3 @@ $(function() {
     // });
 })
 
-
-function activateSkillMotion() {
-    // console.log(scrollTop)
-   if(scrollTop > 1800) {
-       $('.skill').addClass('active');
-    } else {
-        $('.skill').removeClass('active');
-   }
-}
-
-//애니메이션 
-$(function() {
-    $('.animate').scrolla({
-        mobile: false,
-        once: false
-    });
-});
