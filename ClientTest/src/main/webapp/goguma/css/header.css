@@ -131,6 +131,21 @@ header {
     border-bottom: 2px solid #9B59B6;
     padding-left: 5px;
 }
+.inner-header .submit {
+   position: absolute;
+   left: 700px;
+   top: 52px;
+   font-size: 24px;
+   height: 25px;
+   color: #fff;
+   background: #fff;
+   border: 0;
+}
+.inner-header .submit.bi {
+   background: none;
+   color: #9B59B6;
+   font-weight: 700;
+}
 .inner-header .search-img {
     position: absolute;
     left: 707px;
@@ -170,14 +185,11 @@ header {
 .inner-header .menu-option .message-img span{
 	position: absolute;
 	right: 183px;
-	top: 3px;
+	top: -6px;
     text-align: center;
-    color: #fff;
-    background: #9B59B6;
-    width: 22px;
-    height: 18px;
-    line-height: 18px;
-    font-size: 18px;
+    color: #9B59B6;
+    font-size: 24px;
+    font-weight: 900;
 	cursor: pointer;
    z-index: 0;
 }
@@ -231,14 +243,13 @@ header {
     width: 4px;
     height: 15px;
 }
-.inner-header .menu li img{
-    transform: translateY(-2px);
-    margin-left: 25px;
-    margin-right: 5px;
-    width: 25px;
-}
-.inner-header .menu li:nth-child(3) img{
-    margin-right: 1px;
+.inner-header .menu li i{
+   transform: translateY(-2px);
+   margin-left: 25px;
+   margin-right: 5px;
+   width: 25px;
+   color: #9B59B6;
+   font-size: 22px;
 }
 
 
@@ -525,7 +536,6 @@ li:nth-child(3).slick-active img {
    top: -480px;
    float: right;
    width: 100px;
-   height: 500px;
    background-color: #eee;
    text-align: center;
    font-size: 16px;
@@ -536,6 +546,7 @@ li:nth-child(3).slick-active img {
    height: 60.5px;
    border-radius: 50%;
    background-color: #F4BF35;
+   cursor: pointer;
 }
 .right-side .favorite i {
    position: absolute;
@@ -544,6 +555,23 @@ li:nth-child(3).slick-active img {
    color: #E74C3C;
    font-weight: 200;
    font-size: 44px;
+}
+.right-side .favorite i:hover {
+   animation: heart 0.5s infinite;
+}
+@keyframes heart {
+   0% {transform: rotate(0deg);}
+   25% {transform: rotate(10deg);}
+   75% {transform: rotate(-10deg);}
+   100% {transform: rotate(0deg);}
+}
+.right-side .top i:hover {
+   animation: top 0.6s infinite;
+}
+@keyframes top {
+   0% {transform: translateY(0px);}
+   50% {transform: translateY(-5px);}
+   100% {transform: translateY(0px);}
 }
 .right-side .favorite span {
    position: absolute;
@@ -569,47 +597,4 @@ li:nth-child(3).slick-active img {
    margin-left: 2px;
    font-size: 44px;
 }
-/* .right-side .favorite{
-   position: fixed;
-   width: 100px;
-   height: 75px;
-   background-color: #fff;
-   border: 1px solid #757575;
-   padding: 8px;
-}
-.right-side .favorite i {
-   color: red;
-   margin-right: 6px;
-}
-.right-side .favorite .count {
-   font-size: 20px;
-}
-.right-side .product-view{
-   position: fixed;
-   transform: translateY(90px);
-   width: 100px;
-   height: 210px;
-   background-color: #fff;
-   border: 1px solid #757575;
-   padding: 8px;
-}
-.right-side .product-view img{
-   width: 80px;
-   height: 70px;
-   background: #eee;
-   margin-top: 10px;
-}
-.right-side .top {
-   position: fixed;
-   transform: translateY(315px);
-   width: 100px;
-   height: auto;
-   background-color: #fff;
-   border: 1px solid #757575;
-   padding: 8px;
-}
-.right-side .top i {
-   margin-left: 2px;
-   transform: translateY(1px);
-   font-size: 19px;
-} */
+

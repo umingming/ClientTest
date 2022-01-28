@@ -25,7 +25,7 @@
 		</h1>
 		<form method="GET" action="">
 			<input class="search" type="text" placeholder="찾고 싶은 상품을 검색해보세요!">
-			<input class="search-img" type="image" src="img/search.png" alt="">
+			<input type="submit" class="submit"><i class="bi bi-search submit"></i>
          <ul class="popular-keyword">
             <p>인기 검색어</p>
             <li>1 이유미최고</li>
@@ -41,15 +41,15 @@
          </ul>
 		</form>
 		<ul class="menu-option">
+			<li onclick="location.href='/goguma/message/inBox.do';" class="message-img"><span class="bi bi-envelope"></span></li>
 			<li class="message-count"><span>3</span></li>
-			<li onclick="location.href='/goguma/message/inBox.do';" class="message-img"><span class="glyphicon glyphicon-envelope message"></span></li>
 			<li onclick="location.href='/goguma/profile/mypage.do';">고구마님</li>
 			<li><a href="/goguma/user/logoutok.do">로그아웃</a></li>
 		</ul>
 		<ul class="menu">
-         <li><p><img src="img/menu1.png">중고거래</p></li>
-			<li onclick="location.href='/goguma/community/communityList.do';"><p><img src="img/menu2.png">커뮤니티</p></li>
-			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><p><img src="img/menu3.png">고객센터</p></li>
+         <li><p><i class="bi bi-cart-plus"></i>중고거래</p></li>
+			<li onclick="location.href='/goguma/community/communityList.do';"><p><i class="bi bi-chat-dots"></i>커뮤니티</p></li>
+			<li onclick="location.href='/goguma/center/faq.do?search=1&page=1';"><p><i class="bi bi-headset"></i>고객센터</p></li>
 		</ul>
 	</div>
 </header>
@@ -69,7 +69,8 @@
       </li>
    </ul>
    <nav class="right-side">
-      <div class="favorite">
+      <div class="favorite"
+         onclick="location.href='www.naver.com';">
          <p class="count"><i class="bi bi-heart-fill"></i><span>2</span></p>
       </div>
       <div class="top">
