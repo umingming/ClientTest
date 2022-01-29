@@ -1,7 +1,6 @@
+//top 버튼
 var scrollTop = 0;
 scrollTop = $(document).scrollTop();
-
-
 $(function(){
     $('.top').on('click', function(){
         let scroll = $('.inner-header').offset().top;
@@ -12,7 +11,7 @@ $(function(){
 
 //메인 슬라이드
 $(function() {
-    $('.main .slide').slick({
+    $('.main-img .slide').slick({
         arrows: true,   
         dots: false,    
         fade: true,    
@@ -22,16 +21,14 @@ $(function() {
         pauseOnFocus: false
     })
     $('.slick-prev').text('prev');
-    // $('.projectSlide').slick({
-    //     arrows:true,  //화살표
-    //     dots:true,  //인디케이터
-    //     autoplay:true,    //자동 재생
-    //     infinite: true,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplaySpeed:6000,  //재생 시간
-    //     pauseOnHover:true,  //호버시 멈추도록 설정
-    //     pauseOnFocus:true
-    // });
 })
+
+
+//인기 검색어
+$(function() {
+    $(".popular-keyword").hide();
+    $(".search").click(function() {
+        $(".popular-keyword").slideToggle(200);
+    });
+});
 
