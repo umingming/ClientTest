@@ -600,7 +600,7 @@ li:nth-child(3).slick-active img {
    width: 60.5px;
    height: 60.5px;
    border-radius: 60%;
-   /* border: 1px solid #F4BF35; */
+   /* border: 1px solid #FAF7FB; */
 }
 .right-side .github i {
    position: absolute;
@@ -610,6 +610,23 @@ li:nth-child(3).slick-active img {
    /* margin-left: 2px; */
    font-size: 60.5px;
    cursor: pointer;
+}
+.right-side .github a {
+   position: absolute;
+   left: -155px;
+   top: 20px;
+   width: 200px;
+   height: 50px;
+   /* background: #000; */
+}
+.hit {
+   position: relative;
+}
+.hit img {
+   position: absolute;
+   left: 0px;
+   top: -120px;
+   height: 15px;
 }
 
 
