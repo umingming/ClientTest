@@ -15,18 +15,106 @@ body {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 18px; 
 	font-weight: 500; 
-    background: #fff;
-    color: #181818;
+   color: #5C6F7E;
+   background: #F5F8FF;
 }
 section {
-	width: 1200px;
+   width: 1200px;
 	margin: 60px auto;
 }
 .wrap {
-    width: 100%;
-    overflow: hidden;
+   background: #F5F8FF;
+   width: 100%;
+   overflow: hidden;
+   height: 100vh;
 }
 span {
     color: #9B59B6;
 }
 
+/* header */
+header h1 {
+   margin-top: 250px;
+   font-size: 90px;
+   font-weight: 700;
+   color: #6CA1FD;
+   background: #F5F8FF;
+   text-align: center;
+}
+
+/* basic */
+.basic {
+   text-align: center;
+}
+.basic div {
+   margin: 10px auto;
+   width: 450px;
+   border: 1px solid #C9C9C9;
+   border-radius: 5px;
+   font-size: 23px;
+}
+.basic input {
+   border: 0;
+   padding-left: 10px;
+   width: 380px;
+   height: 60px;
+}
+.basic i {
+   position: relative;
+   top: 5px;
+   font-size: 39px;
+   margin: 9px;
+   color: #5C6F7E;
+}
+.basic .login {
+   width: 450px;
+   height: 60px;
+   border-radius: 30px;
+   background: #6CA1FD;
+   color: #fff;
+   font-size: 40px;
+   font-weight: 700;
+   padding: 5px 0 5px 0;
+   margin-top: 30px;
+}
+
+
+/* simple */
+.simple {
+   text-align: center;
+   z-index: -2;
+}
+.simple .simple-login {
+   margin: 0 auto;
+   position: relative;
+   content: '';
+   border-top: 1px solid #000;
+   width: 350px;
+   height: 300px;
+   padding-top: 80px;
+   top: 27px;
+}
+.simple h2 {
+   position: relative;
+   top: 50px;
+   font-size: 35px;
+   color: #5C6F7E;
+   font-weight: 700;
+   background: #F5F8FF;
+   /* border: 1px solid #000; */
+   margin: 0 auto;
+   width: 120px;
+   z-index: 1;
+}
+.simple .simple-login img {
+   width: 60px;
+   height: 60px;
+   border-radius: 50px;
+   margin: 0px 40px;
+}
+.simple .simple-login img:first-child {
+   margin-left: 0px;
+}
+.simple .simple-login img:last-child {
+   margin-right: 0px;
+}
