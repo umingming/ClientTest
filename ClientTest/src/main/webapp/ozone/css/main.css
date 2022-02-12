@@ -122,3 +122,114 @@ header h1 {
 .simple .simple-login img:last-child {
    margin-right: 0px;
 }
+
+
+/* 프로젝트 칼럼 */
+.project-column {
+   color: #5C6F7E;
+   margin-top: 150px;
+}
+.project-column img {
+   width: 40px;
+   height: 40px;
+   border-radius: 20px;
+   margin: 5px 2px 10px 0px;
+}
+.project-column .select {
+   margin: 20px 55px;
+   font-size: 22px;
+   padding-top: 30px;
+}
+.project-column .select select{
+   position: relative;
+   top: 0;
+   left: 0;
+   border: 0;
+   background: #F5F8FF;
+   left: -3px;
+   font-weight: 700;
+}
+.project-column .column {
+   float: left;
+   width: 300px;
+   margin: 0 50px;
+}
+.project-column .column div {
+   color: #fff;
+   height: 35px;
+   line-height: 35px;
+   font-size: 24px;
+   font-weight: 700;
+   text-align: center;
+   border-radius: 10px;
+   margin: 20px 0px;
+}
+.project-column .not-started {
+   background: #749FFE;
+}
+.project-column .in-progress {
+   background: #FF738E;
+}
+.project-column .completed {
+   background: #FE9E62;
+}
+.project-column .column ul {
+   border: 1px solid #E0E0E0;
+   background: #fff;
+   height: 120px;
+   padding: 10px;
+   padding-left: 20px;
+   border-radius: 10px;
+   margin-top: 15px;
+}
+.project-column .column ul li:first-child {
+   position: relative;
+   font-size: 20px;
+   font-weight: 900;
+}
+.project-column .column ul li:first-child span {
+   position: absolute;
+   right: 0;
+   top: 1px;
+   width: 60px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: 400;
+   color: #5C6F7E;
+   background: #E3ECFF;
+   border-radius: 20px;
+}
+.project-column .column ul li:first-child span.middle {
+   background: #FFECE0;
+}
+.project-column .column ul li:first-child span.high {
+   background: #FCE0E5;
+}
+.project-column .column ul li:nth-child(2) span {
+   color: #95A1A9;
+   font-size: 18px;
+   margin-left: 8px;
+}
+.project-column .column ul li:last-child {
+   color: #C9C9C9;
+   position: relative;
+}
+.project-column .column p {
+   color: #95A1A9;
+   font-size: 19px;
+   margin: 15px;
+}
+.project-column .column ul:hover {
+   background: #FBFBFB;
+}
+.project-column .column ul li:last-child i {
+   position: absolute;
+   right: 0;
+   bottom: 0px;
+   font-size: 18px;
+   color: #5C6F7E;
+   opacity: 0;
+}
+.project-column .column ul:hover li:last-child i {
+   opacity: 1;
+}
