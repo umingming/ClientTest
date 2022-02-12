@@ -32,6 +32,7 @@ span {
     color: #9B59B6;
 }
 
+
 /* header */
 header h1 {
    margin-top: 220px;
@@ -159,7 +160,7 @@ header h1 {
    height: 35px;
    line-height: 35px;
    font-size: 24px;
-   font-weight: 700;
+   /* font-weight: 700; */
    text-align: center;
    border-radius: 10px;
    margin: 20px 0px;
