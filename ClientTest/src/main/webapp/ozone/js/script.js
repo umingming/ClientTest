@@ -1,10 +1,24 @@
-//top 버튼
-var scrollTop = 0;
-scrollTop = $(document).scrollTop();
+//상세 프로젝트에서 삭제와 수정
 $(function(){
-    $('.top').on('click', function(){
-        let scroll = $('.inner-header').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+    $('.hover').on('click', function(){
+        $('.update').addClass('click');
+        $('.bi-three-dots').addClass('click-hover');
+        $('.bi-three-dots').removeClass('hover');
+    });
+    $('.click-hover').on('click', function(){
+        $('.update').removeClass('click');
+        $('.bi-three-dots').removeClass('click-hover');
+        $('.bi-three-dots').addClass('hover');
+    });
+});
+
+//상세 프로젝트 호버
+$(function(){
+    $('.bi').on('mouseover', function(){
+        $('.project-detail').addClass('hover');
+    });
+    $('.bi').on('mouseout', function(){
+        $('.project-detail').removeClass('hover');
     });
 });
 

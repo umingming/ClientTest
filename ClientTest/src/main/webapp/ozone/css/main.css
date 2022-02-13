@@ -362,6 +362,8 @@ header h1 {
    border-radius: 10px;
    border: 1px solid #E0E0E0;
    font-size: 17px;
+   position: relative;
+   transition: all 0.3s;
 }
 .project-detail h1 {
    font-weight: 1000;
@@ -458,4 +460,52 @@ header h1 {
    text-decoration: line-through;
    /* font-style: italic; */
    /* font-size: 16px; */
+}
+
+
+/* 프로젝트 수정과 삭제로 이동 */
+.project-detail.hover {
+   background: #fbfbfb;
+   transition: all 0.3s;
+   opacity: 0.7;
+}
+.project-detail > i {
+   position: absolute;
+   font-size: 45px;
+   right: 20px;
+   top: 10px;
+   color: #e0e0e0;
+   opacity: 0;
+}
+.project-detail > i.hover {
+   opacity: 1;
+   cursor: pointer;
+   transition: all 0.3s;
+   z-index: 1;
+   right: -70px;
+   width: 150px;
+}
+.project-detail > i.hover:hover {
+   color: #5C6F7E;
+   transition: all 0.3s;
+   opacity: 1;
+}
+.project-detail > i.click-hover {
+   opacity: 1;
+   cursor: pointer;
+   transition: all 0.3s;
+   z-index: 1;
+   right: -70px;
+   width: 150px;
+}
+.project-detail > i.click {
+   top: -14px;
+   right: -50px;
+   color: #5C6F7E;
+   opacity: 1.5;
+   z-index: 1;
+   height: 100px;
+}
+.project-detail > i.bi-trash.click {
+   top: 40px;
 }
