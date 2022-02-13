@@ -28,9 +28,6 @@ section {
    overflow: hidden;
    height: 100vh;
 }
-span {
-    color: #9B59B6;
-}
 
 
 /* header */
@@ -234,3 +231,115 @@ header h1 {
 .project-column .column ul:hover li:last-child i {
    opacity: 1;
 }
+
+
+/* project-board select */
+.project-board {
+   color: #5C6F7E;
+   margin-top: 150px;
+}
+.project-board img {
+   width: 30px;
+   height: 30px;
+   border-radius: 20px;
+   margin: 5px 2px 10px 0px;
+   background-color: #fff;
+}
+.project-board .select {
+   margin: 20px 55px;
+   font-size: 22px;
+   padding-top: 30px;
+}
+.project-board .select select{
+   position: relative;
+   top: 0;
+   left: 0;
+   border: 0;
+   background: #F5F8FF;
+   left: -3px;
+   font-weight: 700;
+}
+
+/* project board */
+.project-board .board table {
+   width: 1100px;
+   border: 1px solid #95A1A9;
+   border-radius: 20px;
+}
+.project-board .board table,
+.project-board .board table th,
+.project-board .board table td{
+   border-left: 0px;
+   border-right: 0px;
+   margin: 0px auto;
+   text-align: center;
+   font-weight: 700;
+}
+.project-board .board table th {
+   font-weight: 700;
+   font-size: 18px;
+   text-align: center;
+   width: 200px;
+}
+.project-board .board table tr {
+   border: 1px solid #95A1A9;
+   border-left: 0px;
+   border-right: 0px;
+   height: 40px;
+}
+.project-board .board table td {
+   font-size: 17px;
+}
+.project-board .board table th:nth-child(1),
+.project-board .board table td:nth-child(1) {
+   color: #757575;
+   padding-left: 20px;
+   width: 350px;
+   text-align: left;
+}
+.project-board .board table td:nth-child(2) {
+   color: #fff;
+   text-align: center;
+   padding: 0;
+   width: 100px;
+}
+.project-board .board table td:nth-child(3) {
+   width: 250px;
+}
+.project-board .board table td:nth-child(2) .status {
+   padding: 6px;
+   font-weight: 400;
+   border-radius: 10px;
+}
+.project-board .board table .not-started {
+   background: #749FFE;
+}
+.project-board .board table  .in-progress {
+   background: #FF738E;
+}
+.project-board .board table  .completed {
+   background: #FE9E62;
+}
+.project-board .board table td:nth-child(4) {
+   /* color: #95A1A9; */
+   font-weight: 400;
+}
+.project-board .board table td:nth-child(5) .priority {
+   padding: 1px 7px 1px 7px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: 400;
+   color: #5C6F7E;
+   background: #E3ECFF;
+   border-radius: 20px;
+}
+.project-board .board table td:nth-child(5) .priority.middle {
+   background: #FFECE0;
+}
+.project-board .board table td:nth-child(5) .priority.high {
+   background: #FCE0E5;
+   padding: 1px 5px 1px 5px;
+}
+
+
+/* detail */
