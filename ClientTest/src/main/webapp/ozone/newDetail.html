@@ -14,49 +14,42 @@
 <body>
    <div class="wrap">
       <section class="project-detail">
-         <h1><input type="text" placeholder="Untitled"></h1>
-         <table>
-            <tr>
-               <td><i class="bi bi-people-fill"></i>Member</td>
-               <td><img src="img/kakao.png">카카오</td>
-               <td><img src="img/google.png">구글</td>
-               <td><img src="img/KakaoTalk_20220104_002701045.png">이유미</td>
-               <td><img src="img/오 현우님.png">황현우</td>
-               <td><img src="img/터진 헤인님.png">이혜인</td>
-            </tr>
-            <tr>
-               <td><i class="bi bi-caret-down-fill"></i>Status</td>
-               <td colspan="10"><span class="status not-started">Not Started</span></td>
-            </tr>
-            <tr>
-               <td><i class="bi bi-bookmarks"></i>Priority</td>
-               <td colspan="10"><span class="priority middle">Middle</span></td>
-            </tr>
-            <tr>
-               <td><i class="bi bi-clock"></i>Date Created</td>
-               <td colspan="10">Feb 22, 2022 5:30PM</td>
-            </tr>
-            <tr>
-               <td><i class="bi bi-calendar-check"></i>Due Date</td>
-               <td colspan="10">Feb 22, 2022</td>
-            </tr>
-            <tr>
-               <td colspan="10">Description</td>
-            </tr>
-            <tr>
-               <td colspan="10">고구마켓은 Servlet과 JSP로 구현한 중고거래 웹사이트입니다. </td>
-            </tr>
-            <tr>
-               <td colspan="10">To-do</td>
-            </tr>
-            <tr class="to-do">
-               <td colspan="10"><input type="checkbox" name="check1" id="check1"><label for="check1">프론트엔드 꾸미기</label></td>
-            </tr>
-            <tr class="to-do">
-               <td colspan="10"><input type="checkbox" name="check2" id="check2"><label for="check2">백엔드 형상관리 제대로 하기</label></td>
-            </tr>
-         </table>
-      </section>
-   </div>
-</body>
-</html>
+         <form action="">
+            <input type="text" placeholder="Untitled" class="title">
+            <table>
+               <tr>
+                  <td><i class="bi bi-people-fill"></i>Member</td>
+                  <td colspan="10"><input type="text" placeholder="Search for a person" class="search"></td>
+               </tr>
+               <tr>
+                  <td><i class="bi bi-caret-down-fill"></i>Status</td>
+                  <td colspan="10"><input type="text" placeholder="Search for a option" class="search"></td>
+               </tr>
+               <tr>
+                  <td><i class="bi bi-bookmarks"></i>Priority</td>
+                  <td colspan="10"><input type="text" placeholder="Search for a option" class="search"></td>
+               </tr>
+               <tr>
+                  <td><i class="bi bi-calendar-check"></i>Due Date</td>
+                  <td colspan="10"><input type="date" class="search"></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td colspan="10"></td>
+               </tr>
+               <tr>
+                  <td colspan="10">Description</td>
+               </tr>
+               <tr>
+                  <td colspan="10"><input type="text" placeholder="Description" class="description"></td>
+               </tr>
+               <tr>
+                  <td colspan="1">To-do</td>
+                  <td colspan="10"><input type="button" class="new-to-do" value="+"></td>
+               </tr>
+            </table>
+         </form>
+         </section>
+      </div>
+   </body>
+   </html>

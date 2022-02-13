@@ -509,3 +509,40 @@ header h1 {
 .project-detail > i.bi-trash.click {
    top: 40px;
 }
+
+
+/* 프로젝트 만들기 */
+.project-detail form input.title {
+   font-weight: 700;
+   font-size: 40px;
+   margin-bottom: 20px;
+   border: 0px;
+   color: #5C6F7E;
+}
+.project-detail form input:hover,
+.project-detail form input:focus {
+   outline: 0;
+}
+.project-detail form table .search {
+   position: relative;
+   left: -10px;
+   border: 0px;
+   font-weight: 400;
+   background: #FBFBFB;
+   width: 700px;
+   border-radius: 7px;
+   padding: 2px;
+   padding-left: 8px;
+}
+.project-detail form table .description {
+   border: 0;
+}
+.project-detail form table .new-to-do {
+   position: relative;
+   left: -80px;
+   top: -4px;
+   border: 0;
+   border-radius: 7px;
+   padding: 1px 6px 1px 6px;
+   font-size: 20px;
+}
