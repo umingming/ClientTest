@@ -14,10 +14,10 @@ $(function(){
 
 //상세 프로젝트 호버
 $(function(){
-    $('.bi').on('mouseover', function(){
+    $('.hover').on('mouseover', function(){
         $('.project-detail').addClass('hover');
     });
-    $('.bi').on('mouseout', function(){
+    $('.hover').on('mouseout', function(){
         $('.project-detail').removeClass('hover');
     });
 });
