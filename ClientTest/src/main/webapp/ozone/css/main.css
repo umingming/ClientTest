@@ -292,10 +292,10 @@ header h1 {
 }
 .project-board .board table th:nth-child(1),
 .project-board .board table td:nth-child(1) {
-   color: #757575;
    padding-left: 20px;
    width: 350px;
    text-align: left;
+   color: #5C6F7E;
 }
 .project-board .board table td:nth-child(2) {
    color: #fff;
@@ -343,3 +343,105 @@ header h1 {
 
 
 /* detail */
+.project-detail img {
+   width: 30px;
+   height: 30px;
+   border-radius: 20px;
+   margin-right: 3px;
+   background-color: #fff;
+   /* border: 1px solid #5C6F7E; */
+   position: relative;
+   top: -2px;
+}
+.project-detail {
+   background: #fff;
+   width: 1100px;
+   padding: 50px 80px 100px 80px;
+   color: #5C6F7E;
+   border-radius: 10px;
+   border: 1px solid #E0E0E0;
+   font-size: 17px;
+}
+.project-detail h1 {
+   font-weight: 700;
+   margin-bottom: 20px;
+}
+.project-detail table tr td i {
+   margin-right: 10px;
+   font-size: 22px;
+   position: relative;
+   top: 2px
+}
+.project-detail table tr:first-child td {
+   width: 90px;
+   font-weight: 700;
+}
+.project-detail table tr:nth-child(4) td,
+.project-detail table tr:nth-child(5) td {
+   font-weight: 700;
+   font-size: 15px;
+}
+.project-detail table tr td:first-child {
+   font-weight: 400;
+   font-size: 19px;
+   color: #95A1A9;
+   width: 180px;
+   height: 40px;
+}
+.project-detail table tr .status {
+   padding: 6px;
+   font-weight: 400;
+   border-radius: 8px;
+   color: #fff;
+   font-size: 16px;
+}
+.project-detail table tr .status.not-started {
+   background: #749FFE;
+}
+.project-detail table tr .status.in-progress {
+   background: #FF738E;
+}
+.project-detail table tr .status.completed {
+   background: #FE9E62;
+}
+.project-detail table tr .priority {
+   padding: 1px 7px 1px 7px;
+   text-align: center;
+   font-size: 15px;
+   font-weight: 400;
+   color: #5C6F7E;
+   background: #E3ECFF;
+   border-radius: 20px;
+   position: relative;
+   top: 2px
+}
+.project-detail table tr .priority.middle {
+   background: #FFECE0;
+}
+.project-detail table tr .priority.high {
+   background: #FCE0E5;
+   padding: 1px 5px 1px 5px;
+}
+.project-detail table tr:nth-child(6) td {
+   color: #5C6F7E;
+   /* font-weight: 700; */
+   padding: 50px 5px;
+}
+.project-detail table tr.to-do td {
+   padding: 0px 5px;
+   margin-bottom: -20px;
+   font-size: 17px;
+   height: 10px;
+   color: #5C6F7E;
+}
+.project-detail table tr.to-do td input[type="checkbox"] {
+   position: relative;
+   margin-right: 5px;
+   top: -1px;
+}
+.project-detail table tr.to-do td input[type="checkbox"]:checked + label {
+   font-weight: 400;
+   color: #95A1A9;
+   text-decoration: line-through;
+   font-style: italic;
+}
