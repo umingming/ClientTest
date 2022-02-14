@@ -288,6 +288,9 @@ header h1 {
    /* width: 1px; */
    opacity: 0.4;
 }
+.project-column .title {
+   cursor: pointer;
+}
 
 
 /* project-board select */
