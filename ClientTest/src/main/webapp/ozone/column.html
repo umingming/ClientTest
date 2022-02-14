@@ -10,6 +10,8 @@
    <link rel="stylesheet" href="css/bootstrap.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+   <link href='/fullcalendar-5.10.2/lib/main.css' rel='stylesheet' />
+   <script src='/fullcalendar-5.10.2/lib/main.js'></script>
    <script src="js/jquery-1.12.4.min.js"></script>
    <script src="js/jquery-ui.js"></script>
    <script src="js/bootstrap.min.js"></script>
@@ -88,6 +90,9 @@
             </ul>
          </div>
       </section>
+      <section class="project-calendar">
+         <div id="calendar"></div>
+      </section>
    </div>
 </body>
 <script>
@@ -100,6 +105,13 @@
       });
       $( ".column .project" ).disableSelection();
    });
-   
+
+   var calendar;
+   document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+            calendar = new FullCalendar.Calendar(calendarEl, {
+      });
+      calendar.render();
+   });
 </script>
 </html>
