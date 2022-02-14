@@ -180,8 +180,9 @@ header h1 {
    float: left;
    width: 300px;
    margin: 0 50px;
+   position: relative;
 }
-.project-column .column div {
+.project-column div.state {
    color: #fff;
    height: 35px;
    line-height: 35px;
@@ -189,9 +190,11 @@ header h1 {
    /* font-weight: 700; */
    text-align: center;
    border-radius: 10px;
-   margin: 20px 0px;
+   margin: 20px 50px;
    box-shadow: 3px 3px 2px #9bacff42;
    text-shadow: 1px 1px 1px #ddd;
+   width: 300px;
+   float: left;
 }
 .project-column .not-started {
    background: #749FFE;
@@ -274,6 +277,14 @@ header h1 {
 }
 .project-column .column ul:hover li:last-child i {
    opacity: 1;
+}
+
+
+/* 칼럼 이동 */
+.project-placeholder {
+   background-color: #F5F8FF;
+   /* width: 1px; */
+   opacity: 0.4;
 }
 
 
