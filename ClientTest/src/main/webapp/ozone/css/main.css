@@ -309,7 +309,7 @@ header h1 {
 /* project-calendar */
 .project-calendar {
    position: relative;
-   top: -960px;
+   top: -980px;
    left: 150px;
    width: 500px;
    float: left;
@@ -341,7 +341,58 @@ header h1 {
    right: -100px;
    width: 450px;
 }
-
+.project-calendar .fc-toolbar-title {
+   position: relative;
+   width: 200px;
+   padding-left: 0;
+   text-align: center;
+   /* background: #000; */
+   left: 90px;
+   font-weight: 500;
+   color: #5C6F7E;
+}
+.project-calendar .fc-daygrid-day.fc-day.fc-day-mon.fc-day-today {
+   background-color: #F5F8FF;
+}
+.project-calendar .fc-today-button.fc-button.fc-button-primary {
+   position: relative;
+   left: -100px;
+   opacity: 0;
+}
+.project-calendar .fc-prev-button.fc-button.fc-button-primary,
+.project-calendar .fc-next-button.fc-button.fc-button-primary {
+   position: relative;
+   left: -265px;
+   background: #fff; 
+   border: #fff;  
+   color: #DFDFDF;
+   transition: all 0.3s;
+   /* opacity: 0; */
+}
+.project-calendar .fc-prev-button.fc-button.fc-button-primary:hover,
+.project-calendar .fc-next-button.fc-button.fc-button-primary:hover {
+   color: #9BABFF;
+   transition: all 0.3s;
+   border: 0;
+}
+.project-calendar .fc-prev-button.fc-button.fc-button-primary ,
+.project-calendar .fc-next-button.fc-button.fc-button-primary {
+   border: 0px;
+}
+.project-calendar .fc-next-button.fc-button.fc-button-primary {
+   left: -77px;
+}
+.project-calendar .fc-col-header-cell-cushion {
+   color: #fff;
+   font-weight: 500;
+}
+.project-calendar .fc-col-header-cell.fc-day {
+   background: #9BACFF;
+}
+.project-calendar .fc-daygrid-day-number {
+   color: #5C6F7E;
+   cursor: pointer;
+}
 
 /* project-board select */
 .project-board {
