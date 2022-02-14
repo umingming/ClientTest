@@ -156,6 +156,8 @@ header h1 {
    color: #5C6F7E;
    margin-top: 150px;
    font-family: 'IBM Plex Sans KR', sans-serif;
+   width: 1200px;
+	margin: 60px 100px;
 }
 .project-column img {
    width: 30px;
