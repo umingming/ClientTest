@@ -42,16 +42,24 @@
          <div class="state completed">Completed</div>
          <div class="column">
             <ul class="project">
-               <li class="title">고구마켓(JSP+Servlet)<span class="low">Low</span></li>
+               <li class="title">고구마켓(MVC)<span class="low">Low</span></li>
                <li>
-                  <img src="img/KakaoTalk_20220104_002701045.png">
                   <img src="img/KakaoTalk_20220205_020132636.jpg">
                   <img src="img/오 현우님.png">
                   <img src="img/오 혜인님.png">
                   <img src="img/kakao.png">
+                  <img src="img/터진 현우님.png">
+                  <img src="img/터진 헤인님.png">
+                  <!-- <span>+3</span> -->
+               </li>
+               <li>Feb 22, 2022</li>
+            </ul>
+            <ul class="project">
+               <li class="title">파이널 프로젝트 오존 <span class="middle">Middle</span></li>
+               <li>
+                  <img src="img/유미 후우.png">
                   <img src="img/터진 헤인님.png">
                   <img src="img/터진 현우님.png">
-                  <span>+3</span>
                </li>
                <li>Feb 22, 2022</li>
             </ul>
@@ -81,10 +89,17 @@
                </li>
                <li>Feb 22, 2022</li>
             </ul>
+            <ul class="project">
+               <li class="title">자바 콘솔 용용랜드 <span>Low</span></li>
+               <li>
+                  <img src="img/google.png">
+               </li>
+               <li>Feb 22, 2022</li>
+            </ul>
          </div>
          <div class="column">
             <ul class="project">
-               <li class="title">뿌리 깊은 국사(console) <span class="high">High🔥</span></li>
+               <li class="title">뿌리 깊은 국사 <span class="high">High🔥</span></li>
                <li><img src="img/유미 후우.png"></li>
                <li>Feb 22, 2022</li>
             </ul>
@@ -92,6 +107,7 @@
       </section>
       <section class="project-calendar">
          <div id="calendar"></div>
+         <img src="img/desk.png" alt="">
       </section>
    </div>
 </body>
@@ -113,5 +129,12 @@
       });
       calendar.render();
    });
+
+   var calHeight = 370;
+   $('#calendar').fullCalendar({
+      height:calHeight,
+      contentHeight:calHeight
+   });
+
 </script>
 </html>

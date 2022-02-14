@@ -17,14 +17,22 @@ body {
 	font-size: 18px; 
 	font-weight: 500; 
    color: #5C6F7E;
-   background: #F5F8FF;
+   /* background: #F5F8FF; */
+   background: #fff;
 }
+/* body{ 
+   -ms-overflow-style: none; 
+} 
+::-webkit-scrollbar { 
+   display: none; 
+} */
 section {
    width: 1200px;
 	margin: 60px auto;
 }
 .wrap {
    background: #F5F8FF;
+   background: #Fff;
    /* width: 100%; */
    overflow: hidden;
    height: 100vh;
@@ -153,11 +161,15 @@ header h1 {
 
 /* 프로젝트 칼럼 */
 .project-column {
+   background: #F5F8FF;
    color: #5C6F7E;
-   margin-top: 150px;
    font-family: 'IBM Plex Sans KR', sans-serif;
-   width: 1200px;
-	margin: 60px 100px;
+   width: 1100px;
+   height: 900px;
+	margin: 60px 0px 0px 150px;
+   border-radius: 10px;
+   /* margin-top: 100px; */
+   padding: 40px 85px 30px 85px;
 }
 .project-column img {
    width: 30px;
@@ -180,9 +192,9 @@ header h1 {
 }
 .project-column .column {
    float: left;
-   width: 300px;
+   width: 250px;
    height: 100vh;
-   margin: 0 50px;
+   margin: 0 30px;
    position: relative;
 }
 .project-column div.state {
@@ -193,11 +205,11 @@ header h1 {
    /* font-weight: 700; */
    text-align: center;
    border-radius: 10px;
-   margin: 10px 50px;
+   margin: 10px 30px;
    margin-top: 30px;
    box-shadow: 3px 3px 2px #9bacff42;
    text-shadow: 1px 1px 1px #ddd;
-   width: 300px;
+   width: 250px;
    float: left;
 }
 .project-column .not-started {
@@ -262,15 +274,13 @@ header h1 {
    color: #C9C9C9;
    position: relative;
    font-weight: 300;
-   right: -202px;
+   right: -152px;
    bottom: 7px
 }
 .project-column .column p {
    color: #95A1A9;
    font-size: 19px;
    margin: 15px;
-}
-.project-column .column ul:hover {
 }
 .project-column .column ul li:last-child i {
    position: absolute;
@@ -293,6 +303,43 @@ header h1 {
 }
 .project-column .title {
    cursor: pointer;
+}
+
+
+/* project-calendar */
+.project-calendar {
+   position: relative;
+   top: -960px;
+   left: 150px;
+   width: 500px;
+   float: left;
+   /* overflow: hidden; */
+}
+.project-calendar #calendar{
+   /* width: 500px; */
+   width: 400px;
+   height: 370px;
+   position: relative;
+   right: -130px;
+}
+.project-calendar #calendar:after {
+   position: absolute;
+   right: -32px;
+   top: 55px;
+   content: '';
+   width: 50px;
+   height: 316px;
+   background: #fff;
+   border-left: 1px solid #DDDDDD;
+}
+.fc-scroller {
+   overflow-y: hidden !important;
+}
+.project-calendar img {
+   position: relative;
+   bottom: -60px;
+   right: -100px;
+   width: 450px;
 }
 
 
