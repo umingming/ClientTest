@@ -166,7 +166,7 @@ header h1 {
    font-family: 'IBM Plex Sans KR', sans-serif;
    width: 1300px;
    height: 900px;
-	margin: 60px 0px 0px 70px;
+	margin: 60px 0px 0px 100px;
    border-radius: 10px;
    /* margin-top: 100px; */
    padding: 40px 20px 0px 30px;
@@ -313,7 +313,7 @@ header h1 {
 .project-calendar {
    position: relative;
    top: -980px;
-   left: -5px;
+   left: -35px;
    width: 500px;
    float: left;
    /* overflow: hidden; */
@@ -335,14 +335,14 @@ header h1 {
    background: #fff;
    border-left: 1px solid #DDDDDD;
 }
-.fc-scroller {
+.project-calendar .fc-scroller {
    overflow-y: hidden !important;
 }
 .project-calendar img {
    position: relative;
-   bottom: -30px;
-   right: -70px;
-   width: 500px;
+   bottom: -120px;
+   right: -140px;
+   width: 400px;
 }
 .project-calendar .fc-toolbar-title {
    position: relative;
