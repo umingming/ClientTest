@@ -192,12 +192,12 @@ header h1 {
    top: 0;
    left: 0;
    border: 0;
-   background: #fff;
+   background: #F5F8FF;
    left: -3px;
    font-weight: 700;
 }
 .project-column .project-select select{
-   background: #F5F8FF;
+   /* background: #fff; */
 }
 .project-column .column {
    float: left;
@@ -370,8 +370,8 @@ header h1 {
 
 /* project-board select */
 .project-board {
-   /* background: #F5F8FF; */
-   background: #fff;
+   background: #F5F8FF;
+   /* background: #fff; */
    color: #5C6F7E;
    font-family: 'IBM Plex Sans KR', sans-serif;
    width: 1300px;
@@ -406,13 +406,19 @@ header h1 {
 }
 
 /* project board */
-/* .project-board .board {
-   width: 1100px;
-   float: left;
+.project-board .board {
+   width: 1200px;
    position: relative;
-} */
+   left: 20px;
+   top: -10px;
+   height: 700px;
+   background: #fff;
+   padding: 50px;
+   border-radius: 10px;
+   margin-top: 50px;
+}
 .project-board .board table {
-   position: relative;
+   position: absolute;
    width: 1100px;
    border: 1px solid #95A1A9;
    border-radius: 20px;
@@ -423,7 +429,7 @@ header h1 {
    border-left: 0px;
    border-right: 0px;
    margin: 0px auto;
-   margin-top: 70px;
+   /* margin-top: 70px; */
    text-align: center;
    font-weight: 700;
 }
