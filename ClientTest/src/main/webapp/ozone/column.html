@@ -41,7 +41,7 @@
          <div class="state not-started">Not Started</div>
          <div class="state in-progress">In Progress</div>
          <div class="state completed">Completed</div>
-         <div class="column">
+         <div class="column column-no-state">
             <ul class="project">
                <li class="title">자바 콘솔 용용랜드 <span>Low</span></li>
                <li>
@@ -58,7 +58,7 @@
             </ul>
             <p>+ New</p>
          </div>
-         <div class="column">
+         <div class="column column-not-started">
             <ul class="project">
                <li class="title">고구마켓(MVC)<span class="low">Low</span></li>
                <li>
@@ -98,7 +98,7 @@
                <li>Feb 22, 2022</li>
             </ul>
          </div>
-         <div class="column">
+         <div class="column column-in-progress">
             <ul class="project">
                <li class="title">자바 콘솔 용용랜드 <span>Low</span></li>
                <li>
@@ -114,7 +114,7 @@
                <li>Feb 22, 2022</li>
             </ul>
          </div>
-         <div class="column">
+         <div class="column column-completed">
             <ul class="project">
                <li class="title">뿌리 깊은 국사 <span class="high">High🔥</span></li>
                <li><img src="img/유미 후우.png"></li>
@@ -129,6 +129,16 @@
    </div>
 </body>
 <script>
+   $(function() {
+      $(".column").sortable({
+         connectWith: ".column",
+         handle: ".title",
+         cancel: ".state",
+         placeholder: "project-placeholder"
+      });
+      $( ".column .project" ).disableSelection();
+   });
+
    var calendar;
    document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
@@ -141,16 +151,6 @@
    $('#calendar').fullCalendar({
       height:calHeight,
       contentHeight:calHeight
-   });
-
-   $(function() {
-      $(".column").sortable({
-         connectWith: ".column",
-         handle: ".title",
-         cancel: ".state",
-         placeholder: "project-placeholder"
-      });
-      $( ".column .project" ).disableSelection();
    });
 
 </script>
