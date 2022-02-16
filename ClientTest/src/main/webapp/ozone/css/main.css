@@ -392,14 +392,19 @@ header h1 {
    text-align: center;
    padding: 0;
    width: 100px;
+   position: relative;
 }
 .project-board .board table td:nth-child(3) {
    width: 250px;
 }
 .project-board .board table td:nth-child(2) .status {
-   padding: 6px;
+   position: absolute;
+   left: 42px;
+   top: 8px;
+   padding: 2px 2px;
    font-weight: 400;
-   border-radius: 10px;
+   border-radius: 7px;
+   width: 100px;
 }
 .project-board .board table .not-started {
    background: #749FFE;
