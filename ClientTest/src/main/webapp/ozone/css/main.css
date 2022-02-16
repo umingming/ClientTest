@@ -19,6 +19,8 @@ body {
    color: #5C6F7E;
    background: #F5F8FF;
    /* background: #fff; */
+   z-index: -2;
+   position: relative;
 }
 /* body{ 
    -ms-overflow-style: none; 
@@ -64,6 +66,10 @@ html, body{
    padding-top : 15px;
    margin-bottom: 0px;
    border-bottom : 1px solid white;
+}
+.header .icon.project {
+   opacity: 1;
+   color: #9bacff;
 }
 .icon:hover{
   opacity: 1;
