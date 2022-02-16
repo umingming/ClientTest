@@ -6,8 +6,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>OZONE</title>
    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/jquery-ui.css">
    <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+   <link href='/fullcalendar-5.10.2/lib/main.css' rel='stylesheet' />
+   <script src='/fullcalendar-5.10.2/lib/main.js'></script>
+   <script src="js/jquery-1.12.4.min.js"></script>
+   <script src="js/jquery-ui.js"></script>
+   <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
    <div class = "header">
@@ -22,7 +29,7 @@
   </div>
    <div class="wrap">
       <section class="project-board">
-         <div class="select">
+         <div class="project-select">
             <i class="bi bi-kanban"></i>
             <select name="view" id="view">
                <option value="all">All Tasks</option>
@@ -145,6 +152,26 @@
             </table>
          </div>
       </section>
+      <section class="project-calendar">
+         <div id="calendar"></div>
+         <img src="img/desk.png" alt="">
+      </section>
    </div>
 </body>
+<script>
+   var calendar;
+   document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+            calendar = new FullCalendar.Calendar(calendarEl, {
+      });
+      calendar.render();
+   });
+
+   var calHeight = 370;
+   $('#calendar').fullCalendar({
+      height:calHeight,
+      contentHeight:calHeight
+   });
+
+</script>
 </html>

@@ -29,7 +29,7 @@
    </div>
    <div class="wrap">
       <section class="project-column">
-         <div class="select">
+         <div class="project-select">
             <i class="bi bi-kanban"></i>
             <select name="view" id="view">
                <option value="status">By Status</option>
@@ -129,16 +129,6 @@
    </div>
 </body>
 <script>
-   $(function() {
-      $(".column").sortable({
-         connectWith: ".column",
-         handle: ".title",
-         cancel: ".state",
-         placeholder: "project-placeholder"
-      });
-      $( ".column .project" ).disableSelection();
-   });
-
    var calendar;
    document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
@@ -151,6 +141,16 @@
    $('#calendar').fullCalendar({
       height:calHeight,
       contentHeight:calHeight
+   });
+
+   $(function() {
+      $(".column").sortable({
+         connectWith: ".column",
+         handle: ".title",
+         cancel: ".state",
+         placeholder: "project-placeholder"
+      });
+      $( ".column .project" ).disableSelection();
    });
 
 </script>
