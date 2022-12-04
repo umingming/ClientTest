@@ -1,0 +1,50 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   padding: 10px;
+   background-color: #eee;
+}
+
+.header {
+   padding: 10px;
+   text-align: center;
+   background-color: aquamarine;
+}
+
+.nav {
+   overflow: hidden;
+   background-color: #b70202;
+}
+
+.nav a {
+   float: left;
+   color: #ffffff;
+   text-align: center;
+   padding: 12px 12px;
+}
+
+.left {
+   float: left;
+   width: 75%;
+   background-color: beige;
+}
+
+.right {
+   float: left;
+   width: 25%;
+   background-color: darkorange;
+   padding-left: 20px;
+}
+
+.card {
+   padding: 20px;
+   margin-top: 20px;
+}
+
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}

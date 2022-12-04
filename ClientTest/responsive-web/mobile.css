@@ -1,0 +1,19 @@
+body {
+   margin: 0px;
+   padding: 0px;
+}
+.left {
+   float: none;
+   width: 100%;
+   padding: 0;
+}
+.right {
+   float: none;
+   width: 100%;
+   padding: 0;
+}
+
+.nav a {
+   float: none;
+   width: 100%;
+}
