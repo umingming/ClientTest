@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 3</title>
+    <style>
+        body {
+            height: 90vh;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        nav {
+            padding: 10px;
+        }
+        nav a {
+            padding: 20px;
+        }
+        aside {
+            float: left;
+            width: 30%;
+            height: 85vh;
+            margin-right: 50px;
+            background-color: #ddd;
+            padding-left: 20px;
+        }
+        section {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        footer {
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 작성 조건</h1>
+    </header>
+    <aside>
+        <h2>주의사항 및 제출방법</h2>
+        <ul>
+            <li>출석수업 과제물(평가결과물) 온라인제출 워드문서(표지양식)에 모두 작성</li>
+            <li>압축파일, 보조파일, URL, 추가제출 모두 허용하지 않음(감점처리)</li>
+        </ul><br/>
+        <h3>Print Screen 키 사용</h3>
+        <ul>
+            <li>전체 작업화면 캡처 첨부</li>
+            <li>소스코드, 실행 및 해당 실습결과 출력화면(capture) 모두 첨부</li>
+            <li>- 누락 없이 전체 내용이 잘 보이도록 제출</li>
+            <li>흐리거나 잘 안 보이면 해당 부분을 추가(복사 또는 캡처)로 첨부</li>
+        </ul>
+        <ul>
+            <li>copy하지 말고 스스로 완성해서 제출</li>
+            <li>표절일 경우, 동일한 과제물 모두 0점 처리 또는 최하 점수 부여함.</li>
+            <li>수업에서 설명했던 사항을 준수하여 제출</li>
+            <li>임의대로 해석해서 작성하지 말 것</li>
+        </ul><br/>
+        <h3>제출기한</h3>
+        <ul>
+            <li>2024년 5월 20일(월요일) 18:00</li>
+        </ul><br/>
+        <h3>제출방법</h3>
+        <ul>
+            <li>홈페이지 로그인 → 학사정보 → 수업/시험 → 출석수업과제물 제출(실험실습)</li>
+        </ul><br/>
+        <p>※ 실습 과제물 표지(서식 다운로드)<br>학교홈페이지-학생서비스-표지 및 기타서식-출석수업 과제물 온라인제출 표지</p>
+    </aside>
+    <nav>
+        <a href="#section1">1번 조건</a>
+        <a href="#section2">2번 조건</a>
+        <a href="#section3">3번 조건</a>
+        <a href="#section4">4번 조건</a>
+    </nav>
+    <section id="section1">
+        <article>
+            <h2>1) 레이아웃을 위한 HTML5 요소</h2>
+            <p>HTML5 요소를 실제 사용에 맞게 작성</p>
+            <ul>
+                <li>header, nav(hyperlink), section, article, aside, footer(특수이름;)</li>
+                <li>잘못된 예: &lt;header&gt; 헤더 영역, header, 머리말 등&lt;/header&gt;</li>
+            </ul>
+        </article>
+    </section>
+    <section id="section2">
+        <article>
+            <h2>2) 학번_본인이름 클릭 시</h2>
+            <p>"학번_본인이름"을 클릭할 경우 - 문제 2번에서 작성한 웹 페이지가 새로운 창으로 출력되도록 작성(윈도우 지정 - base 요소 사용)</p>
+            <p><a href="question2.html" target="문제2">202234-365280_이유미</a></p>
+        </article>
+    </section>
+    <section id="section3">
+        <article>
+            <h2>3) poster 속성 사용 및 비디오 파일 재생</h2>
+            <p>poster 속성을 사용하고 비디오 파일을 12초~15초 재생 구간 지정</p>
+            <video controls width="500" height="200" poster="강아지.png">
+                <source src="강아지.mp4#t=12,15" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>PIP 모드에서 재생된 화면 포함</p>
+        </article>
+    </section>
+    <section id="section4">
+        <article>
+            <h2>4) CSS 적용 방법</h2>
+            <p>CSS 적용 방법 중 style 요소(임베디드 방법)를 사용하여 2가지 이상의 CSS 속성을 본문에 적용 (속성은 자유롭게 작성)</p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 컴퓨터과학과 이유미</p>
+    </footer>
+</body>
+</html>
