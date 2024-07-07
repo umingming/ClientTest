@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input>
+        <p>Copy Text</p>
+        <button>Copy</button>
+    </div>
+
+    <script>
+        /*
+            copy 버튼을 누르면 input의 내용을 복사한다.
+            1. input 내용 복사를 위한 함수 정의
+            2. copy 클릭 이벤트에 1의 함수를 매핑
+        */
+
+        const $p = document.querySelector("p");
+        const $input = document.querySelector("input");
+        const $button = document.querySelector("button");
+
+        /*
+            1. input을 선택하고
+            2. execCommand로 해당 내용 복사
+        */
+        function copyInput() {
+            $input.select();
+            document.execCommand("copy");
+        }
+
+        $button.addEventListener("click", copyInput)
+    </script>
+</body>
+</html>
