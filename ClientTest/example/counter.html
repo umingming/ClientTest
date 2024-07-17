@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .group-hidden {
+            display: none;
+        }
+        .lap-list .longest {
+            color: red;
+        }
+        .lap-list .shortest {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="count">
+        00:000
+    </div>
+    <!-- 초기화 상태 -->
+    <div class="btn-group group-init">
+        <button class="btn-start">시작</button>
+    </div>
+    <!-- 시작 상태 -->
+    <div class="btn-group group-start group-hidden">
+        <button class="btn-stop">멈춤</button>
+        <button class="btn-reset">초기화</button>
+        <button class="btn-lap">랩</button>
+    </div>
+    <!-- 멈춤 상태 -->
+    <div class="btn-group group-stop group-hidden">
+        <button class="btn-restart">재시작</button>
+        <button class="btn-reset">초기화</button>
+    </div>
+    <div>
+        <ul class="lap-list">
+        </ul>
+    </div>
+
+    <script>
+        // Timer
+        let time = 0;
+        let timer = null;
+
+        // 요소
+        const $count = document.querySelector(".count");
+
+        function formatTime(time) {
+            const prefix = String(Math.floor(time / 1000)).padStart(2, 0);
+            const suffix = String(time % 1000).padStart(3, 0);
+            return `${prefix}:${suffix}`;
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                $count.textContent = formatTime(++time);
+            }, 1);
+        }
+
+        function clearTimer(force) {
+            clearInterval(timer);
+
+            if (force) {
+                time = 0;
+                $count.textContent = formatTime(0);
+            }
+        }
+
+        // Group
+        const $groupInit = document.querySelector(".group-init"); 
+        const $groupStart = document.querySelector(".group-start"); 
+        const $groupStop = document.querySelector(".group-stop"); 
+
+        // Start
+        const $btnStart = $groupInit.querySelector(".btn-start");
+        $btnStart.addEventListener("click", () => {
+            startTimer();
+            $groupInit.classList.add("group-hidden");
+            $groupStart.classList.remove("group-hidden");
+        })
+
+        // Stop
+        const $btnStop = $groupStart.querySelector(".btn-stop");
+        $btnStop.addEventListener("click", () => {
+            clearTimer(false);
+            $groupStart.classList.add("group-hidden");
+            $groupStop.classList.remove("group-hidden");
+        })
+
+        // Reset
+        const $btnReset = $groupStart.querySelector(".btn-reset");
+        $btnReset.addEventListener("click", () => {
+            clearTimer(true);
+            clearLap();
+            $groupInit.classList.remove("group-hidden");
+            $groupStart.classList.add("group-hidden");
+        })
+
+        // Restart
+        const $btnRestart = $groupStop.querySelector(".btn-restart");
+        $btnRestart.addEventListener("click", () => {
+            startTimer();
+            $groupStart.classList.remove("group-hidden");
+            $groupStop.classList.add("group-hidden");
+        })
+
+        // Step Reset
+        const $btnInit = $groupStop.querySelector(".btn-reset");
+        $btnInit.addEventListener("click", () => {
+            clearTimer(true);
+            clearLap();
+            $groupInit.classList.remove("group-hidden");
+            $groupStop.classList.add("group-hidden");
+        })
+
+        // Lap
+        let preTime = 0;
+        let index = 0;
+        const $lapList = document.querySelector(".lap-list");
+
+        function appendLap() {
+            const lap = formatTime(time - preTime);
+            const gap = time - preTime;
+            preTime = time;
+
+            const $b = document.createElement("b");
+            $b.textContent = lap;
+
+            const $li = document.createElement("li");
+            $li.textContent = `Lap ${index++} `;
+            $li.dataset.time = gap;
+            $li.appendChild($b);
+            
+            $lapList.appendChild($li);
+
+            validateLap();
+        }
+
+        function clearLap() {
+            $lapList.textContent = "";
+            index = 0;
+            preTime = 0;
+        }
+
+        function validateLap() {
+            const $laps = [...$lapList.querySelectorAll("li")];
+            const lapTimes = $laps.map(({dataset: {time}}) => time);
+            const min = Math.min(...lapTimes);
+            const max = Math.max(...lapTimes);
+
+            for (const $lap of $laps) {
+                const { time } = $lap.dataset;
+                const isMin = time == min;
+                const isMax = !isMin && time == max;
+
+                $lap.classList.toggle("shortest", isMin);
+                $lap.classList.toggle("longest", isMax);
+            }
+        }
+
+        // Lap button
+        const $btnLap = $groupStart.querySelector(".btn-lap");
+        $btnLap.addEventListener("click", () => {
+            appendLap();
+        })
+
+    </script>
+</body>
+</html>
