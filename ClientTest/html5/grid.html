@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashboard {
+            /* 부모 컨테이너를 그리드로 설정하여 자식 요소를 그리드 아이템으로 작동 */
+            display: grid;
+            /* 레이아웃 주요 영역 설정하여 자식 요소들 위치 결정; 각 행에서 정의된 열의 갯수는 동일해야 함. */
+            grid-template-areas:
+                "header header header"
+                "sidebar content content"
+                "sidebar widget widget";
+            /* Column 비율 */
+            grid-template-columns: 1fr 2fr 2fr;
+            grid-template-rows: auto 1fr 1fr;
+            gap: 20px;
+        }
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .widget {
+            grid-area: widget;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">Header</div>
+        <div class="header">Header2</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Main Content</div>
+        <div class="widget">Widget 1</div>
+        <div class="widget">Widget 2</div>
+      </div>
+</body>
+</html>
