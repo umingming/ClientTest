@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* 부모 컨테이너를 플렉스박스로 지정하여 자식 요소들이 아이템으로 작동하도록 함. */
+            display: flex; 
+            /* 자식 요소들이 부모 컴테이너 너비를 초과할 경우 자동으로 줄바꿈 */
+            flex-wrap: wrap;
+            /* 자식 요소들을 수평으로 가운데 정렬 */
+            justify-content: center;
+            /* 자식 요소들 간격 설정 */
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+      </div>
+</body>
+</html>
