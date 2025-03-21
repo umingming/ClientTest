@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("chart");
+      const myChart = new Chart(ctx, {
+        type: "radar",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+          datasets: [
+            {
+              data: [1, 1, 1, 1, 1],
+              backgroundColor: "rgba(255, 99, 132, 0.05)",
+              borderWidth: 0,
+            },
+            {
+              data: [2, 2, 2, 2, 2],
+              backgroundColor: "rgba(255, 99, 132, 0.05)",
+              borderWidth: 0,
+            },
+            {
+              data: [3, 3, 3, 3, 3],
+              backgroundColor: "rgba(255, 99, 132, 0.05)",
+              borderWidth: 0,
+            },
+            {
+              data: [4, 4, 4, 4, 4],
+              backgroundColor: "rgba(255, 99, 132, 0.05)",
+              borderWidth: 0,
+            },
+            {
+              data: [4.4, 4.4, 4.4, 4.4, 4.4],
+              fill: false,
+              backgroundColor: "rgba(255, 99, 132, 0.5)",
+              borderWidth: 0,
+              pointRotation: Array.from({ length: 5 }, (_, i) => i * (360 / 5)),
+              pointStyle: "triangle",
+              pointRadius: 10,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            r: {
+              angleLines: {
+                color: "rgba(255, 99, 132, 0.05)",
+              },
+              min: 0,
+              max: 4.5,
+              ticks: {
+                stepSize: 1,
+                display: false,
+              },
+              grid: {
+                lineWidth: 0,
+                display: false,
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
